@@ -347,7 +347,9 @@ def import_episodes(conn, series_id: int, episodes: list[dict]) -> dict[int, int
                 description, note, legacy_system, legacy_episode_id
             )
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (legacy_system, legacy_episode_id) DO UPDATE SET
+            ON CONFLICT (legacy_system, legacy_episode_id)
+            WHERE legacy_system IS NOT NULL AND legacy_episode_id IS NOT NULL
+            DO UPDATE SET
                 series_id = EXCLUDED.series_id,
                 series_episode_number = EXCLUDED.series_episode_number,
                 air_date = EXCLUDED.air_date,
@@ -415,7 +417,9 @@ def import_broadcasts(
                 legacy_system, legacy_broadcast_id
             )
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (legacy_system, legacy_broadcast_id) DO UPDATE SET
+            ON CONFLICT (legacy_system, legacy_broadcast_id)
+            WHERE legacy_system IS NOT NULL AND legacy_broadcast_id IS NOT NULL
+            DO UPDATE SET
                 series_id = EXCLUDED.series_id,
                 episode_id = EXCLUDED.episode_id,
                 sequence_number = EXCLUDED.sequence_number,
@@ -544,7 +548,9 @@ def import_actor_credits(
                 notes, legacy_system, legacy_credit_id
             )
             VALUES (%s, %s, 'actor', NULL, NULL, 'CBSRMT', %s)
-            ON CONFLICT (legacy_system, legacy_credit_id) DO UPDATE SET
+            ON CONFLICT (legacy_system, legacy_credit_id)
+            WHERE legacy_system IS NOT NULL AND legacy_credit_id IS NOT NULL
+            DO UPDATE SET
                 episode_id = EXCLUDED.episode_id,
                 person_id = EXCLUDED.person_id,
                 credit_type = EXCLUDED.credit_type
@@ -778,6 +784,7 @@ def main() -> int:
 
             series_id = upsert_series(conn)
             import_people(conn, source["cast"])
+            import_people(conn, source["writers"])
             episode_map = import_episodes(conn, series_id, source["episodes"])
             import_broadcasts(conn, series_id, source["episodes"], episode_map)
             import_genres(
