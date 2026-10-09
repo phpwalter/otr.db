@@ -1,4 +1,4 @@
--- CBSRMT legacy appearance -> global episode_credit migration
+-- otr:manual\n-- CBSRMT legacy appearance -> global episode_credit migration
 -- Prerequisite: migrate the legacy CBSRMT episode table into global episode first,
 -- setting episode.legacy_system='CBSRMT' and episode.legacy_episode_id=<old episode id>.
 -- The old tables are referenced as legacy_appearance(id, cast_id, episode_id).
