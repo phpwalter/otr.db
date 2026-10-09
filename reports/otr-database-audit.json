@@ -1,6 +1,12 @@
 {
-  "source_records": null,
-  "fisher": {},
+  "source_records": 188,
+  "fisher": {
+    "matched": 188,
+    "unchanged": 188,
+    "missing": [],
+    "ambiguous": [],
+    "differing": []
+  },
   "constraints": {
     "declared": [
       {
