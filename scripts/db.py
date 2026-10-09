@@ -13,6 +13,7 @@ Connection:
 
 Examples:
     set DATABASE_URL=postgresql://user:password@localhost:5432/otr
+    python scripts/db.py install
     python scripts/db.py install --with-seed
     python scripts/db.py update
     python scripts/db.py status
@@ -32,6 +33,7 @@ from typing import Iterable
 try:
     import psycopg
     from psycopg import sql
+    from psycopg.conninfo import conninfo_to_dict, make_conninfo
 except ImportError:
     print(
         "Missing dependency: psycopg. Install it with:\n"
@@ -159,18 +161,71 @@ def discover_sql(include_seed: bool) -> list[SqlFile]:
     return found
 
 
-def connect(dsn: str | None):
+def require_dsn(dsn: str | None) -> str:
     if not dsn:
         print(
             "No PostgreSQL connection supplied. Set DATABASE_URL or pass --dsn.",
             file=sys.stderr,
         )
         raise SystemExit(2)
+    return dsn
+
+
+def ensure_database_exists(dsn: str) -> None:
+    """
+    Create the target PostgreSQL database when it does not already exist.
+
+    The installer connects to the built-in 'postgres' maintenance database
+    using the same host, port, user, and password as the target DSN.
+    """
+    target = conninfo_to_dict(dsn)
+    database_name = target.get("dbname")
+
+    if not database_name:
+        raise SystemExit("The PostgreSQL DSN does not contain a database name.")
+
+    admin = dict(target)
+    admin["dbname"] = "postgres"
+    admin_dsn = make_conninfo(**admin)
+
+    try:
+        with psycopg.connect(admin_dsn, autocommit=True) as conn:
+            exists = conn.execute(
+                "SELECT 1 FROM pg_database WHERE datname = %s",
+                (database_name,),
+            ).fetchone()
+
+            if exists:
+                return
+
+            print(f"CREATE   database {database_name}")
+            conn.execute(
+                sql.SQL("CREATE DATABASE {}").format(
+                    sql.Identifier(database_name)
+                )
+            )
+            print(f"CREATED  database {database_name}")
+    except psycopg.Error as exc:
+        print(
+            f"Unable to create PostgreSQL database {database_name!r}.",
+            file=sys.stderr,
+        )
+        print(str(exc), file=sys.stderr)
+        raise SystemExit(1) from exc
+
+
+def connect(dsn: str | None):
+    dsn = require_dsn(dsn)
 
     # autocommit is intentional: individual SQL files may manage their own
     # BEGIN/COMMIT blocks. A history row is written only after the SQL file
     # completes successfully.
-    return psycopg.connect(dsn, autocommit=True)
+    try:
+        return psycopg.connect(dsn, autocommit=True)
+    except psycopg.Error as exc:
+        print("Unable to connect to the OTR PostgreSQL database.", file=sys.stderr)
+        print(str(exc), file=sys.stderr)
+        raise SystemExit(1) from exc
 
 
 def ensure_history_table(conn) -> None:
@@ -391,6 +446,11 @@ def apply_single(conn, item: SqlFile, dry_run: bool, verbose: bool) -> int:
 
 def main() -> int:
     args = parse_args()
+
+    # A fresh install owns creation of the target database. Other commands
+    # expect the database to have already been installed.
+    if args.command == "install" and not args.dry_run:
+        ensure_database_exists(require_dsn(args.dsn))
 
     # status still needs a live DB because applied history is stored there.
     with connect(args.dsn) as conn:
