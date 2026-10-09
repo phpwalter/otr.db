@@ -45,3 +45,112 @@ Load the CBSRMT episode dataset into `episode`, setting:
 - `legacy_episode_id = <original CBSRMT episode id>`
 
 Then run `migrations/001_migrate_legacy_cbsrmt_appearances.sql`.
+
+
+## Database installer and updater
+
+Use `scripts/db.py` for both the first installation and all later database updates.
+
+### Install dependency
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Configure the database
+
+Set a PostgreSQL connection string in `DATABASE_URL`.
+
+Windows PowerShell:
+
+```powershell
+$env:DATABASE_URL = "postgresql://user:password@localhost:5432/otr"
+```
+
+Linux/macOS:
+
+```bash
+export DATABASE_URL="postgresql://user:password@localhost:5432/otr"
+```
+
+You can also pass `--dsn` directly.
+
+### Fresh installation
+
+```bash
+python scripts/db.py install
+```
+
+To also load pending seed SQL:
+
+```bash
+python scripts/db.py install --with-seed
+```
+
+### Apply later updates
+
+After pulling a newer version of the repository:
+
+```bash
+python scripts/db.py update
+```
+
+Only SQL files that have not already been successfully applied will run.
+
+### Check status
+
+```bash
+python scripts/db.py status
+```
+
+Use `--with-seed` to include seed scripts in the listing.
+
+### Manual migrations
+
+A SQL file whose first 25 lines contain:
+
+```sql
+-- otr:manual
+```
+
+is not run automatically. This is for staged imports or migrations that require prerequisites.
+
+Run one explicitly with:
+
+```bash
+python scripts/db.py apply migrations/001_migrate_legacy_cbsrmt_appearances.sql
+```
+
+The existing CBSRMT legacy appearance migration is marked manual because the CBSRMT episodes and legacy appearance staging table must exist first.
+
+### Migration history
+
+The installer creates `otr_migration_history` in PostgreSQL and stores:
+
+- repository-relative script path;
+- script category;
+- SHA-256 checksum;
+- whether it was manual;
+- execution date/time;
+- execution duration.
+
+Once a SQL file has been applied, do **not** edit it. Add a new numbered SQL migration instead. The installer checks the checksum of previously applied files and refuses to continue if migration history has been rewritten.
+
+### Naming convention
+
+Use monotonically increasing numbered SQL files:
+
+```text
+schema/
+  001_otr_catalog_schema.sql
+
+migrations/
+  001_migrate_legacy_cbsrmt_appearances.sql
+  002_add_episode_source_fields.sql
+  003_add_person_external_ids.sql
+
+seed/
+  cbsrmt_people_seed.sql
+```
+
+Normal schema and migration files run automatically. Add `-- otr:manual` only when a script cannot safely run as part of every standard update.
