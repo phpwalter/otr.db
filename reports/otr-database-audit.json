@@ -1,0 +1,423 @@
+{
+  "source_records": null,
+  "fisher": {},
+  "constraints": {
+    "declared": [
+      {
+        "schema_name": "public",
+        "table_name": "broadcast",
+        "constraint_name": "broadcast_broadcast_type_check",
+        "kind": "c",
+        "definition": "CHECK ((broadcast_type = ANY (ARRAY['original'::text, 'repeat'::text, 'no_episode'::text, 'other'::text])))"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "broadcast",
+        "constraint_name": "broadcast_episode_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (episode_id) REFERENCES episode(episode_id) ON DELETE SET NULL"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "broadcast",
+        "constraint_name": "broadcast_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (broadcast_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "broadcast",
+        "constraint_name": "broadcast_series_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (series_id) REFERENCES series(series_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "credit_type",
+        "constraint_name": "credit_type_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (credit_type)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "entity_source",
+        "constraint_name": "entity_source_confidence_check",
+        "kind": "c",
+        "definition": "CHECK (((confidence IS NULL) OR (confidence = ANY (ARRAY['high'::text, 'medium'::text, 'low'::text]))))"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "entity_source",
+        "constraint_name": "entity_source_entity_type_check",
+        "kind": "c",
+        "definition": "CHECK ((entity_type = ANY (ARRAY['series'::text, 'episode'::text, 'person'::text, 'episode_credit'::text])))"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "entity_source",
+        "constraint_name": "entity_source_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (entity_source_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "entity_source",
+        "constraint_name": "entity_source_source_id_entity_type_entity_id_source_role_key",
+        "kind": "u",
+        "definition": "UNIQUE (source_id, entity_type, entity_id, source_role)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "entity_source",
+        "constraint_name": "entity_source_source_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (source_id) REFERENCES source(source_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode",
+        "constraint_name": "episode_fisher_rubric_range",
+        "kind": "c",
+        "definition": "CHECK (((fisher_rubric IS NULL) OR ((fisher_rubric >= (0)::numeric) AND (fisher_rubric <= (100)::numeric))))"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode",
+        "constraint_name": "episode_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (episode_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode",
+        "constraint_name": "episode_series_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (series_id) REFERENCES series(series_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode",
+        "constraint_name": "episode_series_run_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (series_run_id) REFERENCES series_run(series_run_id) ON DELETE SET NULL"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_credit",
+        "constraint_name": "episode_credit_credit_type_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (credit_type) REFERENCES credit_type(credit_type)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_credit",
+        "constraint_name": "episode_credit_episode_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (episode_id) REFERENCES episode(episode_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_credit",
+        "constraint_name": "episode_credit_person_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (person_id) REFERENCES person(person_id) ON DELETE RESTRICT"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_credit",
+        "constraint_name": "episode_credit_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (episode_credit_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_credit",
+        "constraint_name": "episode_credit_unique",
+        "kind": "u",
+        "definition": "UNIQUE NULLS NOT DISTINCT (episode_id, person_id, credit_type, billing_order)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_genre",
+        "constraint_name": "episode_genre_episode_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (episode_id) REFERENCES episode(episode_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_genre",
+        "constraint_name": "episode_genre_genre_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (genre_id) REFERENCES genre(genre_id) ON DELETE RESTRICT"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_genre",
+        "constraint_name": "episode_genre_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (episode_id, genre_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_relationship",
+        "constraint_name": "episode_relationship_check",
+        "kind": "c",
+        "definition": "CHECK ((episode_id <> related_episode_id))"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_relationship",
+        "constraint_name": "episode_relationship_episode_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (episode_id) REFERENCES episode(episode_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_relationship",
+        "constraint_name": "episode_relationship_episode_id_related_episode_id_relation_key",
+        "kind": "u",
+        "definition": "UNIQUE (episode_id, related_episode_id, relationship_type)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_relationship",
+        "constraint_name": "episode_relationship_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (episode_relationship_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_relationship",
+        "constraint_name": "episode_relationship_related_episode_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (related_episode_id) REFERENCES episode(episode_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "episode_relationship",
+        "constraint_name": "episode_relationship_relationship_type_check",
+        "kind": "c",
+        "definition": "CHECK ((relationship_type = ANY (ARRAY['repeat_of'::text, 'rebroadcast_of'::text, 'remake_of'::text, 'continuation_of'::text, 'adaptation_of'::text])))"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "genre",
+        "constraint_name": "genre_name_key",
+        "kind": "u",
+        "definition": "UNIQUE (name)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "genre",
+        "constraint_name": "genre_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (genre_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "genre",
+        "constraint_name": "genre_slug_key",
+        "kind": "u",
+        "definition": "UNIQUE (slug)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "import_issue",
+        "constraint_name": "import_issue_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (import_issue_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "legacy_episode_adaptation",
+        "constraint_name": "legacy_episode_adaptation_episode_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (episode_id) REFERENCES episode(episode_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "legacy_episode_adaptation",
+        "constraint_name": "legacy_episode_adaptation_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (legacy_episode_adaptation_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "legacy_episode_adaptation",
+        "constraint_name": "legacy_episode_adaptation_source_key",
+        "kind": "u",
+        "definition": "UNIQUE (legacy_system, legacy_record_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "legacy_episode_adaptation",
+        "constraint_name": "legacy_episode_adaptation_value_key",
+        "kind": "u",
+        "definition": "UNIQUE (legacy_system, episode_id, legacy_adaptation_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "otr_migration_history",
+        "constraint_name": "otr_migration_history_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (migration_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "otr_migration_history",
+        "constraint_name": "otr_migration_history_script_path_key",
+        "kind": "u",
+        "definition": "UNIQUE (script_path)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "performance_role",
+        "constraint_name": "performance_role_episode_credit_id_character_name_role_orde_key",
+        "kind": "u",
+        "definition": "UNIQUE NULLS NOT DISTINCT (episode_credit_id, character_name, role_order)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "performance_role",
+        "constraint_name": "performance_role_episode_credit_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (episode_credit_id) REFERENCES episode_credit(episode_credit_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "performance_role",
+        "constraint_name": "performance_role_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (performance_role_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "person",
+        "constraint_name": "person_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (person_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "person",
+        "constraint_name": "person_slug_key",
+        "kind": "u",
+        "definition": "UNIQUE (slug)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "person_alias",
+        "constraint_name": "person_alias_person_id_alias_name_alias_type_key",
+        "kind": "u",
+        "definition": "UNIQUE (person_id, alias_name, alias_type)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "person_alias",
+        "constraint_name": "person_alias_person_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (person_id) REFERENCES person(person_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "person_alias",
+        "constraint_name": "person_alias_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (person_alias_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "series",
+        "constraint_name": "series_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (series_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "series",
+        "constraint_name": "series_slug_key",
+        "kind": "u",
+        "definition": "UNIQUE (slug)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "series_run",
+        "constraint_name": "series_run_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (series_run_id)"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "series_run",
+        "constraint_name": "series_run_series_id_fkey",
+        "kind": "f",
+        "definition": "FOREIGN KEY (series_id) REFERENCES series(series_id) ON DELETE CASCADE"
+      },
+      {
+        "schema_name": "public",
+        "table_name": "source",
+        "constraint_name": "source_pkey",
+        "kind": "p",
+        "definition": "PRIMARY KEY (source_id)"
+      }
+    ],
+    "unvalidated": []
+  },
+  "integrity": {
+    "duplicate_numeric_episode_numbers": [],
+    "broadcast_cross_series": [],
+    "run_cross_series": [],
+    "unresolved_cbsrmt_issues": [],
+    "orphaned_entity_sources": []
+  },
+  "completeness": {
+    "by_series": [
+      {
+        "series_id": 1,
+        "name": "CBS Radio Mystery Theater",
+        "total_episodes": 1399,
+        "missing_title": 0,
+        "missing_air_date": 0,
+        "missing_description": 0,
+        "fisher_rated": 188,
+        "fisher_cast": 188
+      }
+    ],
+    "episodes_without_credits_by_series": [],
+    "episodes_without_writers_by_series": [],
+    "episodes_without_sources_by_series": [
+      {
+        "series_id": 1,
+        "episodes_without_sources": 1399
+      }
+    ]
+  },
+  "migrations": {
+    "history": [
+      {
+        "script_path": "migrations/002_add_broadcast_and_cbsrmt_import_support.sql",
+        "category": "migrations",
+        "checksum_sha256": "3ca1ff3121a383bf87acf9aaea8d4b1c83737fbe347e9c349e296cdd9329c35f",
+        "manual": false,
+        "applied_at": "2026-10-09 08:02:12.850301+00:00",
+        "execution_ms": 46
+      },
+      {
+        "script_path": "migrations/003_fix_nullable_legacy_identity_constraints.sql",
+        "category": "migrations",
+        "checksum_sha256": "7fe5130d3439699be49c07b6b480bcb20874066f62d9a9b67ce4f913a71d1363",
+        "manual": false,
+        "applied_at": "2026-10-09 08:02:12.858436+00:00",
+        "execution_ms": 6
+      },
+      {
+        "script_path": "schema/001_otr_catalog_schema.sql",
+        "category": "schema",
+        "checksum_sha256": "5f6cbf6eb58d75a1079b2009c23994ade188965fae0eea485e482999ea3e233c",
+        "manual": false,
+        "applied_at": "2026-10-09 07:41:29.993670+00:00",
+        "execution_ms": 32
+      }
+    ]
+  }
+}
