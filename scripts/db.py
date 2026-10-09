@@ -1,0 +1,422 @@
+#!/usr/bin/env python3
+"""
+OTR database installer and migration runner.
+
+Commands:
+    python scripts/db.py install
+    python scripts/db.py update
+    python scripts/db.py status
+    python scripts/db.py apply migrations/001_migrate_legacy_cbsrmt_appearances.sql
+
+Connection:
+    Set DATABASE_URL, or pass --dsn.
+
+Examples:
+    set DATABASE_URL=postgresql://user:password@localhost:5432/otr
+    python scripts/db.py install --with-seed
+    python scripts/db.py update
+    python scripts/db.py status
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import os
+import sys
+import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Iterable
+
+try:
+    import psycopg
+    from psycopg import sql
+except ImportError:
+    print(
+        "Missing dependency: psycopg. Install it with:\n"
+        "  python -m pip install -r requirements.txt",
+        file=sys.stderr,
+    )
+    raise SystemExit(2)
+
+
+ROOT = Path(__file__).resolve().parents[1]
+HISTORY_TABLE = "otr_migration_history"
+CATEGORY_ORDER = ("schema", "migrations", "seed")
+SQL_DIRECTIVE_MANUAL = "-- otr:manual"
+
+
+@dataclass(frozen=True)
+class SqlFile:
+    path: Path
+    relative_path: str
+    category: str
+    checksum: str
+    manual: bool
+
+    @classmethod
+    def from_path(cls, path: Path, category: str) -> "SqlFile":
+        raw = path.read_bytes()
+        text = raw.decode("utf-8-sig")
+        header = "\n".join(text.splitlines()[:25]).lower()
+        return cls(
+            path=path,
+            relative_path=path.relative_to(ROOT).as_posix(),
+            category=category,
+            checksum=hashlib.sha256(raw).hexdigest(),
+            manual=SQL_DIRECTIVE_MANUAL in header,
+        )
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Install and update the shared OTR PostgreSQL database."
+    )
+    parser.add_argument(
+        "--dsn",
+        default=os.getenv("DATABASE_URL"),
+        help="PostgreSQL DSN. Defaults to DATABASE_URL.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Show what would run without modifying the database.",
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Show additional execution details.",
+    )
+
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    install = sub.add_parser(
+        "install",
+        help="Apply all pending automatic schema and migration scripts.",
+    )
+    install.add_argument(
+        "--with-seed",
+        action="store_true",
+        help="Also apply pending SQL files under seed/.",
+    )
+    install.add_argument(
+        "--include-manual",
+        action="store_true",
+        help="Also run scripts marked '-- otr:manual'. Use only when prerequisites are ready.",
+    )
+
+    update = sub.add_parser(
+        "update",
+        help="Apply database scripts added since the last successful run.",
+    )
+    update.add_argument(
+        "--with-seed",
+        action="store_true",
+        help="Also apply pending SQL files under seed/.",
+    )
+    update.add_argument(
+        "--include-manual",
+        action="store_true",
+        help="Also run scripts marked '-- otr:manual'.",
+    )
+
+    status = sub.add_parser(
+        "status",
+        help="Show applied, pending, manual, changed, and missing scripts.",
+    )
+    status.add_argument(
+        "--with-seed",
+        action="store_true",
+        help="Include seed/ scripts in the status listing.",
+    )
+
+    apply_parser = sub.add_parser(
+        "apply",
+        help="Apply one specific SQL file, including a manual migration.",
+    )
+    apply_parser.add_argument(
+        "path",
+        help="Repository-relative SQL path, e.g. migrations/001_example.sql",
+    )
+
+    return parser.parse_args()
+
+
+def discover_sql(include_seed: bool) -> list[SqlFile]:
+    categories = ["schema", "migrations"]
+    if include_seed:
+        categories.append("seed")
+
+    found: list[SqlFile] = []
+    for category in categories:
+        directory = ROOT / category
+        if not directory.exists():
+            continue
+        for path in sorted(directory.glob("*.sql")):
+            if path.is_file():
+                found.append(SqlFile.from_path(path, category))
+    return found
+
+
+def connect(dsn: str | None):
+    if not dsn:
+        print(
+            "No PostgreSQL connection supplied. Set DATABASE_URL or pass --dsn.",
+            file=sys.stderr,
+        )
+        raise SystemExit(2)
+
+    # autocommit is intentional: individual SQL files may manage their own
+    # BEGIN/COMMIT blocks. A history row is written only after the SQL file
+    # completes successfully.
+    return psycopg.connect(dsn, autocommit=True)
+
+
+def ensure_history_table(conn) -> None:
+    conn.execute(
+        sql.SQL(
+            """
+            CREATE TABLE IF NOT EXISTS {} (
+                migration_id bigint GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+                script_path text NOT NULL UNIQUE,
+                category text NOT NULL,
+                checksum_sha256 text NOT NULL,
+                manual boolean NOT NULL DEFAULT false,
+                applied_at timestamptz NOT NULL DEFAULT now(),
+                execution_ms integer NOT NULL
+            )
+            """
+        ).format(sql.Identifier(HISTORY_TABLE))
+    )
+
+
+def load_history(conn) -> dict[str, dict[str, object]]:
+    rows = conn.execute(
+        sql.SQL(
+            """
+            SELECT script_path, category, checksum_sha256, manual,
+                   applied_at, execution_ms
+            FROM {}
+            ORDER BY migration_id
+            """
+        ).format(sql.Identifier(HISTORY_TABLE))
+    ).fetchall()
+
+    return {
+        row[0]: {
+            "category": row[1],
+            "checksum": row[2],
+            "manual": row[3],
+            "applied_at": row[4],
+            "execution_ms": row[5],
+        }
+        for row in rows
+    }
+
+
+def validate_applied_files(
+    files: Iterable[SqlFile],
+    history: dict[str, dict[str, object]],
+) -> list[str]:
+    problems: list[str] = []
+    current = {item.relative_path: item for item in files}
+
+    for path, record in history.items():
+        item = current.get(path)
+        if item is None:
+            # A previously applied migration may have been intentionally renamed.
+            # Report this; never silently re-run or delete its history.
+            problems.append(f"MISSING  {path} (was previously applied)")
+            continue
+        if item.checksum != record["checksum"]:
+            problems.append(
+                f"CHANGED  {path} (already applied; create a new migration instead)"
+            )
+    return problems
+
+
+def record_success(conn, item: SqlFile, elapsed_ms: int) -> None:
+    conn.execute(
+        sql.SQL(
+            """
+            INSERT INTO {} (
+                script_path, category, checksum_sha256, manual, execution_ms
+            )
+            VALUES (%s, %s, %s, %s, %s)
+            ON CONFLICT (script_path) DO NOTHING
+            """
+        ).format(sql.Identifier(HISTORY_TABLE)),
+        (
+            item.relative_path,
+            item.category,
+            item.checksum,
+            item.manual,
+            elapsed_ms,
+        ),
+    )
+
+
+def execute_sql_file(conn, item: SqlFile, verbose: bool) -> int:
+    text = item.path.read_text(encoding="utf-8-sig")
+    if verbose:
+        print(f"RUN      {item.relative_path}")
+    start = time.perf_counter()
+    conn.execute(text)
+    elapsed_ms = int((time.perf_counter() - start) * 1000)
+    record_success(conn, item, elapsed_ms)
+    print(f"APPLIED  {item.relative_path} ({elapsed_ms} ms)")
+    return elapsed_ms
+
+
+def run_pending(
+    conn,
+    files: list[SqlFile],
+    *,
+    include_manual: bool,
+    dry_run: bool,
+    verbose: bool,
+) -> int:
+    history = load_history(conn)
+    problems = validate_applied_files(files, history)
+
+    changed = [p for p in problems if p.startswith("CHANGED")]
+    if changed:
+        for problem in problems:
+            print(problem, file=sys.stderr)
+        print(
+            "\nRefusing to continue because an already-applied SQL file changed. "
+            "Add a new numbered migration instead of editing migration history.",
+            file=sys.stderr,
+        )
+        return 3
+
+    for problem in problems:
+        print(problem)
+
+    pending = [item for item in files if item.relative_path not in history]
+    automatic = [item for item in pending if not item.manual or include_manual]
+    skipped_manual = [item for item in pending if item.manual and not include_manual]
+
+    if skipped_manual:
+        for item in skipped_manual:
+            print(f"MANUAL   {item.relative_path}")
+
+    if not automatic:
+        print("Database is up to date.")
+        return 0
+
+    for item in automatic:
+        if dry_run:
+            print(f"WOULD RUN {item.relative_path}")
+            continue
+        try:
+            execute_sql_file(conn, item, verbose)
+        except Exception as exc:
+            print(f"FAILED   {item.relative_path}", file=sys.stderr)
+            print(str(exc), file=sys.stderr)
+            return 1
+
+    return 0
+
+
+def show_status(conn, files: list[SqlFile]) -> int:
+    history = load_history(conn)
+    current = {item.relative_path: item for item in files}
+    problems = validate_applied_files(files, history)
+
+    for item in files:
+        record = history.get(item.relative_path)
+        if record is None:
+            state = "MANUAL" if item.manual else "PENDING"
+        elif record["checksum"] != item.checksum:
+            state = "CHANGED"
+        else:
+            state = "APPLIED"
+        print(f"{state:8} {item.relative_path}")
+
+    for path in history:
+        if path not in current:
+            print(f"{'MISSING':8} {path}")
+
+    if any(p.startswith("CHANGED") for p in problems):
+        return 3
+    return 0
+
+
+def resolve_single_sql(relative: str) -> SqlFile:
+    candidate = (ROOT / relative).resolve()
+    try:
+        candidate.relative_to(ROOT.resolve())
+    except ValueError:
+        raise SystemExit("The SQL file must be inside this repository.")
+
+    if candidate.suffix.lower() != ".sql" or not candidate.is_file():
+        raise SystemExit(f"SQL file not found: {relative}")
+
+    category = candidate.parent.name
+    if category not in CATEGORY_ORDER:
+        category = "manual"
+    return SqlFile.from_path(candidate, category)
+
+
+def apply_single(conn, item: SqlFile, dry_run: bool, verbose: bool) -> int:
+    history = load_history(conn)
+    record = history.get(item.relative_path)
+
+    if record:
+        if record["checksum"] != item.checksum:
+            print(
+                f"CHANGED  {item.relative_path}\n"
+                "This script has already been applied with a different checksum. "
+                "Create a new migration instead of modifying it.",
+                file=sys.stderr,
+            )
+            return 3
+        print(f"APPLIED  {item.relative_path} (already installed)")
+        return 0
+
+    if dry_run:
+        print(f"WOULD RUN {item.relative_path}")
+        return 0
+
+    try:
+        execute_sql_file(conn, item, verbose)
+    except Exception as exc:
+        print(f"FAILED   {item.relative_path}", file=sys.stderr)
+        print(str(exc), file=sys.stderr)
+        return 1
+    return 0
+
+
+def main() -> int:
+    args = parse_args()
+
+    # status still needs a live DB because applied history is stored there.
+    with connect(args.dsn) as conn:
+        ensure_history_table(conn)
+
+        if args.command == "status":
+            return show_status(conn, discover_sql(args.with_seed))
+
+        if args.command == "apply":
+            return apply_single(
+                conn,
+                resolve_single_sql(args.path),
+                args.dry_run,
+                args.verbose,
+            )
+
+        include_seed = bool(args.with_seed)
+        files = discover_sql(include_seed)
+        return run_pending(
+            conn,
+            files,
+            include_manual=bool(args.include_manual),
+            dry_run=args.dry_run,
+            verbose=args.verbose,
+        )
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
