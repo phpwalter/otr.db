@@ -75,8 +75,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--dsn",
-        default=os.getenv("DATABASE_URL"),
-        help="PostgreSQL DSN. Defaults to DATABASE_URL.",
+        default=os.getenv("DATABASE_URL", "postgresql://root:root@localhost:5432/otrdb"),
+        help="PostgreSQL DSN. Defaults to DATABASE_URL, then postgresql://root:root@localhost:5432/otrdb.",
     )
     parser.add_argument(
         "--dry-run",
