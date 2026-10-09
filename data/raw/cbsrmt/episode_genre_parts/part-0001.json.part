@@ -1,0 +1,1000 @@
+[
+  {
+    "record_id": "1",
+    "episode_id": "5",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "2",
+    "episode_id": "6",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "3",
+    "episode_id": "6",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "4",
+    "episode_id": "6",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "5",
+    "episode_id": "7",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "6",
+    "episode_id": "9",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "7",
+    "episode_id": "12",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "8",
+    "episode_id": "13",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "9",
+    "episode_id": "15",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "10",
+    "episode_id": "18",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "11",
+    "episode_id": "18",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "12",
+    "episode_id": "19",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "13",
+    "episode_id": "19",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "14",
+    "episode_id": "19",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "15",
+    "episode_id": "20",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "16",
+    "episode_id": "24",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "17",
+    "episode_id": "24",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "18",
+    "episode_id": "28",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "19",
+    "episode_id": "30",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "20",
+    "episode_id": "31",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "21",
+    "episode_id": "32",
+    "genre_id": "13"
+  },
+  {
+    "record_id": "22",
+    "episode_id": "33",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "23",
+    "episode_id": "34",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "24",
+    "episode_id": "35",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "25",
+    "episode_id": "36",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "26",
+    "episode_id": "37",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "27",
+    "episode_id": "37",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "28",
+    "episode_id": "39",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "29",
+    "episode_id": "39",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "30",
+    "episode_id": "40",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "31",
+    "episode_id": "40",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "32",
+    "episode_id": "43",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "33",
+    "episode_id": "48",
+    "genre_id": "12"
+  },
+  {
+    "record_id": "34",
+    "episode_id": "50",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "35",
+    "episode_id": "52",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "36",
+    "episode_id": "54",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "37",
+    "episode_id": "56",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "38",
+    "episode_id": "57",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "39",
+    "episode_id": "60",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "40",
+    "episode_id": "60",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "41",
+    "episode_id": "67",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "42",
+    "episode_id": "67",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "43",
+    "episode_id": "68",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "44",
+    "episode_id": "69",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "45",
+    "episode_id": "69",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "46",
+    "episode_id": "74",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "47",
+    "episode_id": "75",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "48",
+    "episode_id": "78",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "49",
+    "episode_id": "79",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "50",
+    "episode_id": "79",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "51",
+    "episode_id": "81",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "52",
+    "episode_id": "82",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "53",
+    "episode_id": "83",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "54",
+    "episode_id": "84",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "55",
+    "episode_id": "85",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "56",
+    "episode_id": "85",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "57",
+    "episode_id": "88",
+    "genre_id": "12"
+  },
+  {
+    "record_id": "58",
+    "episode_id": "89",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "59",
+    "episode_id": "89",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "60",
+    "episode_id": "91",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "61",
+    "episode_id": "92",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "62",
+    "episode_id": "93",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "63",
+    "episode_id": "95",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "64",
+    "episode_id": "96",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "65",
+    "episode_id": "98",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "66",
+    "episode_id": "100",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "67",
+    "episode_id": "101",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "68",
+    "episode_id": "101",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "69",
+    "episode_id": "105",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "70",
+    "episode_id": "106",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "71",
+    "episode_id": "108",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "72",
+    "episode_id": "108",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "73",
+    "episode_id": "109",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "74",
+    "episode_id": "115",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "75",
+    "episode_id": "115",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "76",
+    "episode_id": "117",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "77",
+    "episode_id": "117",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "78",
+    "episode_id": "117",
+    "genre_id": "14"
+  },
+  {
+    "record_id": "79",
+    "episode_id": "118",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "80",
+    "episode_id": "119",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "81",
+    "episode_id": "122",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "82",
+    "episode_id": "124",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "83",
+    "episode_id": "127",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "84",
+    "episode_id": "128",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "85",
+    "episode_id": "128",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "86",
+    "episode_id": "131",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "87",
+    "episode_id": "132",
+    "genre_id": "14"
+  },
+  {
+    "record_id": "88",
+    "episode_id": "136",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "89",
+    "episode_id": "138",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "90",
+    "episode_id": "140",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "91",
+    "episode_id": "140",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "92",
+    "episode_id": "141",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "93",
+    "episode_id": "143",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "94",
+    "episode_id": "145",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "95",
+    "episode_id": "145",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "96",
+    "episode_id": "146",
+    "genre_id": "8"
+  },
+  {
+    "record_id": "97",
+    "episode_id": "148",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "98",
+    "episode_id": "150",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "99",
+    "episode_id": "150",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "100",
+    "episode_id": "152",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "101",
+    "episode_id": "153",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "102",
+    "episode_id": "153",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "103",
+    "episode_id": "154",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "104",
+    "episode_id": "155",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "105",
+    "episode_id": "156",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "106",
+    "episode_id": "157",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "107",
+    "episode_id": "158",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "108",
+    "episode_id": "159",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "109",
+    "episode_id": "161",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "110",
+    "episode_id": "162",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "111",
+    "episode_id": "163",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "112",
+    "episode_id": "163",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "113",
+    "episode_id": "163",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "114",
+    "episode_id": "164",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "115",
+    "episode_id": "166",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "116",
+    "episode_id": "166",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "117",
+    "episode_id": "168",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "118",
+    "episode_id": "170",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "119",
+    "episode_id": "170",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "120",
+    "episode_id": "173",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "121",
+    "episode_id": "174",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "122",
+    "episode_id": "175",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "123",
+    "episode_id": "176",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "124",
+    "episode_id": "177",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "125",
+    "episode_id": "178",
+    "genre_id": "12"
+  },
+  {
+    "record_id": "126",
+    "episode_id": "180",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "127",
+    "episode_id": "180",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "128",
+    "episode_id": "181",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "129",
+    "episode_id": "182",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "130",
+    "episode_id": "186",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "131",
+    "episode_id": "187",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "132",
+    "episode_id": "188",
+    "genre_id": "13"
+  },
+  {
+    "record_id": "133",
+    "episode_id": "189",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "134",
+    "episode_id": "190",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "135",
+    "episode_id": "193",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "136",
+    "episode_id": "194",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "137",
+    "episode_id": "198",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "138",
+    "episode_id": "198",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "139",
+    "episode_id": "200",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "140",
+    "episode_id": "200",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "141",
+    "episode_id": "204",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "142",
+    "episode_id": "207",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "143",
+    "episode_id": "208",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "144",
+    "episode_id": "211",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "145",
+    "episode_id": "212",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "146",
+    "episode_id": "213",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "147",
+    "episode_id": "213",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "148",
+    "episode_id": "215",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "149",
+    "episode_id": "215",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "150",
+    "episode_id": "215",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "151",
+    "episode_id": "216",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "152",
+    "episode_id": "216",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "153",
+    "episode_id": "217",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "154",
+    "episode_id": "221",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "155",
+    "episode_id": "222",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "156",
+    "episode_id": "222",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "157",
+    "episode_id": "223",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "158",
+    "episode_id": "224",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "159",
+    "episode_id": "224",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "160",
+    "episode_id": "225",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "161",
+    "episode_id": "227",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "162",
+    "episode_id": "227",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "163",
+    "episode_id": "228",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "164",
+    "episode_id": "229",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "165",
+    "episode_id": "230",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "166",
+    "episode_id": "232",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "167",
+    "episode_id": "233",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "168",
+    "episode_id": "237",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "169",
+    "episode_id": "239",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "170",
+    "episode_id": "239",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "171",
+    "episode_id": "240",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "172",
+    "episode_id": "240",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "173",
+    "episode_id": "241",
+    "genre_id": "6"
+  },
+  {
+    "record_id": "174",
+    "episode_id": "244",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "175",
+    "episode_id": "244",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "176",
+    "episode_id": "246",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "177",
+    "episode_id": "247",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "178",
+    "episode_id": "248",
+    "genre_id": "13"
+  },
+  {
+    "record_id": "179",
+    "episode_id": "251",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "180",
+    "episode_id": "254",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "181",
+    "episode_id": "256",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "182",
+    "episode_id": "257",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "183",
+    "episode_id": "259",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "184",
+    "episode_id": "259",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "185",
+    "episode_id": "260",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "186",
+    "episode_id": "261",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "187",
+    "episode_id": "263",
+    "genre_id": "11"
+  },
+  {
+    "record_id": "188",
+    "episode_id": "264",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "189",
+    "episode_id": "264",
+    "genre_id": "8"
+  },
+  {
+    "record_id": "190",
+    "episode_id": "264",
+    "genre_id": "10"
+  },
+  {
+    "record_id": "191",
+    "episode_id": "265",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "192",
+    "episode_id": "265",
+    "genre_id": "9"
+  },
+  {
+    "record_id": "193",
+    "episode_id": "266",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "194",
+    "episode_id": "268",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "195",
+    "episode_id": "269",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "196",
+    "episode_id": "270",
+    "genre_id": "7"
+  },
+  {
+    "record_id": "197",
+    "episode_id": "273",
+    "genre_id": "5"
+  },
+  {
+    "record_id": "198",
+    "episode_id": "277",
+    "genre_id": "3"
+  },
+  {
+    "record_id": "199",
+    "episode_id": "279",
+    "genre_id": "4"
+  },
+  {
+    "record_id": "200",
+    "episode_id": "279",
+    "genre_id": "9"
