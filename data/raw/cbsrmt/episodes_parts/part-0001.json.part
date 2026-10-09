@@ -1,0 +1,1000 @@
+[
+  {
+    "id": 1,
+    "sequence_number": 1,
+    "episode_id": 1,
+    "episode_plot": "An old woman takes on a border who is ill. As he dies, he makes a strange deathbed confession that gets her into trouble. ",
+    "episode_date": "1974-01-06",
+    "episode_name": "Old Ones Are Hard to Kill [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 2,
+    "sequence_number": 2,
+    "episode_id": 2,
+    "episode_plot": "A man kills his wife after he finds out she gave all their money away. He is sure she has come back to life as cat to torment him.",
+    "episode_date": "1974-01-07",
+    "episode_name": "Return Of The Moresbys [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 3,
+    "sequence_number": 3,
+    "episode_id": 3,
+    "episode_plot": "The \"wrong man\" dies in combat and must travel back to get the man who should have died in combat to give up his life to set the cosmos straight.",
+    "episode_date": "1974-01-08",
+    "episode_name": "Bullet [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 4,
+    "sequence_number": 4,
+    "episode_id": 4,
+    "episode_plot": "A petty thug torments his wife --- who is afraid of dogs --- by buying a doberman and trying to make her live with it. She has different ideas.",
+    "episode_date": "1974-01-09",
+    "episode_name": "Lost Dog",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 5,
+    "sequence_number": 5,
+    "episode_id": 5,
+    "episode_plot": "A man who is about to become CEO of his father-in-law's corporation is blackmailed for a horrible misdeed in his past.",
+    "episode_date": "1974-01-10",
+    "episode_name": "No Hiding Place",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 6,
+    "sequence_number": 6,
+    "episode_id": 6,
+    "episode_plot": "When A young woman comes home from her \"honeymoon\" her husband vanishes and her sister tells her the entire marriage was a dream. She tries to convince a young cop that her husband was murdered.",
+    "episode_date": "1974-01-11",
+    "episode_name": "Honeymoon With Death",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 7,
+    "sequence_number": 7,
+    "episode_id": 7,
+    "episode_plot": "A woman's husband gets out of the car in a snowstorm in NY City to clear the car windows and vanishes into thin air. His reasons for disappearance are compelling.",
+    "episode_date": "1974-01-12",
+    "episode_name": "I Warn You Three Times",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 8,
+    "sequence_number": 8,
+    "episode_id": 8,
+    "episode_plot": "When a man finds out his deceased mother is actually alive, he locks her in the basement so he may inherit her home and her wealth.",
+    "episode_date": "1974-01-13",
+    "episode_name": "Cold Storage",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 9,
+    "sequence_number": 9,
+    "episode_id": 9,
+    "episode_plot": "A Lothario is tormented by the ghost of a woman he used who later died in a horse riding accident.",
+    "episode_date": "1974-01-14",
+    "episode_name": "Death Rides A Stallion",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 10,
+    "sequence_number": 10,
+    "episode_id": 10,
+    "episode_plot": "A retired woman moves from the city to the country and is tormented by a cat and a young woman who move in against the woman's will. The cat's name is EVI",
+    "episode_date": "1974-01-15",
+    "episode_name": "Resident [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 11,
+    "sequence_number": 11,
+    "episode_id": 11,
+    "episode_plot": "A son brings his ailing, paroled father home from the hospital. Meanwhile, he must find $15000 to buy out his business partner or lose his business. ",
+    "episode_date": "1974-01-16",
+    "episode_name": "Accounts Receivable",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 12,
+    "sequence_number": 12,
+    "episode_id": 12,
+    "episode_plot": "A man is convinced that he murdered his wife. he is also convinced that he has been having an affair with another woman. However, he can't convince a police detecitve of either.",
+    "episode_date": "1974-01-17",
+    "episode_name": "You Can Die Again",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 13,
+    "sequence_number": 13,
+    "episode_id": 13,
+    "episode_plot": "A young couple stumble across a ghostly scene of a man trying to whip a little girl. They find themselves wrapped up in a family curse and an old murder.",
+    "episode_date": "1974-01-18",
+    "episode_name": "Ring A Ring Of Roses",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 14,
+    "sequence_number": 14,
+    "episode_id": 14,
+    "episode_plot": "A couple take in a young, delinquent girl with a talent for finding lost objects -- and dead bodies. ",
+    "episode_date": "1974-01-19",
+    "episode_name": "Girl Who Found Things [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 15,
+    "sequence_number": 15,
+    "episode_id": 15,
+    "episode_plot": "A man desperate for money is offered the chance to make a fortune. All he has to do is commit an anonymous murder where he won't even have to see the victim.",
+    "episode_date": "1974-01-20",
+    "episode_name": "Chinaman Button [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 16,
+    "sequence_number": 16,
+    "episode_id": 16,
+    "episode_plot": "Two men plot to murder the businessman who swindled them. When they are pre-empted by somebody else, they are left to pay the price while receiving none of the rewards. ",
+    "episode_date": "1974-01-21",
+    "episode_name": "Dead For A Dollar",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 17,
+    "sequence_number": 17,
+    "episode_id": 17,
+    "episode_plot": "An ancient man has the power to heal people with his touch and has uncanny insight into people's character and motives. ",
+    "episode_date": "1974-01-22",
+    "episode_name": "Very Old Man [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 18,
+    "sequence_number": 18,
+    "episode_id": 18,
+    "episode_plot": "A college professor tries to take the blame for his wayward son who has hit and killed a pedestrian. A young detective suspects the truth, but can't convince his boss of it.",
+    "episode_date": "1974-01-23",
+    "episode_name": "And Nothing But The Truth",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 19,
+    "sequence_number": 19,
+    "episode_id": 19,
+    "episode_plot": "A woman learns that detectives are tailing her new husband because they suspect he killed his first wife.",
+    "episode_date": "1974-01-24",
+    "episode_name": "Deadly Honeymoon",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 20,
+    "sequence_number": 20,
+    "episode_id": 20,
+    "episode_plot": "A young bride is tormented by a demon after attending a seance just before her wedding.",
+    "episode_date": "1974-01-25",
+    "episode_name": "Speak Of The Devil",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 21,
+    "sequence_number": 21,
+    "episode_id": 21,
+    "episode_plot": "A father destroys his daugter's relationship with a man by forcing her to offer testimony against him in a vehicular homicide case. Several lives are ruined.",
+    "episode_date": "1974-01-26",
+    "episode_name": "Ring Of Truth [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 22,
+    "sequence_number": 22,
+    "episode_id": 22,
+    "episode_plot": "A clock repairman finds a clock that grants its owner an extra hour in a day. The price is just a small amount of blood. . . ",
+    "episode_date": "1974-01-27",
+    "episode_name": "Time And Again",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 23,
+    "sequence_number": 23,
+    "episode_id": 23,
+    "episode_plot": "A writer's publisher wants him to change the end of a book to more fully exploit the heroine. He is afraid because he fears his character is indeed alive. ",
+    "episode_date": "1974-01-28",
+    "episode_name": "Three Women",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 24,
+    "sequence_number": 24,
+    "episode_id": 24,
+    "episode_plot": "A successful attorney is haunted by the voice of the wife he killed in a mercy killing ten years prior. It threatens the relationship he is having with his new girlfriend with whom he started an affair shortly after his wife fell ill.",
+    "episode_date": "1974-01-29",
+    "episode_name": "Man Who Heard Voices [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 25,
+    "sequence_number": 25,
+    "episode_id": 25,
+    "episode_plot": "A young woman, unable to conceive, seeks out a fortune teller who says she can help her have a baby for $6000 and a strange favor. ",
+    "episode_date": "1974-01-30",
+    "episode_name": "Mother Love",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 26,
+    "sequence_number": 26,
+    "episode_id": 26,
+    "episode_plot": "A man is gunned down by his wife. When he arrives in the afterlife, he begs to be allowed to live the last part of his life over.",
+    "episode_date": "1974-01-31",
+    "episode_name": "Man Who Asked For Yesterday [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 27,
+    "sequence_number": 27,
+    "episode_id": 27,
+    "episode_plot": "A woman finds a man who looks exactly like her husband. She uses him to help murder her husband. ",
+    "episode_date": "1974-02-01",
+    "episode_name": "Dead Ringer",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 28,
+    "sequence_number": 28,
+    "episode_id": 28,
+    "episode_plot": "A ghost hunter tries to drive the ghost of an old sea captain's wife out of a house so a new buyer can live in it to tear it down to build condominiums. ",
+    "episode_date": "1974-02-02",
+    "episode_name": "Ghostly Game Of Death [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 29,
+    "sequence_number": 29,
+    "episode_id": 29,
+    "episode_plot": "An impetuous female archeologist violates the customs of a local tribe by offering them praise and she steals their artifacts. She finds their price high.",
+    "episode_date": "1974-02-03",
+    "episode_name": "Sign Of The Beast [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 30,
+    "sequence_number": 30,
+    "episode_id": 30,
+    "episode_plot": "A woman arrives at the estate of her new husband to find his former wife' s spirit still haunts the place. She died under suspicious circumstances",
+    "episode_date": "1974-02-04",
+    "episode_name": "Here Goes The Bride",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 31,
+    "sequence_number": 31,
+    "episode_id": null,
+    "episode_plot": "A petty thug torments his wife --- who is afraid of dogs --- by buying a doberman and trying to make her live with it. She has different ideas.",
+    "episode_date": "1974-02-04",
+    "episode_name": "Lost Dog",
+    "episode_note": null,
+    "repeat_of_episode_id": 4
+  },
+  {
+    "id": 32,
+    "sequence_number": 32,
+    "episode_id": 31,
+    "episode_plot": "An out of work newspaper reporter is framed for murder in France by a double agent spy.",
+    "episode_date": "1974-02-05",
+    "episode_name": "Lady was A Tiger [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 33,
+    "sequence_number": 33,
+    "episode_id": 32,
+    "episode_plot": "A young lawyer finds out the man he defended for murder is actually guilty. He must decide how to put things right.",
+    "episode_date": "1974-02-06",
+    "episode_name": "After The Verdict",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 34,
+    "sequence_number": 34,
+    "episode_id": null,
+    "episode_plot": "A woman's husband gets out of the car in a snowstorm in NY City to clear the car windows and vanishes into thin air. His reasons for disappearance are compelling.",
+    "episode_date": "1974-02-07",
+    "episode_name": "I Warn You Three Times",
+    "episode_note": null,
+    "repeat_of_episode_id": 7
+  },
+  {
+    "id": 35,
+    "sequence_number": 35,
+    "episode_id": 33,
+    "episode_plot": "A federal drug agent goes to France to trace heroin shipments. A Greek drug dealer torments him and his new love interest.",
+    "episode_date": "1974-02-08",
+    "episode_name": "Conspiracy To Defraud",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 36,
+    "sequence_number": 36,
+    "episode_id": 34,
+    "episode_plot": "A short, insecure man goes insane after finding out that his wife is having an affair and does not speak for many years. He describes to his psychologist how he trapped a man and woman in a cave to listen to them die.",
+    "episode_date": "1974-02-09",
+    "episode_name": "Deadly Hour [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 37,
+    "sequence_number": 37,
+    "episode_id": 35,
+    "episode_plot": "A developer wants to develop a cursed mountain. Everyone who climbs the mountain loses what they love the most ",
+    "episode_date": "1974-02-10",
+    "episode_name": "Dead Man's Mountain",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 38,
+    "sequence_number": 38,
+    "episode_id": null,
+    "episode_plot": "A petty thug torments his wife --- who is afraid of dogs --- by buying a doberman and trying to make her live with it. She has different ideas.",
+    "episode_date": "1974-02-11",
+    "episode_name": "Lost Dog",
+    "episode_note": null,
+    "repeat_of_episode_id": 4
+  },
+  {
+    "id": 39,
+    "sequence_number": 39,
+    "episode_id": 36,
+    "episode_plot": "A college professor becomes convinced that he is reincarnated. He is worried that he will be punished for breaking a 200 year old engagement.",
+    "episode_date": "1974-02-12",
+    "episode_name": "Dream Of Death [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 40,
+    "sequence_number": 40,
+    "episode_id": 37,
+    "episode_plot": "When archeology students uncover a strangely decomposed body in the Arizona desert, A lady detective is called in to solve the mystery.",
+    "episode_date": "1974-02-13",
+    "episode_name": "Dig Me Deadly",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 41,
+    "sequence_number": 41,
+    "episode_id": 38,
+    "episode_plot": "A couple's marriage is under strain while a college professor's wife is having an affair. He kills them both and is then is stranded by a hurricane.",
+    "episode_date": "1974-02-14",
+    "episode_name": "Under Grave Suspicion",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 42,
+    "sequence_number": 42,
+    "episode_id": null,
+    "episode_plot": "The \"wrong man\" dies in combat and must travel back to get the man who should have died in combat to give up his life to set the cosmos straight.",
+    "episode_date": "1974-02-15",
+    "episode_name": "Bullet [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 3
+  },
+  {
+    "id": 43,
+    "sequence_number": 43,
+    "episode_id": 39,
+    "episode_plot": "After a whirlwind romance, and American woman marries an aristocratic Brit. When she moves into her husband's manorhouse, she is haunted by a headless specter on horseback who bears a striking resemblence to her.",
+    "episode_date": "1974-02-16",
+    "episode_name": "Lady Never Loses Her Head [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 44,
+    "sequence_number": 44,
+    "episode_id": 40,
+    "episode_plot": "A Banana Republic dictator uses an army of zombies to take over a small island country. An American couple on their honeymoon stumble into his plot.",
+    "episode_date": "1974-02-17",
+    "episode_name": "Walking Corpse [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 45,
+    "sequence_number": 45,
+    "episode_id": 41,
+    "episode_plot": "A couple with marital difficulties are forced to seek refuge from a blizzard in a remote cabin. they find it inhabited by a man who might be a serial killer.",
+    "episode_date": "1974-02-18",
+    "episode_name": "Blizzard Of Terror",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 46,
+    "sequence_number": 46,
+    "episode_id": 42,
+    "episode_plot": "A jealous sea captain sends men to their deaths for even looking at his wife. Unfortunately, some men just can't resist.",
+    "episode_date": "1974-02-19",
+    "episode_name": "Sea Fever",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 47,
+    "sequence_number": 47,
+    "episode_id": null,
+    "episode_plot": "A man kills his wife after he finds out she gave all their money away. He is sure she has come back to life as cat to torment him.",
+    "episode_date": "1974-02-20",
+    "episode_name": "Return Of The Moresbys [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 2
+  },
+  {
+    "id": 48,
+    "sequence_number": 48,
+    "episode_id": 43,
+    "episode_plot": "An elderly private club attendant finds that he is able to conjur ghostly figures from his imagination.",
+    "episode_date": "1974-02-21",
+    "episode_name": "Walls Of Jericho [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 49,
+    "sequence_number": 49,
+    "episode_id": 44,
+    "episode_plot": "A man becomes obsessed with a ship in the harbor he is convinced harbors a terrible evil that is the doom of mankind.",
+    "episode_date": "1974-02-22",
+    "episode_name": "Horla [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 50,
+    "sequence_number": 50,
+    "episode_id": null,
+    "episode_plot": "A Lothario is tormented by the ghost of a woman he used who later died in a horse riding accident.",
+    "episode_date": "1974-02-23",
+    "episode_name": "Death Rides A Stallion",
+    "episode_note": null,
+    "repeat_of_episode_id": 9
+  },
+  {
+    "id": 51,
+    "sequence_number": 51,
+    "episode_id": 45,
+    "episode_plot": "A woman is forced to sell most of her father's horses after he dies. She holds on to the best horse -- much to the consternation of her father's competitors.",
+    "episode_date": "1974-02-24",
+    "episode_name": "Horse That Wasn't For Sale [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 52,
+    "sequence_number": 52,
+    "episode_id": null,
+    "episode_plot": "A man who is about to become CEO of his father-in-law's corporation is blackmailed for a horrible misdeed in his past.",
+    "episode_date": "1974-02-25",
+    "episode_name": "No Hiding Place",
+    "episode_note": null,
+    "repeat_of_episode_id": 5
+  },
+  {
+    "id": 53,
+    "sequence_number": 53,
+    "episode_id": 46,
+    "episode_plot": "A farmer spots a man with no face who he is sure holds a miracle cure for the illness that is killing his wife.",
+    "episode_date": "1974-02-26",
+    "episode_name": "Edge Of Death [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 54,
+    "sequence_number": 54,
+    "episode_id": null,
+    "episode_plot": "When A young woman comes home from her \"honeymoon\" her husband vanishes and her sister tells her the entire marriage was a dream. She tries to convince a young cop that her husband was murdered.",
+    "episode_date": "1974-02-27",
+    "episode_name": "Honeymoon With Death",
+    "episode_note": null,
+    "repeat_of_episode_id": 6
+  },
+  {
+    "id": 55,
+    "sequence_number": 55,
+    "episode_id": 47,
+    "episode_plot": "A \"professional\" balckmailer is targeted by his victims who hatch an elaborate plan to get him.",
+    "episode_date": "1974-02-28",
+    "episode_name": "Choice Of Witnesses [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 56,
+    "sequence_number": 56,
+    "episode_id": null,
+    "episode_plot": "An old woman takes on a border who is ill. As he dies, he makes a strange deathbed confession that gets her into trouble. ",
+    "episode_date": "1974-03-01",
+    "episode_name": "Old Ones Are Hard to Kill [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 1
+  },
+  {
+    "id": 57,
+    "sequence_number": 57,
+    "episode_id": 48,
+    "episode_plot": "A space mission with the first woman in space (Sally Ride?) is tormented by aliens they cannot see.",
+    "episode_date": "1974-03-02",
+    "episode_name": "Out Of Sight",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 58,
+    "sequence_number": 58,
+    "episode_id": 49,
+    "episode_plot": "A fake medium takes in a military created psychopath to enhance her act. She is playing with fire while the military searches for their lost soldier ",
+    "episode_date": "1974-03-03",
+    "episode_name": "Prognosis Negative",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 59,
+    "sequence_number": 59,
+    "episode_id": 50,
+    "episode_plot": "A demonologist puts a curse on a newspaper writer who gives his book a bad review. The only way he can get rid of his death curse is to pass it along to someone else.",
+    "episode_date": "1974-03-04",
+    "episode_name": "This Will Kill You",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 60,
+    "sequence_number": 60,
+    "episode_id": null,
+    "episode_plot": "A son brings his ailing, paroled father home from the hospital. Meanwhile, he must find $15000 to buy out his business partner or lose his business. ",
+    "episode_date": "1974-03-05",
+    "episode_name": "Accounts Receivable",
+    "episode_note": null,
+    "repeat_of_episode_id": 11
+  },
+  {
+    "id": 61,
+    "sequence_number": 61,
+    "episode_id": 51,
+    "episode_plot": "A college professor dupes unwitting co-eds into donating their youth to his wife.",
+    "episode_date": "1974-03-06",
+    "episode_name": "Sending [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 62,
+    "sequence_number": 62,
+    "episode_id": 52,
+    "episode_plot": "A man rescues a woman from quicksand and is later stalked by a creature that inhabits the swamp.",
+    "episode_date": "1974-03-07",
+    "episode_name": "Creature From The Swamp [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 63,
+    "sequence_number": 63,
+    "episode_id": null,
+    "episode_plot": "A couple take in a young, delinquent girl with a talent for finding lost objects -- and dead bodies. ",
+    "episode_date": "1974-03-08",
+    "episode_name": "Girl Who Found Things [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 14
+  },
+  {
+    "id": 64,
+    "sequence_number": 64,
+    "episode_id": 53,
+    "episode_plot": "A criminologist and an American Indian swap lives and find they are unable to deal with their new and strange surroundings. One must testify before Congress, the other before a tribal council.",
+    "episode_date": "1974-03-09",
+    "episode_name": "Long Time To Die [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 65,
+    "sequence_number": 65,
+    "episode_id": null,
+    "episode_plot": "A man is convinced that he murdered his wife. he is also convinced that he has been having an affair with another woman. However, he can't convince a police detecitve of either.",
+    "episode_date": "1974-03-10",
+    "episode_name": "You Can Die Again",
+    "episode_note": null,
+    "repeat_of_episode_id": 12
+  },
+  {
+    "id": 66,
+    "sequence_number": 66,
+    "episode_id": 54,
+    "episode_plot": "Two couples are trapped in a cave with its notorious resident.",
+    "episode_date": "1974-03-11",
+    "episode_name": "Thing In The Cave [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 67,
+    "sequence_number": 67,
+    "episode_id": 55,
+    "episode_plot": "A pair of archeologists find a baby boy in an Aztec temple of evil. They decide to raise the boy -- much to their regret.",
+    "episode_date": "1974-03-12",
+    "episode_name": "Sacrifice In Blood [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 68,
+    "sequence_number": 68,
+    "episode_id": 56,
+    "episode_plot": "A serial killer stalks women in the city to fulfill a promise he made to them when he was a child-- a promise to kill them. ",
+    "episode_date": "1974-03-13",
+    "episode_name": "Little Night Murder [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 69,
+    "sequence_number": 69,
+    "episode_id": 57,
+    "episode_plot": "Adaptation of Poe's classic tale of a castle haunted by the living dead.",
+    "episode_date": "1974-03-14",
+    "episode_name": "Fall Of The House Of Usher [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 70,
+    "sequence_number": 70,
+    "episode_id": null,
+    "episode_plot": "A young bride is tormented by a demon after attending a seance just before her wedding.",
+    "episode_date": "1974-03-15",
+    "episode_name": "Speak Of The Devil",
+    "episode_note": null,
+    "repeat_of_episode_id": 20
+  },
+  {
+    "id": 71,
+    "sequence_number": 71,
+    "episode_id": null,
+    "episode_plot": "Two men plot to murder the businessman who swindled them. When they are pre-empted by somebody else, they are left to pay the price while receiving none of the rewards. ",
+    "episode_date": "1974-03-16",
+    "episode_name": "Dead For A Dollar",
+    "episode_note": null,
+    "repeat_of_episode_id": 16
+  },
+  {
+    "id": 72,
+    "sequence_number": 72,
+    "episode_id": null,
+    "episode_plot": "A college professor tries to take the blame for his wayward son who has hit and killed a pedestrian. A young detective suspects the truth, but can't convince his boss of it.",
+    "episode_date": "1974-03-17",
+    "episode_name": "And Nothing But The Truth",
+    "episode_note": null,
+    "repeat_of_episode_id": 18
+  },
+  {
+    "id": 73,
+    "sequence_number": 73,
+    "episode_id": 58,
+    "episode_plot": "With the help of his brother, a man plots to murder his wife while crossing the Atlantic on a ship. ",
+    "episode_date": "1974-03-18",
+    "episode_name": "Sea Of Troubles",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 74,
+    "sequence_number": 74,
+    "episode_id": 59,
+    "episode_plot": "A news team plans to cover the 400th anniversary of the death of Baron Von Frankenstein. When they get there, they find that Dr. Frankenstein and his creation might still be around -- and looking for fresh blood.",
+    "episode_date": "1974-03-19",
+    "episode_name": "Frankenstein Revisited",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 75,
+    "sequence_number": 75,
+    "episode_id": 60,
+    "episode_plot": "A man continues his love affair with his wife and his mistress beyond the grave.",
+    "episode_date": "1974-03-20",
+    "episode_name": "Ghost At The Gate [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 76,
+    "sequence_number": 76,
+    "episode_id": 61,
+    "episode_plot": "A woman asks her boyfriend to try to help her father who is turning his home into a fortress. He soon finds out his soon-to-be father in law must give $1 million to a cult or be burned to death.",
+    "episode_date": "1974-03-21",
+    "episode_name": "Ordeal By Fire",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 77,
+    "sequence_number": 77,
+    "episode_id": null,
+    "episode_plot": "An ancient man has the power to heal people with his touch and has uncanny insight into people's character and motives. ",
+    "episode_date": "1974-03-22",
+    "episode_name": "Very Old Man [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": 17
+  },
+  {
+    "id": 78,
+    "sequence_number": 78,
+    "episode_id": null,
+    "episode_plot": "A woman learns that detectives are tailing her new husband because they suspect he killed his first wife.",
+    "episode_date": "1974-03-23",
+    "episode_name": "Deadly Honeymoon",
+    "episode_note": null,
+    "repeat_of_episode_id": 19
+  },
+  {
+    "id": 79,
+    "sequence_number": 79,
+    "episode_id": null,
+    "episode_plot": "A young bride is tormented by a demon after attending a seance just before her wedding.",
+    "episode_date": "1974-03-24",
+    "episode_name": "Speak Of The Devil",
+    "episode_note": null,
+    "repeat_of_episode_id": 20
+  },
+  {
+    "id": 80,
+    "sequence_number": 80,
+    "episode_id": 62,
+    "episode_plot": "A judge chronicles his secret life of random, dispassionate murder.",
+    "episode_date": "1974-03-25",
+    "episode_name": "Diary Of A Madman",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 81,
+    "sequence_number": 81,
+    "episode_id": 63,
+    "episode_plot": "set at the turn of the century; a surgeon attaches the hands of a dead piano player to the arms of his rival. The consequences are deadly.",
+    "episode_date": "1974-03-26",
+    "episode_name": "Death By Whose Hand",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 82,
+    "sequence_number": 82,
+    "episode_id": 64,
+    "episode_plot": "A mousy man dreams of getting away from his domineering wife. He concocts a uncharacteristic scheme of robbery and murder -- with the help of an \"admirer\".",
+    "episode_date": "1974-03-27",
+    "episode_name": "It's Simply Murder",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 83,
+    "sequence_number": 83,
+    "episode_id": 65,
+    "episode_plot": "The cook of a lumberjack camp has the ability to foresee events. When she has a horrible vision of the new man in camp, she decides to act to prevent another death.",
+    "episode_date": "1974-03-28",
+    "episode_name": "Unearthly Gift [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 84,
+    "sequence_number": 84,
+    "episode_id": null,
+    "episode_plot": "A father destroys his daugter's relationship with a man by forcing her to offer testimony against him in a vehicular homicide case. Several lives are ruined.",
+    "episode_date": "1974-03-29",
+    "episode_name": "Ring Of Truth [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 21
+  },
+  {
+    "id": 85,
+    "sequence_number": 85,
+    "episode_id": null,
+    "episode_plot": "A clock repairman finds a clock that grants its owner an extra hour in a day. The price is just a small amount of blood. . . ",
+    "episode_date": "1974-03-30",
+    "episode_name": "Time And Again",
+    "episode_note": null,
+    "repeat_of_episode_id": 22
+  },
+  {
+    "id": 86,
+    "sequence_number": 86,
+    "episode_id": null,
+    "episode_plot": "A young woman, unable to conceive, seeks out a fortune teller who says she can help her have a baby for $6000 and a strange favor. ",
+    "episode_date": "1974-03-31",
+    "episode_name": "Mother Love",
+    "episode_note": null,
+    "repeat_of_episode_id": 25
+  },
+  {
+    "id": 87,
+    "sequence_number": 87,
+    "episode_id": 66,
+    "episode_plot": "A man finds out that when he married his wife, he also married her cat with whom she has a close relationship. The cat convinces him that he will murder his wife. ",
+    "episode_date": "1974-04-01",
+    "episode_name": "Black Cat [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 88,
+    "sequence_number": 88,
+    "episode_id": 67,
+    "episode_plot": "An archeologist and a songstress unearth valuable jewels, artifacts and a curse in an Egyptian tomb.",
+    "episode_date": "1974-04-02",
+    "episode_name": "Pharoah's Curse [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 89,
+    "sequence_number": 89,
+    "episode_id": 68,
+    "episode_plot": "An aspiring photographer obtains a special camera that takes photographs of future events. He soon finds that the people who made the camera want it back. So do those whom were photographed.",
+    "episode_date": "1974-04-03",
+    "episode_name": "Die! You're On Magic Camera",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 90,
+    "sequence_number": 90,
+    "episode_id": 69,
+    "episode_plot": "An artist and his wife acquire a glass paperweight at an antique shop. The artist develops a fixation on it -- and when a greedy developer dies, the woman suspects that her husband has been taken over by an evil spirit.",
+    "episode_date": "1974-04-04",
+    "episode_name": "Thing Inside [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 91,
+    "sequence_number": 91,
+    "episode_id": null,
+    "episode_plot": "A successful attorney is haunted by the voice of the wife he killed in a mercy killing ten years prior. It threatens the relationship he is having with his new girlfriend with whom he started an affair shortly after his wife fell ill.",
+    "episode_date": "1974-04-05",
+    "episode_name": "Man Who Heard Voices [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 24
+  },
+  {
+    "id": 92,
+    "sequence_number": 92,
+    "episode_id": null,
+    "episode_plot": "A woman finds a man who looks exactly like her husband. She uses him to help murder her husband. ",
+    "episode_date": "1974-04-06",
+    "episode_name": "Dead Ringer",
+    "episode_note": null,
+    "repeat_of_episode_id": 27
+  },
+  {
+    "id": 93,
+    "sequence_number": 93,
+    "episode_id": null,
+    "episode_plot": "A man is gunned down by his wife. When he arrives in the afterlife, he begs to be allowed to live the last part of his life over.",
+    "episode_date": "1974-04-07",
+    "episode_name": "Man Who Asked For Yesterday [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 26
+  },
+  {
+    "id": 94,
+    "sequence_number": 94,
+    "episode_id": 70,
+    "episode_plot": "A newly-wed couple are harrassed by the girl's mother because she is sure that the man is marrying her ugly daughter for her monehy",
+    "episode_date": "1974-04-08",
+    "episode_name": "Locked Room [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 95,
+    "sequence_number": 95,
+    "episode_id": 71,
+    "episode_plot": "A museum dedicated to criminals becomes the scene of the retelling of a real murder when the relative of one of the \"exhibits\" protests his placement in the museum.",
+    "episode_date": "1974-04-09",
+    "episode_name": "Murder Museum [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 96,
+    "sequence_number": 96,
+    "episode_id": 72,
+    "episode_plot": "An advertising executive falls for a model who seduces him. She seems to be his dream woman until she reveals her true, evil purpose.",
+    "episode_date": "1974-04-10",
+    "episode_name": "Out Of Focus",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 97,
+    "sequence_number": 97,
+    "episode_id": 73,
+    "episode_plot": "An old woman with a large stash of money is tormented by visitors who no one else can see. Her nephew and his wife are unsympathetic and use the occurences to slowly rob her.",
+    "episode_date": "1974-04-11",
+    "episode_name": "Strange Company",
+    "episode_note": null,
+    "repeat_of_episode_id": null
+  },
+  {
+    "id": 98,
+    "sequence_number": 98,
+    "episode_id": null,
+    "episode_plot": "A ghost hunter tries to drive the ghost of an old sea captain's wife out of a house so a new buyer can live in it to tear it down to build condominiums. ",
+    "episode_date": "1974-04-12",
+    "episode_name": "Ghostly Game Of Death [A]",
+    "episode_note": null,
+    "repeat_of_episode_id": 28
+  },
+  {
+    "id": 99,
+    "sequence_number": 99,
+    "episode_id": null,
+    "episode_plot": "An impetuous female archeologist violates the customs of a local tribe by offering them praise and she steals their artifacts. She finds their price high.",
+    "episode_date": "1974-04-13",
+    "episode_name": "Sign Of The Beast [The]",
+    "episode_note": null,
+    "repeat_of_episode_id": 29
+  },
+  {
+    "id": 100,
+    "sequence_number": 100,
+    "episode_id": null,
+    "episode_plot": "A woman arrives at the estate of her new husband to find his former wife' s spirit still haunts the place. She died under suspicious circumstances",
+    "episode_date": "1974-04-14",
+    "episode_name": "Here Goes The Bride",
+    "episode_note": null,
+    "repeat_of_episode_id": 30
