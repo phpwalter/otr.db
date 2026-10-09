@@ -1,0 +1,153 @@
+{
+  "original_file": "appearance(1).json",
+  "total_lines": 28637,
+  "total_rows": 5727,
+  "format": "ordered text chunks; concatenate part-0001 through part-0029 with no reordering",
+  "parts": [
+    {
+      "file": "appearance_parts/part-0001.json.part",
+      "start_line": 1,
+      "end_line": 1000
+    },
+    {
+      "file": "appearance_parts/part-0002.json.part",
+      "start_line": 1001,
+      "end_line": 2000
+    },
+    {
+      "file": "appearance_parts/part-0003.json.part",
+      "start_line": 2001,
+      "end_line": 3000
+    },
+    {
+      "file": "appearance_parts/part-0004.json.part",
+      "start_line": 3001,
+      "end_line": 4000
+    },
+    {
+      "file": "appearance_parts/part-0005.json.part",
+      "start_line": 4001,
+      "end_line": 5000
+    },
+    {
+      "file": "appearance_parts/part-0006.json.part",
+      "start_line": 5001,
+      "end_line": 6000
+    },
+    {
+      "file": "appearance_parts/part-0007.json.part",
+      "start_line": 6001,
+      "end_line": 7000
+    },
+    {
+      "file": "appearance_parts/part-0008.json.part",
+      "start_line": 7001,
+      "end_line": 8000
+    },
+    {
+      "file": "appearance_parts/part-0009.json.part",
+      "start_line": 8001,
+      "end_line": 9000
+    },
+    {
+      "file": "appearance_parts/part-0010.json.part",
+      "start_line": 9001,
+      "end_line": 10000
+    },
+    {
+      "file": "appearance_parts/part-0011.json.part",
+      "start_line": 10001,
+      "end_line": 11000
+    },
+    {
+      "file": "appearance_parts/part-0012.json.part",
+      "start_line": 11001,
+      "end_line": 12000
+    },
+    {
+      "file": "appearance_parts/part-0013.json.part",
+      "start_line": 12001,
+      "end_line": 13000
+    },
+    {
+      "file": "appearance_parts/part-0014.json.part",
+      "start_line": 13001,
+      "end_line": 14000
+    },
+    {
+      "file": "appearance_parts/part-0015.json.part",
+      "start_line": 14001,
+      "end_line": 15000
+    },
+    {
+      "file": "appearance_parts/part-0016.json.part",
+      "start_line": 15001,
+      "end_line": 16000
+    },
+    {
+      "file": "appearance_parts/part-0017.json.part",
+      "start_line": 16001,
+      "end_line": 17000
+    },
+    {
+      "file": "appearance_parts/part-0018.json.part",
+      "start_line": 17001,
+      "end_line": 18000
+    },
+    {
+      "file": "appearance_parts/part-0019.json.part",
+      "start_line": 18001,
+      "end_line": 19000
+    },
+    {
+      "file": "appearance_parts/part-0020.json.part",
+      "start_line": 19001,
+      "end_line": 20000
+    },
+    {
+      "file": "appearance_parts/part-0021.json.part",
+      "start_line": 20001,
+      "end_line": 21000
+    },
+    {
+      "file": "appearance_parts/part-0022.json.part",
+      "start_line": 21001,
+      "end_line": 22000
+    },
+    {
+      "file": "appearance_parts/part-0023.json.part",
+      "start_line": 22001,
+      "end_line": 23000
+    },
+    {
+      "file": "appearance_parts/part-0024.json.part",
+      "start_line": 23001,
+      "end_line": 24000
+    },
+    {
+      "file": "appearance_parts/part-0025.json.part",
+      "start_line": 24001,
+      "end_line": 25000
+    },
+    {
+      "file": "appearance_parts/part-0026.json.part",
+      "start_line": 25001,
+      "end_line": 26000
+    },
+    {
+      "file": "appearance_parts/part-0027.json.part",
+      "start_line": 26001,
+      "end_line": 27000
+    },
+    {
+      "file": "appearance_parts/part-0028.json.part",
+      "start_line": 27001,
+      "end_line": 28000
+    },
+    {
+      "file": "appearance_parts/part-0029.json.part",
+      "start_line": 28001,
+      "end_line": 28637
+    }
+  ]
+}
