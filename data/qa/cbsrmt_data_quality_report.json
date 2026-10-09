@@ -1,0 +1,49 @@
+{
+  "source_files": {
+    "people": "data/raw/cbsrmt/cast.json",
+    "appearances": "data/raw/cbsrmt/appearance_parts/"
+  },
+  "counts": {
+    "people": 332,
+    "appearance_rows": 5727,
+    "unique_person_episode_pairs": 5727
+  },
+  "integrity": {
+    "orphan_person_references": [],
+    "duplicate_person_episode_pairs": 0,
+    "duplicate_slugs": [],
+    "duplicate_normalized_names": []
+  },
+  "review_flags": [
+    {
+      "entity": "person",
+      "person_id": 1,
+      "display_name": "Eileen Heckart",
+      "field": "birth_date/death_date",
+      "severity": "review",
+      "source_values": {
+        "birth_date": "1905-04-02",
+        "death_date": "1905-06-23"
+      },
+      "reason": "Implausible lifespan (0.2 years). Values preserved from source; not corrected."
+    },
+    {
+      "entity": "person",
+      "person_id": 2,
+      "display_name": "Henry Slesar",
+      "field": "birth_date/death_date",
+      "severity": "review",
+      "source_values": {
+        "birth_date": "1905-04-10",
+        "death_date": "1905-06-24"
+      },
+      "reason": "Implausible lifespan (0.2 years). Values preserved from source; not corrected."
+    }
+  ],
+  "notes": [
+    "0000-00-00 legacy dates convert to null in normalized seed JSON.",
+    "Plausible non-null dates are preserved exactly as provided; suspicious values are flagged rather than corrected.",
+    "All legacy cast IDs are preserved as initial global person IDs.",
+    "Episode credits retain legacy_episode_id until the CBSRMT episode table is migrated into the global episode table."
+  ]
+}
