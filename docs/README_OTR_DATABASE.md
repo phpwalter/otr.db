@@ -18,7 +18,7 @@ One database serves every radio series.
 ## Repository layout
 
 - `schema/001_otr_catalog_schema.sql` — PostgreSQL 15+ shared schema.
-- `migrations/001_cbsrmt_appearance_to_episode_credit.sql` — converts legacy CBSRMT appearance links after episodes are loaded.
+- `migrations/001_migrate_legacy_cbsrmt_appearances.sql` — converts legacy CBSRMT appearance links after episodes are loaded.
 - `seed/cbsrmt_people_seed.sql` — inserts the existing CBSRMT people while preserving legacy IDs.
 - `data/raw/cbsrmt/` — original source JSON supplied for the migration.
 - `data/seed/cbsrmt/` — normalized generated JSON.
@@ -44,4 +44,4 @@ Load the CBSRMT episode dataset into `episode`, setting:
 - `legacy_system = 'CBSRMT'`
 - `legacy_episode_id = <original CBSRMT episode id>`
 
-Then run `migrations/001_cbsrmt_appearance_to_episode_credit.sql`.
+Then run `migrations/001_migrate_legacy_cbsrmt_appearances.sql`.
