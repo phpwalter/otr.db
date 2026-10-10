@@ -1,0 +1,6 @@
+severity,air_date,issue,handling
+REVIEW,1957-01-23,Duplicate canonical episode number 79,Open Warfare imported as separate canonical episode; series_episode_number NULL; internal legacy ID -19570123 pending correction
+REVIEW,1956-11-28,Repeat has no original episode reference,Broadcast saved as repeat with NULL episode_id; source number 72 preserved in note
+REVIEW,1957-09-05,Repeat has no original episode reference,Broadcast saved as repeat with NULL episode_id; source number 102 preserved in note
+REVIEW,1957-11-14,Scheduled show with unknown title,"Broadcast_type other, no episode link, preserve uncertainty"
+REVIEW,1957-12-05,Unresolved scheduled date,"Broadcast_type other, no episode link, not labelled confirmed preemption"
