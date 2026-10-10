@@ -72,7 +72,7 @@ SELECT s.series_id, x.catalog_episode_number::text, x.air_date, NULLIF(x.title,'
    NULLIF('Dated sources: ' || nullif(x.dated_sources,''), 'Dated sources: '))
 FROM xmo_stage x CROSS JOIN public.series s
 WHERE s.slug='x-minus-one' AND x.event_type='broadcast' AND x.broadcast_status <> 'repeat'
-ON CONFLICT (legacy_system,legacy_episode_id) DO UPDATE SET
+ON CONFLICT (legacy_system,legacy_episode_id) WHERE legacy_system IS NOT NULL AND legacy_episode_id IS NOT NULL DO UPDATE SET
   title=EXCLUDED.title, air_date=EXCLUDED.air_date,
   description=COALESCE(EXCLUDED.description,public.episode.description),
   broadcast_status=EXCLUDED.broadcast_status,
