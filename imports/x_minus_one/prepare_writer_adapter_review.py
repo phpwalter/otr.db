@@ -12,7 +12,7 @@ from audit_writer_adapter_credits import author_rows
 from import_x_minus_one import SQL_DIR
 
 ALIASES = {"Finn O'Donnevan": "Robert Sheckley", "Ned Lang": "Robert Sheckley"}
-HOLDS = {"A. H. Phelps Jr.", "Arthur Small", "Jack C. Wilson", "Jack McKenty", "Steven Arr"}
+APPROVED_NEW = {"A. H. Phelps Jr.", "Arthur Small", "Jack C. Wilson", "Jack McKenty", "Steven Arr"}
 
 def main() -> None:
     path = SQL_DIR / "writer_adapter_identity_review.csv"
@@ -30,8 +30,8 @@ def main() -> None:
         name = row["source_name"].strip()
         if name in ALIASES:
             row.update(action="alias", target_name=ALIASES[name], approved_person_id="")
-        elif name in HOLDS:
-            row.update(action="hold", target_name="", approved_person_id="")
+        elif name in APPROVED_NEW:
+            row.update(action="create", target_name="", approved_person_id="")
         else:
             row.setdefault("action", "")
             row.setdefault("target_name", "")
