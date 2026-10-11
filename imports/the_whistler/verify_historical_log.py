@@ -20,7 +20,7 @@ URL="https://otrsite.com/logs/logw1002.htm"
 FIRST={51,72,80,93,215,222,253,254,259,291,292,307,308,315,350,359,361,362,375,377}
 # Haendiges lists multiple sections, including separately numbered East Coast shows.
 # Only accept rows with number/date AND title; detect ambiguous matching explicitly.
-ROW=re.compile(r'^\s*(?P<catalog>\*na\*|\d{5}[A-Z]?)\s+"(?P<title>[^"]+)"\s+(?P<number>\d{1,3})\s+(?P<date>\d{2}-\d{2}-\d{2})(?:\s|$)',re.I)
+ROW=re.compile(r'^\s*(?P<catalog>\*na\*|\d{1,5}[A-Z]?)\s+"(?P<title>[^"]+)"\s+(?P<number>\d{1,3})\s+(?P<date>\d{2}-\d{2}-\d{2})(?:\s|$)',re.I)
 
 def norm(s: str)->str:
     return re.sub(r"[^a-z0-9]+","",html.unescape(s).casefold())
