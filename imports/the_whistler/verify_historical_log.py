@@ -41,7 +41,8 @@ def parse_log(text: str)->dict[tuple[int,str],list[dict[str,str]]]:
         m=ROW.match(line)
         if not m:continue
         date=datetime.strptime(m["date"],"%m-%d-%y").date()
-        # The log covers 1942..1955. Python's 2-digit-year logic maps these correctly.
+        # The historical log covers 1942..1955, not 2042..2055.
+        date=date.replace(year=date.year-100) if date.year>=2000 else date
         key=(int(m["number"]),date.isoformat())
         result.setdefault(key,[]).append(m.groupdict())
     return result
