@@ -112,7 +112,8 @@ BEGIN
   SELECT 1 FROM xmo_identity i WHERE i.action='create' AND EXISTS (
    SELECT 1 FROM public.person p
    LEFT JOIN public.person_alias a ON a.person_id=p.person_id
-   WHERE lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name)
+   WHERE (lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name))
+    AND (p.legacy_system IS DISTINCT FROM 'X_MINUS_ONE' OR p.legacy_person_id IS NOT NULL)
   )
  ) THEN RAISE EXCEPTION 'New identity collides with existing person or alias'; END IF;
  IF EXISTS (
@@ -131,11 +132,11 @@ INSERT INTO public.person(display_name,legacy_system)
 SELECT i.name, 'X_MINUS_ONE'
 FROM xmo_identity i
 WHERE i.action='create'
- AND NOT EXISTS (SELECT 1 FROM public.person p WHERE lower(p.display_name)=lower(i.name));
+ AND NOT EXISTS (SELECT 1 FROM public.person p WHERE lower(p.display_name)=lower(i.name) AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL);
 CREATE TEMP TABLE xmo_resolved AS
 SELECT i.name,
  CASE WHEN i.action='reuse' THEN i.person_id ELSE
-  (SELECT p.person_id FROM public.person p WHERE p.display_name=i.name ORDER BY p.person_id LIMIT 1)
+  (SELECT p.person_id FROM public.person p WHERE lower(p.display_name)=lower(i.name) AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL ORDER BY p.person_id LIMIT 1)
  END AS person_id
 FROM xmo_identity i;
 DO $check$
