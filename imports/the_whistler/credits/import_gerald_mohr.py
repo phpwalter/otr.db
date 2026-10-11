@@ -82,7 +82,13 @@ def main():
  if a.person_id<=0:raise ValueError("person-id must be positive")
  with a.input.open(encoding="utf-8-sig",newline="") as f:
   rows=list(csv.DictReader(f))
- if len(rows)!=30:raise ValueError(f"Expected 30 matched records; got {len(rows)}")
+ if len(rows)!=30:
+  detail=""
+  if a.exceptions.exists():
+   with a.exceptions.open(encoding="utf-8-sig",newline="") as f:
+    missing=list(csv.DictReader(f))
+   detail="\n".join(f"  {x.get('air_date','?')} {x.get('title','?')}: {x.get('reason','?')} | master same date: {x.get('master_same_date','(none)')}" for x in missing)
+  raise ValueError(f"Expected 30 matched records; got {len(rows)}. Unmatched observations:\n{detail or '(rerun match_gerald_mohr.py to produce exceptions)'}")
  if not a.exceptions.exists():raise ValueError("Missing exceptions file: rerun match_gerald_mohr.py")
  with a.exceptions.open(encoding="utf-8-sig",newline="") as f:
   if any(csv.DictReader(f)):raise ValueError("Unresolved Gerald Mohr match exceptions; import blocked")
