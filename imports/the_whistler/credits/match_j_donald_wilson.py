@@ -14,7 +14,8 @@ from pathlib import Path
 from collections import Counter
 
 HERE=Path(__file__).resolve().parent
-COLUMNS=["episode_number","air_date","episode_title","person_name","credit_type",
+TITLE_VARIANTS={("1942-09-20","fog"):("19","outthefog")}
+COLUMNS=["episode_number","air_date","episode_title","source_title","match_method","person_name","credit_type",
          "source_label","source_url","source_credit_label","verification_status"]
 def norm(value):
     value=value.casefold().strip()
@@ -47,10 +48,16 @@ def main():
     for src in observed:
         day=bydate.get(src["air_date"],[])
         exact=[e for e in day if norm(e["Title"])==norm(src["title"])]
+        method="exact_date_title"
+        if not exact:
+            variant=TITLE_VARIANTS.get((src["air_date"],norm(src["title"])))
+            if variant:
+                exact=[e for e in day if e["Episode Number"]==variant[0] and norm(e["Title"])==variant[1]]
+                method="reviewed_title_variant"
         if len(exact)==1:
             e=exact[0]
             matched.append(dict(episode_number=e["Episode Number"],air_date=e["Air Date"],
-                episode_title=e["Title"],person_name=src["person_name"],credit_type="writer",
+                episode_title=e["Title"],source_title=src["title"],match_method=method,person_name=src["person_name"],credit_type="writer",
                 source_label=src["source_label"],source_url=src["source_url"],
                 source_credit_label=src["source_credit_label"],
                 verification_status=src["verification_status"]))
@@ -64,7 +71,8 @@ def main():
     save(args.output,matched,COLUMNS)
     save(args.exceptions,exceptions,list(observed[0])+["reason","master_same_date"])
     print(f"Source observations: {len(observed)}")
-    print(f"Exact date/title matches: {len(matched)}")
+    print(f"Exact date/title matches: {sum(r['match_method']=='exact_date_title' for r in matched)}")
+    print(f"Reviewed title-variant matches: {sum(r['match_method']=='reviewed_title_variant' for r in matched)}")
     print(f"Exceptions requiring review: {len(exceptions)}")
     print(f"Matched: {args.output}")
     print(f"Exceptions: {args.exceptions}")
