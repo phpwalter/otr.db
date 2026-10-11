@@ -16,9 +16,12 @@ FIELDS=["air_date","title","person_name","credit_type","source_url","source_cred
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--output",type=Path,default=HERE/"radioindex_combined_observations.csv")
+    p.add_argument("--extra",type=Path,action="append",default=[],help="Additional reviewed source-observation CSV")
     a=p.parse_args()
     seen=set();out=[]
-    for path in DEFAULTS:
+    if a.output.resolve() in {x.resolve() for x in DEFAULTS+a.extra}:
+        raise ValueError("Output must differ from source inputs")
+    for path in DEFAULTS+a.extra:
         with path.open(encoding="utf-8-sig",newline="") as f:
             reader=csv.DictReader(f)
             if any(k not in (reader.fieldnames or []) for k in FIELDS):
