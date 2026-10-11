@@ -38,7 +38,7 @@ BEGIN
  JOIN public.episode_credit ec ON ec.episode_id=e.episode_id
  WHERE ec.person_id=__PERSON_ID__ AND ec.credit_type='actor'
  AND (ec.billing_order IS NOT NULL OR ec.notes IS DISTINCT FROM
-    ('Source-reported writer attribution: Gerald Mohr; source: The Archive of American Radio filtered actor listing')))
+    ('Source-reported actor attribution: Gerald Mohr; source: The Archive of American Radio filtered actor listing')))
  THEN RAISE EXCEPTION 'Existing actor credit conflicts with source attribution; manual review needed'; END IF;
 END $check$;
 INSERT INTO public.source(source_type,title,citation,notes)
@@ -54,7 +54,7 @@ CREATE TEMP TABLE inserted AS SELECT
  AND e.legacy_episode_id=i.episode_number;
 INSERT INTO public.episode_credit(episode_id,person_id,credit_type,billing_order,notes)
 SELECT i.episode_id,__PERSON_ID__,'actor',NULL,
- 'Source-reported writer attribution: Gerald Mohr; source: The Archive of American Radio filtered actor listing'
+ 'Source-reported actor attribution: Gerald Mohr; source: The Archive of American Radio filtered actor listing'
  FROM inserted i
  WHERE NOT EXISTS(SELECT 1 FROM public.episode_credit ec WHERE
  ec.episode_id=i.episode_id AND ec.person_id=__PERSON_ID__ AND ec.credit_type='actor');
