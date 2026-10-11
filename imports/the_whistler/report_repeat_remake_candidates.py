@@ -52,7 +52,11 @@ def main() -> None:
         unknown = (row["Title"].strip().casefold() == "title unknown" or
                    target["Title"].strip().casefold() == "title unknown")
         same_title = row["Title"].strip().casefold() == target["Title"].strip().casefold()
-        priority = "unknown_title" if unknown else ("source_discrepancy" if related else "review")
+        priority = "invalid_title_match" if unknown else ("numbering_conflict" if related else "review")
+        # A generic placeholder never proves a relationship. Keep its source
+        # reference for provenance, but exclude it from the research queue.
+        link_status = "rejected_placeholder" if unknown else "provisional"
+        decision = "invalid_title_match" if unknown else "unresolved"
         output.append({
             "candidate_episode_number":row["Episode Number"],
             "candidate_air_date":row["Air Date"],
@@ -71,8 +75,9 @@ def main() -> None:
             "title_exact_match":str(same_title and not unknown),
             "title_unknown":str(unknown),
             "review_priority":priority,
+            "link_status":link_status,
             "source_discrepancies": " | ".join(f"{d.get('Date / Episode','')}: {d.get('Issue Type','')}: {d.get('Details','')}" for d in related),
-            "review_decision":"",
+            "review_decision":decision,
             "review_evidence":"",
             "review_notes":"",
         })
@@ -82,12 +87,17 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(output)
     counts=Counter(r["candidate_status"] for r in output)
+    priorities=Counter(r["review_priority"] for r in output)
+    if priorities != {"invalid_title_match":11, "numbering_conflict":1, "review":105}:
+        raise ValueError(f"Unexpected review breakdown: {dict(priorities)}")
     print(f"Review candidates: {len(output)}")
     print("Candidate statuses:",dict(counts))
     print(f"Informative exact title matches: {sum(r['title_exact_match']=='True' for r in output)}")
     print(f"Unknown-title placeholders: {sum(r['title_unknown']=='True' for r in output)}")
     print(f"Candidates with directly referenced discrepancies: {sum(bool(r['source_discrepancies']) for r in output)}")
-    print("All review decisions are blank; none is automatically confirmed as a repeat or remake.")
+    print("Review outcomes:",dict(priorities))
+    print("11 placeholder links rejected; 106 substantive title matches remain unresolved.")
+    print("No repeat or remake has been confirmed.")
     print(f"Review CSV: {args.output}")
     print("No database changes made.")
 
