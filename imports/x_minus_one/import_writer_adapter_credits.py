@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-"""Transactional X Minus One person/credit importer. Dry-run default.
+"""Import reviewed X Minus One writer/adapter people and credits.
 
-Reads PostgreSQL credentials from root .env. Requires reviewed identity CSV.
-Use --apply only after reviewing the dry-run output.
+Actions in identity review CSV:
+ create: create/reuse an X_MINUS_ONE-owned person by display name
+ reuse: use approved_person_id (must have matching name or alias)
+ alias: map source name to target_name, creating an alias to that person
+ hold: leave identity and associated credits untouched
+
+Dry-run is default. Connections use repository-root .env, not shell DSN.
 """
 from __future__ import annotations
 import argparse
@@ -15,167 +20,166 @@ from pathlib import Path
 from import_x_minus_one import ROOT, SQL_DIR, read_env
 from audit_writer_adapter_credits import author_rows
 
-def quote(value: str) -> str:
+def literal(value: str) -> str:
     return "'" + value.replace("'", "''") + "'"
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--env", type=Path, default=ROOT / ".env")
     parser.add_argument("--identities", type=Path, default=SQL_DIR / "writer_adapter_identity_review.csv")
-    modes = parser.add_mutually_exclusive_group()
-    modes.add_argument("--dry-run", action="store_true")
-    modes.add_argument("--apply", action="store_true")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--dry-run", action="store_true")
+    group.add_argument("--apply", action="store_true")
     args = parser.parse_args()
-    if not args.identities.is_file():
-        raise ValueError(f"Missing identity review CSV: {args.identities}")
-    with args.identities.open(encoding="utf-8-sig", newline="") as fh:
-        identities = list(csv.DictReader(fh))
-    source = author_rows()
-    expected = {name for _, _, _, name in source}
-    names = [item.get("source_name", "").strip() for item in identities]
-    if len(names) != len(set(names)) or set(names) != expected:
-        raise ValueError("Identity CSV does not match current unique source names")
-    if len(source) != 217 or len(expected) != 61:
-        raise ValueError(f"Unexpected credit source counts: {len(source)} assignments, {len(expected)} people")
-    # Require the human to explicitly approve creation or reuse. Suggested fuzzy IDs
-    # are NEVER interpreted as approval.
-    decisions: dict[str, tuple[str, str]] = {}
+    with args.identities.open(encoding="utf-8-sig", newline="") as stream:
+        identities = list(csv.DictReader(stream))
+    credits = author_rows()
+    names = {name for _, _, _, name in credits}
+    if len(identities) != 61 or len(credits) != 217 or len(names) != 61:
+        raise ValueError("Master counts changed: expected 61 names and 217 source credits")
+    if {row.get("source_name", "").strip() for row in identities} != names:
+        raise ValueError("Identity review does not match current master names")
+    if len({row["source_name"] for row in identities}) != len(identities):
+        raise ValueError("Duplicate identities in review")
+    decisions = []
     for row in identities:
         name = row["source_name"].strip()
-        approved = row.get("approved_person_id", "").strip()
-        action = row.get("action", "").strip().lower()
-        if approved:
-            if not approved.isdecimal() or int(approved) < 1:
-                raise ValueError(f"Invalid approved_person_id for {name}")
-            if action not in ("", "reuse"):
-                raise ValueError(f"Conflicting identity action for {name}")
-            decisions[name] = ("reuse", approved)
-        elif action == "create":
-            decisions[name] = ("create", "")
-        else:
-            raise ValueError(
-                f"Unapproved identity: {name}. Set action=create for confirmed new "
-                "person, or approved_person_id=<id> to reuse an existing person."
-            )
-    settings = read_env(args.env)
+        action = (row.get("action") or "").strip().lower()
+        target = (row.get("target_name") or "").strip()
+        approved = (row.get("approved_person_id") or "").strip()
+        if action not in ("create", "reuse", "alias", "hold"):
+            raise ValueError(f"Unapproved identity {name}: use create/reuse/alias/hold")
+        if action == "reuse" and (not approved.isdecimal() or int(approved) <= 0):
+            raise ValueError(f"reuse requires approved_person_id: {name}")
+        if action != "reuse" and approved:
+            raise ValueError(f"Unexpected approved_person_id for {name}")
+        if action == "alias" and (target not in names or target == name):
+            raise ValueError(f"alias requires another source target_name: {name}")
+        if action != "alias" and target:
+            raise ValueError(f"Unexpected target_name for {name}")
+        decisions.append({"name": name, "action": action, "target": target,
+                          "person_id": int(approved) if approved else None})
+    by_name = {row["name"]: row for row in decisions}
+    for item in decisions:
+        if item["action"] == "alias" and by_name[item["target"]]["action"] not in ("create", "reuse"):
+            raise ValueError(f"Alias target must be approved create/reuse: {item['name']}")
+    config = read_env(args.env)
     required = ("DB_HOST", "DB_PORT", "DB_NAME", "DB_USER", "DB_PASSWORD")
-    if any(not settings.get(key) for key in required):
-        raise ValueError("Missing DB_* settings in .env")
-    if settings["DB_PASSWORD"] == "REPLACE_WITH_LOCAL_PASSWORD":
-        raise ValueError("Replace placeholder DB_PASSWORD")
+    if any(not config.get(k) for k in required):
+        raise ValueError("Missing DB_* credentials in .env")
+    if config["DB_PASSWORD"] == "REPLACE_WITH_LOCAL_PASSWORD":
+        raise ValueError("Replace placeholder password")
     env = os.environ.copy()
-    env.update({
-        "PGHOST": settings["DB_HOST"], "PGPORT": settings["DB_PORT"],
-        "PGDATABASE": settings["DB_NAME"], "PGUSER": settings["DB_USER"],
-        "PGPASSWORD": settings["DB_PASSWORD"],
-        "PGSSLMODE": settings.get("DB_SSLMODE", "prefer"),
-    })
-    # Stage source data in a PostgreSQL temporary table; avoid persisting temp files.
-    payload = [{"date": date, "title": title, "role": role, "name": name}
-               for date, title, role, name in source]
-    mapping = [{"name": name, "action": action, "person_id": int(pid) if pid else None}
-               for name, (action, pid) in decisions.items()]
+    env.update({"PGHOST": config["DB_HOST"], "PGPORT": config["DB_PORT"],
+                "PGDATABASE": config["DB_NAME"], "PGUSER": config["DB_USER"],
+                "PGPASSWORD": config["DB_PASSWORD"],
+                "PGSSLMODE": config.get("DB_SSLMODE", "prefer")})
+    source = [{"date": day, "title": title, "role": role, "name": name}
+              for day, title, role, name in credits]
     sql = r"""
 BEGIN;
-SET LOCAL lock_timeout = '10s';
-SELECT pg_advisory_xact_lock(hashtext('otr.x_minus_one.writer_adapter.v1'));
+SET LOCAL lock_timeout='10s';
+SELECT pg_advisory_xact_lock(hashtext('otr.x_minus_one.writer_adapter.v2'));
 CREATE TEMP TABLE xmo_identity AS
-SELECT x.name, x.action, x.person_id
-FROM jsonb_to_recordset(__MAPPING__::jsonb)
- AS x(name text, action text, person_id bigint);
+SELECT x.name,x.action,x.target,x.person_id
+FROM jsonb_to_recordset(__MAPPING__::jsonb) x(name text,action text,target text,person_id bigint);
+CREATE UNIQUE INDEX ON xmo_identity(name);
 CREATE TEMP TABLE xmo_credits AS
-SELECT x.date::date air_date, x.title, x.role, x.name
-FROM jsonb_to_recordset(__CREDITS__::jsonb)
- AS x(date text, title text, role text, name text);
-DO $check$
+SELECT x.date::date AS air_date,x.title,x.role,x.name
+FROM jsonb_to_recordset(__CREDITS__::jsonb) x(date text,title text,role text,name text);
+DO $verify$
 BEGIN
- IF (SELECT count(*) FROM xmo_identity) <> 61 OR (SELECT count(*) FROM xmo_credits) <> 217 THEN
-  RAISE EXCEPTION 'Unexpected source row counts';
- END IF;
- IF EXISTS (
-  SELECT 1 FROM xmo_identity i
-  WHERE i.action = 'reuse' AND NOT EXISTS (
-   SELECT 1 FROM public.person p WHERE p.person_id = i.person_id
-  )
- ) THEN RAISE EXCEPTION 'Approved reused person ID not found'; END IF;
- IF EXISTS (
-  SELECT 1 FROM xmo_identity i WHERE i.action='reuse' AND
-  NOT EXISTS (
-   SELECT 1 FROM public.person p
-   LEFT JOIN public.person_alias a ON a.person_id=p.person_id
-   WHERE p.person_id=i.person_id AND (
-    lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name)
-   )
-  )
- ) THEN RAISE EXCEPTION 'Approved reused person name has no exact name/alias match; add a verified alias first'; END IF;
- IF EXISTS (
-  SELECT 1 FROM xmo_identity i WHERE i.action='create' AND EXISTS (
-   SELECT 1 FROM public.person p
-   LEFT JOIN public.person_alias a ON a.person_id=p.person_id
-   WHERE (lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name))
-    AND (p.legacy_system IS DISTINCT FROM 'X_MINUS_ONE' OR p.legacy_person_id IS NOT NULL)
-  )
- ) THEN RAISE EXCEPTION 'New identity collides with existing person or alias'; END IF;
- IF EXISTS (
-  SELECT 1 FROM xmo_credits c LEFT JOIN public.episode e
-    ON e.air_date=c.air_date AND e.title=c.title
-   JOIN public.series s ON s.series_id=e.series_id AND s.slug='x-minus-one'
-  WHERE e.episode_id IS NULL
- ) THEN RAISE EXCEPTION 'Episode identity mismatch'; END IF;
- IF EXISTS (
-  SELECT 1 FROM xmo_credits c WHERE (SELECT count(*) FROM public.episode e
-   JOIN public.series s ON s.series_id=e.series_id
-   WHERE s.slug='x-minus-one' AND e.air_date=c.air_date AND e.title=c.title) <> 1
- ) THEN RAISE EXCEPTION 'Missing/ambiguous source episode'; END IF;
-END $check$;
+ IF (SELECT count(*) FROM xmo_identity)<>61 OR (SELECT count(*) FROM xmo_credits)<>217
+ THEN RAISE EXCEPTION 'Source count mismatch'; END IF;
+ IF EXISTS (SELECT 1 FROM xmo_identity i WHERE i.action='reuse' AND
+  NOT EXISTS (SELECT 1 FROM public.person p LEFT JOIN public.person_alias a
+   ON a.person_id=p.person_id WHERE p.person_id=i.person_id AND
+   (lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name))))
+ THEN RAISE EXCEPTION 'Reuse identity lacks exact display-name or alias approval'; END IF;
+ IF EXISTS (SELECT 1 FROM xmo_identity i WHERE i.action='create'
+ AND EXISTS (SELECT 1 FROM public.person p LEFT JOIN public.person_alias a ON a.person_id=p.person_id
+ WHERE (lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name))
+ AND (p.legacy_system IS DISTINCT FROM 'X_MINUS_ONE' OR p.legacy_person_id IS NOT NULL)))
+ THEN RAISE EXCEPTION 'Create conflicts with established person/alias'; END IF;
+ IF EXISTS (SELECT 1 FROM xmo_identity i WHERE i.action='create'
+  AND (SELECT count(*) FROM public.person p WHERE lower(p.display_name)=lower(i.name)
+    AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL)>1)
+ THEN RAISE EXCEPTION 'Duplicate existing X_MINUS_ONE identity'; END IF;
+ IF EXISTS (SELECT 1 FROM xmo_credits c WHERE
+  (SELECT count(*) FROM public.episode e JOIN public.series s ON s.series_id=e.series_id
+   WHERE s.slug='x-minus-one' AND e.air_date=c.air_date AND e.title=c.title)<>1)
+ THEN RAISE EXCEPTION 'Missing/ambiguous canonical episode'; END IF;
+ IF EXISTS (SELECT 1 FROM xmo_credits WHERE role NOT IN ('writer','adapter'))
+ THEN RAISE EXCEPTION 'Unexpected credit role'; END IF;
+END $verify$;
 INSERT INTO public.person(display_name,legacy_system)
-SELECT i.name, 'X_MINUS_ONE'
-FROM xmo_identity i
+SELECT i.name,'X_MINUS_ONE' FROM xmo_identity i
 WHERE i.action='create'
- AND NOT EXISTS (SELECT 1 FROM public.person p WHERE lower(p.display_name)=lower(i.name) AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL);
+AND NOT EXISTS (SELECT 1 FROM public.person p WHERE lower(p.display_name)=lower(i.name)
+ AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL);
 CREATE TEMP TABLE xmo_resolved AS
-SELECT i.name,
- CASE WHEN i.action='reuse' THEN i.person_id ELSE
-  (SELECT p.person_id FROM public.person p WHERE lower(p.display_name)=lower(i.name) AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL ORDER BY p.person_id LIMIT 1)
- END AS person_id
+SELECT i.name,i.action,
+ CASE WHEN i.action='reuse' THEN i.person_id
+ WHEN i.action='create' THEN
+   (SELECT p.person_id FROM public.person p WHERE lower(p.display_name)=lower(i.name)
+   AND p.legacy_system='X_MINUS_ONE' AND p.legacy_person_id IS NULL)
+ ELSE NULL END AS person_id
 FROM xmo_identity i;
-DO $check$
+UPDATE xmo_resolved r SET person_id=t.person_id
+FROM xmo_identity i JOIN xmo_resolved t ON t.name=i.target
+WHERE r.name=i.name AND i.action='alias';
+DO $verify$
 BEGIN
- IF EXISTS (SELECT 1 FROM xmo_resolved WHERE person_id IS NULL) THEN
- RAISE EXCEPTION 'Missing resolved person'; END IF;
-END $check$;
-INSERT INTO public.episode_credit(episode_id,person_id,credit_type,billing_order,notes)
-SELECT e.episode_id, r.person_id, c.role, NULL, 'X Minus One master source credit: '||c.name
-FROM xmo_credits c
-JOIN xmo_resolved r ON r.name=c.name
+ IF EXISTS(SELECT 1 FROM xmo_resolved WHERE action<>'hold' AND person_id IS NULL)
+ THEN RAISE EXCEPTION 'Unresolved approved identity'; END IF;
+ IF EXISTS(SELECT 1 FROM xmo_identity i JOIN xmo_resolved r ON r.name=i.name
+ WHERE i.action='alias' AND EXISTS(
+ SELECT 1 FROM public.person p LEFT JOIN public.person_alias a ON a.person_id=p.person_id
+ WHERE (lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name))
+ AND p.person_id<>r.person_id))
+ THEN RAISE EXCEPTION 'Alias conflicts with another person's identity'; END IF;
+END $verify$;
+INSERT INTO public.person_alias(person_id,alias_name,alias_type,source_note)
+SELECT r.person_id,i.name,'pen_name','X Minus One reviewed source identity'
+FROM xmo_identity i JOIN xmo_resolved r ON r.name=i.name
+WHERE i.action='alias'
+AND NOT EXISTS (SELECT 1 FROM public.person_alias a WHERE
+ a.person_id=r.person_id AND lower(a.alias_name)=lower(i.name) AND a.alias_type='pen_name');
+CREATE TEMP TABLE xmo_planned AS
+SELECT e.episode_id,r.person_id,c.role,
+ string_agg(DISTINCT c.name,'; ' ORDER BY c.name) AS credited_names
+FROM xmo_credits c JOIN xmo_resolved r ON r.name=c.name
 JOIN public.episode e ON e.air_date=c.air_date AND e.title=c.title
 JOIN public.series s ON s.series_id=e.series_id AND s.slug='x-minus-one'
-WHERE NOT EXISTS (
- SELECT 1 FROM public.episode_credit ec
- WHERE ec.episode_id=e.episode_id AND ec.person_id=r.person_id
- AND ec.credit_type=c.role
-);
-SELECT 'people_resolved' AS metric,count(*)::bigint AS value FROM xmo_resolved
-UNION ALL SELECT 'credit_source_rows',count(*) FROM xmo_credits
-UNION ALL SELECT 'linked_credits',count(*) FROM public.episode_credit ec
- JOIN public.episode e ON e.episode_id=ec.episode_id
- JOIN public.series s ON s.series_id=e.series_id WHERE s.slug='x-minus-one'
- AND ec.credit_type IN ('writer','adapter');
-__END__;
+WHERE r.person_id IS NOT NULL
+GROUP BY e.episode_id,r.person_id,c.role;
+INSERT INTO public.episode_credit(episode_id,person_id,credit_type,billing_order,notes)
+SELECT p.episode_id,p.person_id,p.role,NULL,
+ 'X Minus One master source credit: '||p.credited_names
+FROM xmo_planned p
+WHERE NOT EXISTS (SELECT 1 FROM public.episode_credit ec
+ WHERE ec.episode_id=p.episode_id AND ec.person_id=p.person_id AND ec.credit_type=p.role);
+SELECT 'source_names' AS metric,61::bigint AS count
+UNION ALL SELECT 'held_names',count(*) FROM xmo_resolved WHERE action='hold'
+UNION ALL SELECT 'held_source_credits',count(*) FROM xmo_credits c JOIN xmo_resolved r ON c.name=r.name WHERE r.action='hold'
+UNION ALL SELECT 'approved_source_credits',count(*) FROM xmo_credits c JOIN xmo_resolved r ON c.name=r.name WHERE r.person_id IS NOT NULL
+UNION ALL SELECT 'resolved_people',count(DISTINCT person_id) FROM xmo_resolved WHERE person_id IS NOT NULL
+UNION ALL SELECT 'distinct_planned_credits',count(*) FROM xmo_planned;
+__ENDING__;
 """
-    sql = sql.replace("__MAPPING__", quote(json.dumps(mapping, ensure_ascii=False)))
-    sql = sql.replace("__CREDITS__", quote(json.dumps(payload, ensure_ascii=False)))
-    sql = sql.replace("__END__", "COMMIT" if args.apply else "ROLLBACK")
-    print(f"Mode: {'APPLY' if args.apply else 'DRY RUN'} | 61 reviewed names, 217 source credits", flush=True)
+    sql = sql.replace("__MAPPING__",literal(json.dumps(decisions,ensure_ascii=False)))
+    sql = sql.replace("__CREDITS__",literal(json.dumps(source,ensure_ascii=False)))
+    sql = sql.replace("__ENDING__","COMMIT" if args.apply else "ROLLBACK")
+    print(f"Mode: {'APPLY' if args.apply else 'DRY RUN'}; 61 names; 217 candidate credits",flush=True)
     proc = subprocess.run(["psql","-X","-w","-v","ON_ERROR_STOP=1","-f","-"],
-                          env=env,input=sql,text=True,check=False)
-    if proc.returncode == 0:
+                          input=sql,text=True,env=env,check=False)
+    if proc.returncode==0:
         print("Committed." if args.apply else "Preview passed; rolled back.")
     return proc.returncode
 
-if __name__ == "__main__":
+if __name__=="__main__":
     try:
         sys.exit(main())
-    except (ValueError, RuntimeError, OSError) as exc:
-        print(f"ERROR: {exc}", file=sys.stderr)
+    except (OSError,ValueError,RuntimeError) as exc:
+        print(f"ERROR: {exc}",file=sys.stderr)
         sys.exit(1)
