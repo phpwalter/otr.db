@@ -8,6 +8,7 @@ review_decision/review_notes columns. No historical repeat/remake inference.
 from __future__ import annotations
 import argparse
 import csv
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -39,8 +40,19 @@ def main() -> None:
         if not target:raise ValueError(f"Missing referenced episode #{target_number}")
         if int(target_number)>=int(row["Episode Number"]):
             raise ValueError(f"Reference is not earlier: #{row['Episode Number']} -> #{target_number}")
-        keywords=(row["Episode Number"],target_number,row["Air Date"],target["Air Date"])
-        related=[d for d in discrepancies if any(k and k in " ".join(d.values()) for k in keywords)]
+        # Compare structured discrepancy references, not substrings of prose.
+        # Episode 32 must not match episode 532, nor dates mentioned only in details.
+        def linked_discrepancy(d):
+            identifier = d.get("Date / Episode", "")
+            dates = set(re.findall(r"\b\d{4}-\d{2}-\d{2}\b", identifier))
+            numbers = set(re.findall(r"#(\d+)\b", identifier))
+            return (row["Air Date"] in dates or target["Air Date"] in dates
+                    or row["Episode Number"] in numbers or target_number in numbers)
+        related = [d for d in discrepancies if linked_discrepancy(d)]
+        unknown = (row["Title"].strip().casefold() == "title unknown" or
+                   target["Title"].strip().casefold() == "title unknown")
+        same_title = row["Title"].strip().casefold() == target["Title"].strip().casefold()
+        priority = "unknown_title" if unknown else ("source_discrepancy" if related else "review")
         output.append({
             "candidate_episode_number":row["Episode Number"],
             "candidate_air_date":row["Air Date"],
@@ -56,7 +68,9 @@ def main() -> None:
             "referenced_status":target["Broadcast Status"],
             "referenced_primary_source":target["Primary Source"],
             "referenced_preservation_status":target.get("Preservation Status",""),
-            "title_exact_match":str(row["Title"].casefold().strip()==target["Title"].casefold().strip()),
+            "title_exact_match":str(same_title and not unknown),
+            "title_unknown":str(unknown),
+            "review_priority":priority,
             "source_discrepancies": " | ".join(f"{d.get('Date / Episode','')}: {d.get('Issue Type','')}: {d.get('Details','')}" for d in related),
             "review_decision":"",
             "review_evidence":"",
@@ -70,7 +84,9 @@ def main() -> None:
     counts=Counter(r["candidate_status"] for r in output)
     print(f"Review candidates: {len(output)}")
     print("Candidate statuses:",dict(counts))
-    print(f"Title exact matches: {sum(r['title_exact_match']=='True' for r in output)}")
+    print(f"Informative exact title matches: {sum(r['title_exact_match']=='True' for r in output)}")
+    print(f"Unknown-title placeholders: {sum(r['title_unknown']=='True' for r in output)}")
+    print(f"Candidates with directly referenced discrepancies: {sum(bool(r['source_discrepancies']) for r in output)}")
     print("All review decisions are blank; none is automatically confirmed as a repeat or remake.")
     print(f"Review CSV: {args.output}")
     print("No database changes made.")
