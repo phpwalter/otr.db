@@ -92,8 +92,11 @@ def main():
  if not a.exceptions.exists():raise ValueError("Missing exceptions file: rerun match_gerald_mohr.py")
  with a.exceptions.open(encoding="utf-8-sig",newline="") as f:
   if any(csv.DictReader(f)):raise ValueError("Unresolved Gerald Mohr match exceptions; import blocked")
- if sum(r.get("match_method")=="reviewed_title_variant" for r in rows)>0:
-  raise ValueError("Reviewed title variants require explicit approval before import")
+ if sum(r.get("match_method")=="reviewed_title_variant" for r in rows)!=1:
+  raise ValueError("Expected exactly one reviewed title variant (episode 355)")
+ variants=[r for r in rows if r.get("match_method")=="reviewed_title_variant"]
+ if not (variants[0]["episode_number"]=="355" and variants[0]["air_date"]=="1949-03-20" and variants[0]["source_title"]=="The Death Of Mr. Penny" and variants[0]["episode_title"]=="Death of Mr. Penny"):
+  raise ValueError("Unexpected reviewed title variation; import blocked")
  data=[]
  for r in rows:
   if r["person_name"]!="Gerald Mohr" or r["credit_type"]!="actor":
