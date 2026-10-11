@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconcile user-supplied Gerald Mohr writer credits to Whistler master.
+"""Reconcile user-supplied Gerald Mohr actor credits to Whistler master.
 
 Preserves all 30 user-supplied source observations. Matching requires
 the broadcast date AND normalized title; mismatches are exported for review.
@@ -30,10 +30,10 @@ def save(path,rows,fields):
         writer.writeheader();writer.writerows(rows)
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--observations",type=Path,default=HERE/"j_donald_mohr_source_observations.csv")
+    parser.add_argument("--observations",type=Path,default=HERE/"gerald_mohr_source_observations.csv")
     parser.add_argument("--master",type=Path,default=HERE.parent/"staged"/"the_whistler_master_broadcasts.csv")
-    parser.add_argument("--output",type=Path,default=HERE/"j_donald_mohr_matched.csv")
-    parser.add_argument("--exceptions",type=Path,default=HERE/"j_donald_mohr_exceptions.csv")
+    parser.add_argument("--output",type=Path,default=HERE/"gerald_mohr_matched.csv")
+    parser.add_argument("--exceptions",type=Path,default=HERE/"gerald_mohr_exceptions.csv")
     args=parser.parse_args()
     observed=read(args.observations)
     master=read(args.master)
@@ -76,6 +76,6 @@ def main():
     print(f"Exceptions requiring review: {len(exceptions)}")
     print(f"Matched: {args.output}")
     print(f"Exceptions: {args.exceptions}")
-    print("Writer attributions remain source-reported; no database changes.")
+    print("Actor attributions remain source-reported; no database changes.")
 if __name__=="__main__":
     main()
