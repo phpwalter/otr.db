@@ -14,7 +14,7 @@ from pathlib import Path
 from collections import Counter
 
 HERE=Path(__file__).resolve().parent
-TITLE_VARIANTS={}
+TITLE_VARIANTS={("1949-03-20","thedeathofmrpenny"):("355","deathofmrpenny")}
 COLUMNS=["episode_number","air_date","episode_title","source_title","match_method","person_name","credit_type",
          "source_label","source_url","source_credit_label","verification_status"]
 def norm(value):
