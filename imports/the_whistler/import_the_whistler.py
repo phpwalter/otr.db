@@ -144,8 +144,11 @@ SELECT s.series_id,e.episode_id,w.*,
  ELSE 'other' END AS broadcast_type,
  concat_ws(E'\n','Master status: '||w.broadcast_status,
   'Primary source: '||w.primary_source,
-  CASE WHEN w.repeat_of IS NOT NULL THEN
-   'Provisional title-match reference (NOT VERIFIED): '||w.repeat_of ELSE NULL END,
+  CASE WHEN w.repeat_of IS NOT NULL AND lower(trim(w.title))='title unknown' THEN
+   'Rejected placeholder-title reference (NOT A VALID MATCH): '||w.repeat_of
+  WHEN w.repeat_of IS NOT NULL THEN
+   'Provisional title-match reference (NOT VERIFIED): '||w.repeat_of
+  ELSE NULL END,
   CASE WHEN w.source_work_title IS NOT NULL THEN
    'Source work (unverified): '||w.source_work_title ELSE NULL END) AS note
 FROM wh_stage w
