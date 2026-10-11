@@ -11,6 +11,7 @@ import argparse
 import csv
 import html
 import re
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -92,6 +93,7 @@ def main():
     ap.add_argument("--master",type=Path,default=HERE.parent/"staged"/"the_whistler_master_broadcasts.csv")
     ap.add_argument("--output",type=Path,default=HERE/"radioindex_crawl_observations.csv")
     ap.add_argument("--exceptions",type=Path,default=HERE/"radioindex_crawl_exceptions.csv")
+    ap.add_argument("--index-file",type=Path,help="Locally saved Radio Index listing HTML (only if permitted)")
     ap.add_argument("--limit",type=int,default=25)
     ap.add_argument("--delay",type=float,default=1.0)
     args=ap.parse_args()
@@ -100,7 +102,16 @@ def main():
     if len(master)!=692:raise ValueError("Expected 692 master rows")
     by_title=defaultdict(list)
     for r in master:by_title[norm(r["Title"])].append(r)
-    urls=links_for_index(get(INDEX))
+    try:
+        index_html=args.index_file.read_text(encoding="utf-8-sig") if args.index_file else get(INDEX)
+    except urllib.error.HTTPError as exc:
+        if exc.code in (403,429):
+            print(f"ERROR: Radio Index returned HTTP {exc.code} for {INDEX}.",file=sys.stderr)
+            print("The site is refusing automated requests. Do not retry with spoofed headers or proxies.",file=sys.stderr)
+            print("Use --index-file with a locally saved, lawfully accessible index, or rely on manually sourced credits.",file=sys.stderr)
+            return 2
+        raise
+    urls=links_for_index(index_html)
     if not urls:raise ValueError("No episode links found; index layout may have changed")
     observations=[];exceptions=[]
     for url in urls[:args.limit]:
@@ -124,6 +135,12 @@ def main():
                 observations.append(dict(air_date=date,title=candidates[0]["Title"],person_name=name,
                     credit_type=role,source_url=url,source_credit_label=role,
                     verification_status="source_reported"))
+        except urllib.error.HTTPError as ex:
+            if ex.code in (403,429):
+                exceptions.append((url,f"http_{ex.code}_access_denied","","Access restriction; not retried"))
+                print(f"Access restricted (HTTP {ex.code}) at {url}; stopping further automated requests.",file=sys.stderr)
+                break
+            exceptions.append((url,"http_error","",str(ex)))
         except (urllib.error.URLError,ValueError) as ex:
             exceptions.append((url,"fetch_or_parse_error","",str(ex)))
     args.output.parent.mkdir(parents=True,exist_ok=True)
@@ -135,4 +152,5 @@ def main():
     print(f"Source-reported observations: {len(observations)}; exceptions: {len(exceptions)}")
     print("Output:",args.output)
     print("No episode_verified promotions or database writes.")
-if __name__=="__main__":main()
+    return 0
+if __name__=="__main__":sys.exit(main())
