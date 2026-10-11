@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-check Whistler's first 20 candidates against Haendiges' published log.
+"""Cross-check all 106 substantive Whistler candidates against Haendiges' log.
 
 Read-only to PostgreSQL. Fetches a historical catalog, compares numbered/date/title
 rows, and writes source-specific findings to a NEW CSV. Catalog presence/availability
@@ -17,7 +17,6 @@ from pathlib import Path
 
 HERE=Path(__file__).resolve().parent
 URL="https://otrsite.com/logs/logw1002.htm"
-FIRST={51,72,80,93,215,222,253,254,259,291,292,307,308,315,350,359,361,362,375,377}
 # Haendiges lists multiple sections, including separately numbered East Coast shows.
 # Only accept rows with number/date AND title; detect ambiguous matching explicitly.
 ROW=re.compile(r'^\s*(?P<catalog>\*na\*|\d{1,5}[A-Z]?)\s+"(?P<title>[^"]+)"\s+(?P<number>\d{1,3})\s+(?P<date>\d{2}-\d{2}-\d{2})(?:\s|$)',re.I)
@@ -71,8 +70,11 @@ def main():
     if len(rows)!=117:raise ValueError("Expected 117 reconciled records")
     if len({r["candidate_episode_number"] for r in rows})!=117:
         raise ValueError("Duplicate candidate episode numbers")
-    if not FIRST.issubset({int(r["candidate_episode_number"]) for r in rows}):
-        raise ValueError("First-batch episode list differs from expected")
+    priorities={r["review_priority"] for r in rows}
+    if priorities!={"invalid_title_match","review","numbering_conflict"}:
+        raise ValueError(f"Unexpected review priorities: {priorities}")
+    pending=[r for r in rows if r["review_priority"]!="invalid_title_match"]
+    if len(pending)!=106:raise ValueError(f"Expected 106 substantive links, got {len(pending)}")
     log=parse_log(args.log_file.read_text(encoding="utf-8-sig") if args.log_file else fetch(URL))
     if len(log)<400:raise ValueError(f"Parsed only {len(log)} log keys; source layout may have changed")
     newfields=("log_candidate_status","log_candidate_catalog","log_candidate_title",
@@ -80,7 +82,9 @@ def main():
                "log_notes","log_source","log_verification")
     count=0
     for row in rows:
-        if int(row["candidate_episode_number"]) not in FIRST:continue
+        if row["review_priority"]=="invalid_title_match":
+            row["log_verification"]="rejected_placeholder_not_a_title_match"
+            continue
         ca=lookup(log,row["candidate_episode_number"],row["candidate_air_date"],row["candidate_title"])
         ref=lookup(log,row["referenced_episode_number"],row["referenced_air_date"],row["referenced_title"])
         row.update(zip(newfields,(
@@ -95,11 +99,15 @@ def main():
         writer=csv.DictWriter(f,fieldnames=fields+[k for k in newfields if k not in fields])
         writer.writeheader()
         writer.writerows(rows)
-    validated=sum(1 for r in rows if r.get("log_candidate_status")=="matched" and
+    validated=sum(1 for r in pending if r.get("log_candidate_status")=="matched" and
                   r.get("log_referenced_status")=="matched")
     print(f"Log rows parsed: {len(log)}")
-    print(f"First-batch candidates checked: {count}")
+    print(f"Substantive candidate pairs checked: {count}")
     print(f"Pairs matching both dated catalog entries: {validated}/{count}")
+    exceptions=[r for r in pending if r.get("log_candidate_status")!="matched" or r.get("log_referenced_status")!="matched"]
+    print(f"Catalog exceptions: {len(exceptions)}")
+    for r in exceptions:
+        print(f"  #{r['candidate_episode_number']} -> #{r['referenced_episode_number']}: candidate={r['log_candidate_status']} referenced={r['log_referenced_status']} {r['log_notes']}")
     print(f"Audit: {args.output}")
     print("No repeat/remake confirmed; no PostgreSQL updates.")
 
