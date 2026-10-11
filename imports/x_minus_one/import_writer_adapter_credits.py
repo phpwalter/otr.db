@@ -137,7 +137,7 @@ BEGIN
  SELECT 1 FROM public.person p LEFT JOIN public.person_alias a ON a.person_id=p.person_id
  WHERE (lower(p.display_name)=lower(i.name) OR lower(a.alias_name)=lower(i.name))
  AND p.person_id<>r.person_id))
- THEN RAISE EXCEPTION 'Alias conflicts with another person's identity'; END IF;
+ THEN RAISE EXCEPTION 'Alias conflicts with another person identity'; END IF;
 END $verify$;
 INSERT INTO public.person_alias(person_id,alias_name,alias_type,source_note)
 SELECT r.person_id,i.name,'pen_name','X Minus One reviewed source identity'
