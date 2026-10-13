@@ -12,6 +12,9 @@ import csv
 import re
 from pathlib import Path
 from collections import Counter
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'scripts'))
+from title_articles import title_match_key
 
 HERE=Path(__file__).resolve().parent
 TITLE_VARIANTS={("1942-09-20","fog"):("19","outofthefog")}
@@ -19,7 +22,7 @@ COLUMNS=["episode_number","air_date","episode_title","source_title","match_metho
          "source_label","source_url","source_credit_label","verification_status"]
 def norm(value):
     value=value.casefold().strip()
-    return re.sub(r"[^a-z0-9]","",value)
+    return re.sub(r"[^a-z0-9]","",title_match_key(value))
 def read(path):
     with path.open(encoding="utf-8-sig",newline="") as fp:
         return list(csv.DictReader(fp))
