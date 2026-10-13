@@ -1,9 +1,9 @@
 {
-  "catalog_records": 555,
-  "status_counts": {"exact": 355, "review_regional": 18, "review": 68, "excluded_distribution": 114},
+  "catalog_records": 556,
+  "status_counts": {"exact": 355, "review_regional": 18, "review": 68, "excluded_distribution": 115},
   "explicit_role_credits": 1092,
   "credit_status_counts": {"candidate_new_person": 836, "candidate_existing_person": 222, "already_present": 34},
   "source_catalog_claimed_records": 556,
-  "unaccounted_source_records": 1,
+  "unaccounted_source_records": 0,
   "warning": "Candidate credits are source claims only; no database write performed."
 }
