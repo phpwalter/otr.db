@@ -10,7 +10,12 @@ DB_ROLES={"actor","writer","adapter","director","producer","announcer",
           "narrator","host","composer","sound_effects"}
 def load(name):
     with (HERE/name).open(encoding="utf-8-sig",newline="") as f:
-        return list(csv.DictReader(f))
+        reader=csv.DictReader(f)
+        rows=list(reader)
+        for number,row in enumerate(rows,start=2):
+            if None in row or any(value is None for value in row.values()):
+                raise ValueError(f"{name}: malformed or incomplete CSV row at record {number}: {row!r}")
+        return rows
 def main():
     catalog=load("catalog_reconciliation.csv")
     credits=load("credit_candidates.csv")
@@ -29,7 +34,7 @@ def main():
             blocked["unsupported_role"]+=1
         if not str(credit.get("person_id","")).isdigit():
             blocked["unmatched_person"]+=1
-        if credit.get("approved","").strip().lower() in ("yes","true","1"):
+        if (credit.get("approved") or "").strip().lower() in ("yes","true","1"):
             blocked["unexpected_approval"]+=1
     if blocked["unexpected_approval"]:
         raise ValueError("Approved rows detected: independently review these before proceeding")
