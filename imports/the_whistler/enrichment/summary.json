@@ -1,0 +1,7 @@
+{
+  "catalog_records": 556,
+  "status_counts": {"exact": 355, "review_regional": 18, "review": 68, "excluded_distribution": 115},
+  "explicit_role_credits": 1092,
+  "credit_status_counts": {"candidate_new_person": 836, "candidate_existing_person": 222, "already_present": 34},
+  "warning": "Candidate credits are source claims only; no database write performed."
+}
