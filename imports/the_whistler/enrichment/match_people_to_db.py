@@ -30,13 +30,19 @@ def main():
     env=os.environ.copy()
     env.update(PGHOST=cfg["DB_HOST"],PGPORT=cfg["DB_PORT"],
         PGDATABASE=cfg["DB_NAME"],PGUSER=cfg["DB_USER"],
-        PGPASSWORD=cfg["DB_PASSWORD"],PGSSLMODE=cfg.get("DB_SSLMODE","prefer"))
+        PGPASSWORD=cfg["DB_PASSWORD"],PGSSLMODE=cfg.get("DB_SSLMODE","prefer"),
+        PGCLIENTENCODING="UTF8")
     sql="COPY (SELECT person_id, display_name FROM public.person ORDER BY person_id) TO STDOUT WITH (FORMAT CSV, HEADER TRUE);"
     p=subprocess.run(["psql","-X","-w","-v","ON_ERROR_STOP=1","-c",sql],
-        capture_output=True,text=True,encoding="utf-8",env=env)
-    if p.returncode: raise RuntimeError("Read-only person query failed: "+p.stderr)
+        capture_output=True,env=env)
+    if p.returncode: raise RuntimeError("Read-only person query failed: "+p.stderr.decode("utf-8",errors="replace"))
+    try:
+        stdout=p.stdout.decode("utf-8-sig")
+    except UnicodeDecodeError as exc:
+        raise RuntimeError("Database output was not UTF-8; check PostgreSQL client encoding") from exc
     import io
-    people=list(csv.DictReader(io.StringIO(p.stdout)))
+    people=list(csv.DictReader(io.StringIO(stdout)))
+    if not people: raise RuntimeError("Database returned zero people; refusing to write a misleading match report")
     index=defaultdict(list)
     for person in people:
         index[key(person["display_name"])].append(person)
