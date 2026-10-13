@@ -1,0 +1,1091 @@
+catalog_id,episode_id,episode_date,episode_title,person,person_id,role,credit_status,approved
+60156,3947,1942-05-16,Retribution,Wilbur Hatch,,composer,candidate_new_person
+60156,3947,1942-05-16,Retribution,Wilbur Hatch,,conductor,candidate_new_person
+60157,3951,1942-06-13,Shrunken Head,Wilbur Hatch,,composer,candidate_new_person
+60157,3951,1942-06-13,Shrunken Head,Wilbur Hatch,,conductor,candidate_new_person
+60157,3951,1942-06-13,Shrunken Head,Joseph Kearns,,writer,candidate_new_person
+60157,3951,1942-06-13,Shrunken Head,J. Donald Wilson,573,director,candidate_existing_person
+60481,3953,1942-06-27,Notes in the Night,J. Donald Wilson,573,writer,already_present
+60481,3953,1942-06-27,Notes in the Night,J. Donald Wilson,573,director,candidate_existing_person
+60481,3953,1942-06-27,Notes in the Night,Wilbur Hatch,,composer,candidate_new_person
+60481,3953,1942-06-27,Notes in the Night,Wilbur Hatch,,conductor,candidate_new_person
+24315,3962,1942-08-29,The Letter,J. Donald Wilson,573,writer,already_present
+24315,3962,1942-08-29,The Letter,J. Donald Wilson,573,director,candidate_existing_person
+24315,3962,1942-08-29,The Letter,Wilbur Hatch,,composer,candidate_new_person
+24315,3962,1942-08-29,The Letter,Wilbur Hatch,,conductor,candidate_new_person
+24316,3963,1942-09-05,House of Greed,J. Donald Wilson,573,writer,already_present
+24316,3963,1942-09-05,House of Greed,J. Donald Wilson,573,director,candidate_existing_person
+24316,3963,1942-09-05,House of Greed,Wilbur Hatch,,composer,candidate_new_person
+24316,3963,1942-09-05,House of Greed,Wilbur Hatch,,conductor,candidate_new_person
+24318,3966,1942-09-27,Jealousy,J. Donald Wilson,573,writer,already_present
+24318,3966,1942-09-27,Jealousy,J. Donald Wilson,573,director,candidate_existing_person
+24318,3966,1942-09-27,Jealousy,Wilbur Hatch,,composer,candidate_new_person
+24318,3966,1942-09-27,Jealousy,Wilbur Hatch,,conductor,candidate_new_person
+24319,3967,1942-10-04,Urge to Kill,J. Donald Wilson,573,writer,already_present
+24319,3967,1942-10-04,Urge to Kill,J. Donald Wilson,573,director,candidate_existing_person
+24319,3967,1942-10-04,Urge to Kill,Wilbur Hatch,,composer,candidate_new_person
+24319,3967,1942-10-04,Urge to Kill,Wilbur Hatch,,conductor,candidate_new_person
+24320,3968,1942-10-11,Malice,Wilbur Hatch,,composer,candidate_new_person
+24320,3968,1942-10-11,Malice,Wilbur Hatch,,conductor,candidate_new_person
+24320,3968,1942-10-11,Malice,J. Donald Wilson,573,writer,already_present
+24320,3968,1942-10-11,Malice,J. Donald Wilson,573,director,candidate_existing_person
+24321,3969,1942-10-18,Death Comes at Midnight,Wilbur Hatch,,composer,candidate_new_person
+24321,3969,1942-10-18,Death Comes at Midnight,Wilbur Hatch,,conductor,candidate_new_person
+24321,3969,1942-10-18,Death Comes at Midnight,Herbert Connor,,writer,candidate_new_person
+24321,3969,1942-10-18,Death Comes at Midnight,J. Donald Wilson,573,writer,already_present
+24322,3970,1942-10-25,The Alibi,J. Donald Wilson,573,writer,already_present
+24322,3970,1942-10-25,The Alibi,J. Donald Wilson,573,director,candidate_existing_person
+24322,3970,1942-10-25,The Alibi,Wilbur Hatch,,composer,candidate_new_person
+24322,3970,1942-10-25,The Alibi,Wilbur Hatch,,conductor,candidate_new_person
+24322,3970,1942-10-25,The Alibi,Herbert Connor,,writer,candidate_new_person
+24323,3973,1942-11-15,Apparition,Wilbur Hatch,,composer,candidate_new_person
+24323,3973,1942-11-15,Apparition,Wilbur Hatch,,conductor,candidate_new_person
+24323,3973,1942-11-15,Apparition,J. Donald Wilson,573,writer,already_present
+24323,3973,1942-11-15,Apparition,J. Donald Wilson,573,director,candidate_existing_person
+24324,3974,1942-11-22,The Other Woman,J. Donald Wilson,573,writer,already_present
+24325,3975,1942-11-29,Avarice,J. Donald Wilson,573,writer,already_present
+24325,3975,1942-11-29,Avarice,J. Donald Wilson,573,director,candidate_existing_person
+24326,3977,1942-12-13,The Accounting,J. Donald Wilson,573,writer,already_present
+24326,3977,1942-12-13,The Accounting,J. Donald Wilson,573,director,candidate_existing_person
+24326,3977,1942-12-13,The Accounting,Wilbur Hatch,,composer,candidate_new_person
+24326,3977,1942-12-13,The Accounting,Wilbur Hatch,,conductor,candidate_new_person
+41212,3979,1942-12-27,Double-Cross,J. Donald Wilson,573,writer,already_present
+41213,3980,1943-01-03,The Weakling,Wilbur Hatch,,composer,candidate_new_person
+41213,3980,1943-01-03,The Weakling,Wilbur Hatch,,conductor,candidate_new_person
+41216,3981,1943-01-10,The Nemesis,J. Donald Wilson,573,writer,already_present
+41216,3981,1943-01-10,The Nemesis,Wilbur Hatch,,composer,candidate_new_person
+41216,3981,1943-01-10,The Nemesis,Wilbur Hatch,,conductor,candidate_new_person
+41214,3982,1943-01-17,The Thief,J. Donald Wilson,573,writer,already_present
+41215,3983,1943-01-24,Mind Over Matter,J. Donald Wilson,573,writer,already_present
+41217,3984,1943-01-31,The Confession,Wilbur Hatch,,composer,candidate_new_person
+41217,3984,1943-01-31,The Confession,Wilbur Hatch,,conductor,candidate_new_person
+41217,3984,1943-01-31,The Confession,J. Donald Wilson,573,writer,already_present
+5250,3985,1943-02-07,In the Dark,Wilbur Hatch,,composer,candidate_new_person
+5250,3985,1943-02-07,In the Dark,Wilbur Hatch,,conductor,candidate_new_person
+5250,3985,1943-02-07,In the Dark,J. Donald Wilson,573,writer,already_present
+5250,3985,1943-02-07,In the Dark,J. Donald Wilson,573,director,candidate_existing_person
+41218,3986,1943-02-14,Legacy of Death,J. Donald Wilson,573,writer,already_present
+41219,3987,1943-02-21,Fool'S Gold,J. Donald Wilson,573,writer,already_present
+79521,3992,1943-03-28,The Penalty,J. Donald Wilson,573,writer,already_present
+79521,3992,1943-03-28,The Penalty,J. Donald Wilson,573,director,candidate_existing_person
+79522,3996,1943-05-01,The Killers,J. Donald Wilson,573,writer,already_present
+79522,3996,1943-05-01,The Killers,J. Donald Wilson,573,director,candidate_existing_person
+79522,3996,1943-05-01,The Killers,Wilbur Hatch,,composer,candidate_new_person
+79522,3996,1943-05-01,The Killers,Wilbur Hatch,,conductor,candidate_new_person
+41221,4001,1943-06-05,Shadow of a Mind,J. Donald Wilson,573,writer,already_present
+41222,4002,1943-06-12,Justice,J. Donald Wilson,573,writer,already_present
+40305,4003,1943-06-19,House of Fear,Wilbur Hatch,,composer,candidate_new_person
+40305,4003,1943-06-19,House of Fear,Wilbur Hatch,,conductor,candidate_new_person
+40305,4003,1943-06-19,House of Fear,J. Donald Wilson,573,writer,already_present
+41223,4004,1943-06-26,The Blank Wall,J. Donald Wilson,573,writer,already_present
+41224,4005,1943-07-02,The Avengers,J. Donald Wilson,573,writer,already_present
+41225,4006,1943-07-09,An Eye for an Eye,J. Donald Wilson,573,writer,already_present
+11147,4011,1943-08-13,Death in the Air,Wilbur Hatch,,composer,candidate_new_person
+11147,4011,1943-08-13,Death in the Air,Wilbur Hatch,,conductor,candidate_new_person
+51104,4014,1943-09-03,Destiny,J. Donald Wilson,573,writer,already_present
+51104,4014,1943-09-03,Destiny,J. Donald Wilson,573,director,candidate_existing_person
+51104,4014,1943-09-03,Destiny,Wilbur Hatch,,composer,candidate_new_person
+51104,4014,1943-09-03,Destiny,Ivan Ditmars,,conductor,candidate_new_person
+11148,4015,1943-09-10,Tangled Web,J. Donald Wilson,573,writer,already_present
+11149,4017,1943-09-24,Blind Alley,Wilbur Hatch,,composer,candidate_new_person
+11149,4017,1943-09-24,Blind Alley,Ivan Ditmars,,conductor,candidate_new_person
+11149,4017,1943-09-24,Blind Alley,J. Donald Wilson,573,writer,already_present
+11149,4017,1943-09-24,Blind Alley,J. Donald Wilson,573,director,candidate_existing_person
+51105,4025,1943-11-21,Patients for the Doctor,William Fifield,,director,candidate_new_person
+51105,4025,1943-11-21,Patients for the Doctor,William Fifield,,writer,candidate_new_person
+51106,4029,1943-12-19,Death Demands a Payment,Wilbur Hatch,,composer,candidate_new_person
+51106,4029,1943-12-19,Death Demands a Payment,Wilbur Hatch,,conductor,candidate_new_person
+51106,4029,1943-12-19,Death Demands a Payment,J. Donald Wilson,573,writer,already_present
+51106,4029,1943-12-19,Death Demands a Payment,J. Donald Wilson,573,director,candidate_existing_person
+51106,4029,1943-12-19,Death Demands a Payment,Bill Pennell,,announcer,candidate_new_person
+51109,4067,1944-09-10,Local Storm,George W. Allen,,producer,candidate_new_person
+51109,4067,1944-09-10,Local Storm,George W. Allen,,director,candidate_new_person
+51109,4067,1944-09-10,Local Storm,James Sussex,,writer,candidate_new_person
+51109,4067,1944-09-10,Local Storm,Wilbur Hatch,,composer,candidate_new_person
+51109,4067,1944-09-10,Local Storm,Wilbur Hatch,,conductor,candidate_new_person
+51109,4067,1944-09-10,Local Storm,Bill Pennell,,announcer,candidate_new_person
+51110,4068,1944-09-18,Black Magic,Bill Pennell,,announcer,candidate_new_person
+51110,4068,1944-09-18,Black Magic,George W. Allen,,producer,candidate_new_person
+47841,4070,1944-10-02,Not If I Kill You First,George W. Allen,,director,candidate_new_person
+47841,4070,1944-10-02,Not If I Kill You First,Bill Pannell,,announcer,candidate_new_person
+47841,4070,1944-10-02,Not If I Kill You First,John Everett Hudson,,writer,candidate_new_person
+47842,4071,1944-10-09,Finders Weepers,Bill Pannell,,announcer,candidate_new_person
+47842,4071,1944-10-09,Finders Weepers,George W. Allen,,producer,candidate_new_person
+47842,4071,1944-10-09,Finders Weepers,Merwyn Gerard,,writer,candidate_new_person
+47842,4071,1944-10-09,Finders Weepers,Seeleg Lester,,writer,candidate_new_person
+47845,4074,1944-10-30,Beloved Fraud,George W. Allen,,producer,candidate_new_person
+47845,4074,1944-10-30,Beloved Fraud,George W. Allen,,director,candidate_new_person
+47845,4074,1944-10-30,Beloved Fraud,Victor Kushner,,writer,candidate_new_person
+47845,4074,1944-10-30,Beloved Fraud,Bob Anderson,,announcer,candidate_new_person
+47846,4075,1944-11-13,Beware the Bridegroom,Victor Kushner,,writer,candidate_new_person
+47846,4075,1944-11-13,Beware the Bridegroom,Bob Anderson,,announcer,candidate_new_person
+47846,4075,1944-11-13,Beware the Bridegroom,George W. Allen,,director,candidate_new_person
+115924,4075,1944-11-13,Beware the Bridegroom,Victor Kushner,,writer,candidate_new_person
+115924,4075,1944-11-13,Beware the Bridegroom,George W. Allen,,director,candidate_new_person
+115924,4075,1944-11-13,Beware the Bridegroom,Bob Anderson,,announcer,candidate_new_person
+47847,4076,1944-11-20,Death Sees Double,George W. Allen,,producer,candidate_new_person
+47847,4076,1944-11-20,Death Sees Double,George W. Allen,,director,candidate_new_person
+47847,4076,1944-11-20,Death Sees Double,Ralph Rose,,writer,candidate_new_person
+47847,4076,1944-11-20,Death Sees Double,Bob Anderson,,announcer,candidate_new_person
+47848,4078,1944-12-04,Doctor Operates in Crime,George W. Allen,,producer,candidate_new_person
+47848,4078,1944-12-04,Doctor Operates in Crime,Merwyn Gerard,,writer,candidate_new_person
+47848,4078,1944-12-04,Doctor Operates in Crime,Seeleg Lester,,writer,candidate_new_person
+61241,4079,1944-12-11,Lie or Consequences,George W. Allen,,producer,candidate_new_person
+61241,4079,1944-12-11,Lie or Consequences,Dwight Hauser,,writer,candidate_new_person
+61241,4079,1944-12-11,Lie or Consequences,Bob Anderson,,announcer,candidate_new_person
+61242,4080,1944-12-18,Windfall,Bob Anderson,,announcer,candidate_new_person
+61242,4080,1944-12-18,Windfall,George W. Allen,,producer,candidate_new_person
+79262,4081,1944-12-25,Christmas Bonus,George W. Allen,,producer,candidate_new_person
+79262,4081,1944-12-25,Christmas Bonus,Bob Anderson,,announcer,candidate_new_person
+47849,4082,1945-01-01,Two for the Money,Bob Anderson,,announcer,candidate_new_person
+47849,4082,1945-01-01,Two for the Money,George W. Allen,,producer,candidate_new_person
+47849,4082,1945-01-01,Two for the Money,Jack Finke,,writer,candidate_new_person
+47849,4082,1945-01-01,Two for the Money,Louis Pelletier,,writer,candidate_new_person
+47850,4083,1945-01-08,The Body Wouldn'T Stay in the Bay,George W. Allen,,producer,candidate_new_person
+47850,4083,1945-01-08,The Body Wouldn'T Stay in the Bay,Hugh Keegan,,writer,candidate_new_person
+47850,4083,1945-01-08,The Body Wouldn'T Stay in the Bay,Bob Anderson,,announcer,candidate_new_person
+4392,4085,1945-01-22,Seascape,Victor Kushner,,writer,candidate_new_person
+47852,4086,1945-01-29,Murder on Paper,George W. Allen,,director,candidate_new_person
+47852,4086,1945-01-29,Murder on Paper,J. Donald Wilson,573,writer,already_present
+47852,4086,1945-01-29,Murder on Paper,Bob Anderson,,announcer,candidate_new_person
+76149,4087,1945-02-05,Murder Is Legal,Robert Libbott,,writer,candidate_new_person
+76149,4087,1945-02-05,Murder Is Legal,George W. Allen,,director,candidate_new_person
+76149,4087,1945-02-05,Murder Is Legal,Bob Anderson,,announcer,candidate_new_person
+79402,4089,1945-02-19,The Dead Man Laughed,Lewis Herman,,writer,candidate_new_person
+79402,4089,1945-02-19,The Dead Man Laughed,George W. Allen,,director,candidate_new_person
+79402,4089,1945-02-19,The Dead Man Laughed,Bob Anderson,,announcer,candidate_new_person
+79407,4091,1945-03-05,Danger Is a Beautiful Blonde,John Dunkel,,writer,candidate_new_person
+79407,4091,1945-03-05,Danger Is a Beautiful Blonde,Hazel Leitel,,writer,candidate_new_person
+79407,4091,1945-03-05,Danger Is a Beautiful Blonde,George W. Allen,,director,candidate_new_person
+79407,4091,1945-03-05,Danger Is a Beautiful Blonde,Bob Anderson,,announcer,candidate_new_person
+76534,4093,1945-03-19,Murder Will Shout,John Hayes,,writer,candidate_new_person
+76534,4093,1945-03-19,Murder Will Shout,George W. Allen,,director,candidate_new_person
+76534,4093,1945-03-19,Murder Will Shout,Bob Anderson,,announcer,candidate_new_person
+76535,4095,1945-04-02,Return of the Innocent,J. Donald Wilson,573,writer,already_present
+76535,4095,1945-04-02,Return of the Innocent,George W. Allen,,director,candidate_new_person
+76535,4095,1945-04-02,Return of the Innocent,Marvin Miller,275,announcer,candidate_existing_person
+76086,4097,1945-04-16,To Rent Danger,John Hay,,writer,candidate_new_person
+76086,4097,1945-04-16,To Rent Danger,George W. Allen,,director,candidate_new_person
+76086,4097,1945-04-16,To Rent Danger,Marvin Miller,275,announcer,candidate_existing_person
+76536,4098,1945-04-23,Meet Mr. Death,George W. Allen,,director,candidate_new_person
+76536,4098,1945-04-23,Meet Mr. Death,Marvin Miller,275,announcer,candidate_existing_person
+76539,4099,1945-04-30,The Master'S Tree,Larry Roman,,writer,candidate_new_person
+76539,4099,1945-04-30,The Master'S Tree,John Dunkel,,writer,candidate_new_person
+76539,4099,1945-04-30,The Master'S Tree,George W. Allen,,director,candidate_new_person
+76539,4099,1945-04-30,The Master'S Tree,Marvin Miller,275,announcer,candidate_existing_person
+41256,4102,1945-05-21,The Man Who Bought Death,Marvin Miller,275,announcer,candidate_existing_person
+41256,4102,1945-05-21,The Man Who Bought Death,Ray Buffum,,writer,candidate_new_person
+41256,4102,1945-05-21,The Man Who Bought Death,George W. Allen,,director,candidate_new_person
+76540,4103,1945-05-28,Escape to Danger,James Sussex,,writer,candidate_new_person
+76540,4103,1945-05-28,Escape to Danger,George W. Allen,,director,candidate_new_person
+76540,4103,1945-05-28,Escape to Danger,Marvin Miller,275,announcer,candidate_existing_person
+76541,4104,1945-06-04,Murder Is Blind,Louis Estes,,writer,candidate_new_person
+76541,4104,1945-06-04,Murder Is Blind,George W. Allen,,director,candidate_new_person
+65083,4105,1945-06-11,Death Pays a Visit,George W. Allen,,director,candidate_new_person
+65083,4105,1945-06-11,Death Pays a Visit,Lewis Reed,,writer,candidate_new_person
+65083,4105,1945-06-11,Death Pays a Visit,Marvin Miller,275,announcer,candidate_existing_person
+76542,4106,1945-06-18,Blueprint for Suicide,Geraldine Merkin,,writer,candidate_new_person
+76542,4106,1945-06-18,Blueprint for Suicide,George W. Allen,,director,candidate_new_person
+76542,4106,1945-06-18,Blueprint for Suicide,Marvin Miller,275,announcer,candidate_existing_person
+76546,4107,1945-06-25,Death Watch,Joseph Cochran,,writer,candidate_new_person
+76546,4107,1945-06-25,Death Watch,George W. Allen,,director,candidate_new_person
+76546,4107,1945-06-25,Death Watch,Marvin Miller,275,announcer,candidate_existing_person
+69904,4108,1945-07-02,Deadly Innocent,George W. Allen,,director,candidate_new_person
+69904,4108,1945-07-02,Deadly Innocent,Sally Thorson,,writer,candidate_new_person
+69904,4108,1945-07-02,Deadly Innocent,Marvin Miller,275,announcer,candidate_existing_person
+69906,4109,1945-07-09,Highway of Escape,George W. Allen,,writer,candidate_new_person
+62439,4110,1945-07-16,Pattern for Terror,George W. Allen,,director,candidate_new_person
+62439,4110,1945-07-16,Pattern for Terror,Harold Swanton,,writer,candidate_new_person
+62439,4110,1945-07-16,Pattern for Terror,Marvin Miller,275,announcer,candidate_existing_person
+62440,4111,1945-07-23,Let George Do It,George W. Allen,,director,candidate_new_person
+62440,4111,1945-07-23,Let George Do It,Ann Rockwood,,writer,candidate_new_person
+62440,4111,1945-07-23,Let George Do It,Marvin Miller,275,announcer,candidate_existing_person
+65078,4112,1945-07-30,Summer Thunder,Marvin Miller,275,announcer,candidate_existing_person
+65078,4112,1945-07-30,Summer Thunder,George W. Allen,,director,candidate_new_person
+65078,4112,1945-07-30,Summer Thunder,Harold Swanton,,writer,candidate_new_person
+65077,4113,1945-08-06,The Man Who Came to Murder,Marvin Miller,275,announcer,candidate_existing_person
+65077,4113,1945-08-06,The Man Who Came to Murder,George W. Allen,,director,candidate_new_person
+65077,4113,1945-08-06,The Man Who Came to Murder,Sally Thorson,,writer,candidate_new_person
+79520,4114,1945-08-13,What Makes a Murderer,Everett Tomlinson,,writer,candidate_new_person
+79520,4114,1945-08-13,What Makes a Murderer,Harold Swanton,,writer,candidate_new_person
+79520,4114,1945-08-13,What Makes a Murderer,George W. Allen,,director,candidate_new_person
+79520,4114,1945-08-13,What Makes a Murderer,Marvin Miller,275,announcer,candidate_existing_person
+45241,4115,1945-08-20,X Marks the Murderer,Marvin Miller,275,announcer,candidate_existing_person
+45241,4115,1945-08-20,X Marks the Murderer,Joseph Cochran,,writer,candidate_new_person
+4400,4116,1945-08-27,I'Ll Trade You Murder,Lesley Edgely,,writer,candidate_new_person
+4398,4117,1945-09-03,Ambition Perilous,Harriet Ray,,writer,candidate_new_person
+45242,4118,1945-09-10,Phone Call from Death,Marvin Miller,275,announcer,candidate_existing_person
+45242,4118,1945-09-10,Phone Call from Death,Lesley Edgely,,writer,candidate_new_person
+45083,4119,1945-09-17,Sing a Song of Murder,Marvin Miller,275,announcer,candidate_existing_person
+45083,4119,1945-09-17,Sing a Song of Murder,Robert Ryf,,writer,candidate_new_person
+45084,4120,1945-09-24,The Man Who Died Twice,Marvin Miller,275,announcer,candidate_existing_person
+45084,4120,1945-09-24,The Man Who Died Twice,Stanley Rubin,,writer,candidate_new_person
+79397,4121,1945-10-01,Death Wears a White Robe,Marvin Miller,275,announcer,candidate_existing_person
+79397,4121,1945-10-01,Death Wears a White Robe,George W. Allen,,director,candidate_new_person
+45289,4122,1945-10-08,Death Laughs Last,Marvin Miller,275,announcer,candidate_existing_person
+45289,4122,1945-10-08,Death Laughs Last,Harold Swanton,,writer,candidate_new_person
+45290,4123,1945-10-15,House on Sycamore Road,Marvin Miller,275,announcer,candidate_existing_person
+45290,4123,1945-10-15,House on Sycamore Road,Lesley Edgely,,writer,candidate_new_person
+46241,4127,1945-11-12,The Seeing Eye,John Michael Hayes,,writer,candidate_new_person
+46241,4127,1945-11-12,The Seeing Eye,Harold Swanton,,writer,candidate_new_person
+46241,4127,1945-11-12,The Seeing Eye,Marvin Miller,275,announcer,candidate_existing_person
+46242,4128,1945-11-19,Coincidence,Harold Swanton,,writer,candidate_new_person
+46242,4128,1945-11-19,Coincidence,Marvin Miller,275,announcer,candidate_existing_person
+46849,4129,1945-11-26,The Stray Dream,George W. Allen,,producer,candidate_new_person
+46849,4129,1945-11-26,The Stray Dream,Marvin Miller,275,announcer,candidate_existing_person
+46849,4129,1945-11-26,The Stray Dream,Harold Swanton,,writer,candidate_new_person
+46850,4130,1945-12-03,Poison Is Quicker,George W. Allen,,producer,candidate_new_person
+46850,4130,1945-12-03,Poison Is Quicker,Lesley Edgely,,writer,candidate_new_person
+46850,4130,1945-12-03,Poison Is Quicker,Marvin Miller,275,announcer,candidate_existing_person
+62430,4131,1945-12-10,The Cistern,Harold Swanton,,writer,candidate_new_person
+62430,4131,1945-12-10,The Cistern,Marvin Miller,275,announcer,candidate_existing_person
+62430,4131,1945-12-10,The Cistern,George W. Allen,,producer,candidate_new_person
+76168,4135,1946-01-07,The Thin Line,Buckley Angel,,writer,candidate_new_person
+76168,4135,1946-01-07,The Thin Line,George W. Allen,,director,candidate_new_person
+76168,4135,1946-01-07,The Thin Line,Marvin Miller,275,announcer,candidate_existing_person
+79412,4137,1946-01-21,Treasure Hunt,Russell Hughes,,writer,candidate_new_person
+79412,4137,1946-01-21,Treasure Hunt,Marvin Miller,275,announcer,candidate_existing_person
+79412,4137,1946-01-21,Treasure Hunt,George W. Allen,,director,candidate_new_person
+62920,4138,1946-01-28,The Strange Sisters,Bernard Gerard,,writer,candidate_new_person
+62920,4138,1946-01-28,The Strange Sisters,George W. Allen,,producer,candidate_new_person
+62920,4138,1946-01-28,The Strange Sisters,Marvin Miller,275,announcer,candidate_existing_person
+6020,4139,1946-02-04,Panic,Harold Swanton,,writer,candidate_new_person
+76085,4142,1946-02-25,Murder in Haste,Eleanor Beeson,,writer,candidate_new_person
+76085,4142,1946-02-25,Murder in Haste,George W. Allen,,producer,candidate_new_person
+76085,4142,1946-02-25,Murder in Haste,Marvin Miller,275,announcer,candidate_existing_person
+62434,4143,1946-03-04,Decision,George W. Allen,,producer,candidate_new_person
+62434,4143,1946-03-04,Decision,Harold Swanton,,writer,candidate_new_person
+62434,4143,1946-03-04,Decision,Marvin Miller,275,announcer,candidate_existing_person
+62435,4144,1946-03-11,Boomerang,George W. Allen,,producer,candidate_new_person
+62435,4144,1946-03-11,Boomerang,Marvin Miller,275,announcer,candidate_existing_person
+62435,4144,1946-03-11,Boomerang,Alfred Seale,,writer,candidate_new_person
+62435,4144,1946-03-11,Boomerang,Nancy Seale,,writer,candidate_new_person
+79414,4146,1946-03-25,The Trigger Man,Marvin Miller,275,announcer,candidate_existing_person
+79414,4146,1946-03-25,The Trigger Man,Robert Druskin,,writer,candidate_new_person
+79414,4146,1946-03-25,The Trigger Man,Beatrice Druskin,,writer,candidate_new_person
+79414,4146,1946-03-25,The Trigger Man,Harold Swanton,,writer,candidate_new_person
+79414,4146,1946-03-25,The Trigger Man,George W. Allen,,producer,candidate_new_person
+63411,4147,1946-04-01,Three Times a Sinner,Gordon T. Hughes,,producer,candidate_new_person
+63411,4147,1946-04-01,Three Times a Sinner,Robert S. Brody,,writer,candidate_new_person
+63411,4147,1946-04-01,Three Times a Sinner,Marvin Miller,275,announcer,candidate_existing_person
+61340,4148,1946-04-08,Terror Stricken,Marvin Miller,275,announcer,candidate_existing_person
+61340,4148,1946-04-08,Terror Stricken,George W. Allen,,producer,candidate_new_person
+61340,4148,1946-04-08,Terror Stricken,Walter Jensen,,writer,candidate_new_person
+76083,4149,1946-04-15,Smart Boy,Adrian Gendot,,writer,candidate_new_person
+76083,4149,1946-04-15,Smart Boy,Marvin Miller,275,announcer,candidate_existing_person
+76083,4149,1946-04-15,Smart Boy,George W. Allen,,producer,candidate_new_person
+62922,4150,1946-04-22,Waterford Case,Marvin Miller,275,announcer,candidate_existing_person
+62922,4150,1946-04-22,Waterford Case,George W. Allen,,producer,candidate_new_person
+62922,4150,1946-04-22,Waterford Case,Ken Harvey,305,writer,candidate_existing_person
+62923,4156,1946-06-03,The Judas Face,Marvin Miller,275,announcer,candidate_existing_person
+62923,4156,1946-06-03,The Judas Face,George W. Allen,,producer,candidate_new_person
+62923,4156,1946-06-03,The Judas Face,Bea Marsh,,writer,candidate_new_person
+61719,4157,1946-06-10,Quiet Sunday,George W. Allen,,producer,candidate_new_person
+61719,4157,1946-06-10,Quiet Sunday,Marvin Miller,275,announcer,candidate_existing_person
+61719,4157,1946-06-10,Quiet Sunday,Bernard Gerard,,writer,candidate_new_person
+61719,4157,1946-06-10,Quiet Sunday,Zane Mann,,writer,candidate_new_person
+61720,4158,1946-06-17,Affair at Stoney Ridge,Marvin Miller,275,announcer,candidate_existing_person
+61720,4158,1946-06-17,Affair at Stoney Ridge,George W. Allen,,producer,candidate_new_person
+61720,4158,1946-06-17,Affair at Stoney Ridge,Louis Estey,,writer,candidate_new_person
+76549,4159,1946-06-24,Blind Bet,Bill Tobin,,writer,candidate_new_person
+76549,4159,1946-06-24,Blind Bet,George W. Allen,,producer,candidate_new_person
+76549,4159,1946-06-24,Blind Bet,Marvin Miller,275,announcer,candidate_existing_person
+76550,4160,1946-07-01,Solid Citizen,George W. Allen,,producer,candidate_new_person
+76550,4160,1946-07-01,Solid Citizen,Harold Swanton,,writer,candidate_new_person
+76550,4160,1946-07-01,Solid Citizen,Marvin Miller,275,announcer,candidate_existing_person
+76551,4161,1946-07-08,The Confession,Fred Hegland,,writer,candidate_new_person
+76551,4161,1946-07-08,The Confession,Harold Swanton,,writer,candidate_new_person
+76551,4161,1946-07-08,The Confession,George W. Allen,,producer,candidate_new_person
+76551,4161,1946-07-08,The Confession,Marvin Miller,275,announcer,candidate_existing_person
+76552,4162,1946-07-15,Custom Built Blonde,Will Pryor,,writer,candidate_new_person
+76552,4162,1946-07-15,Custom Built Blonde,George W. Allen,,director,candidate_new_person
+76552,4162,1946-07-15,Custom Built Blonde,Marvin Miller,275,announcer,candidate_existing_person
+76554,4165,1946-08-05,Bullet Proof,Kenneth Harvey,,writer,candidate_new_person
+76554,4165,1946-08-05,Bullet Proof,George W. Allen,,producer,candidate_new_person
+76554,4165,1946-08-05,Bullet Proof,Marvin Miller,275,announcer,candidate_existing_person
+4391,4166,1946-08-12,Stolen Murder,Eleanor Beeson,,writer,candidate_new_person
+4391,4166,1946-08-12,Stolen Murder,Marvin Miller,275,announcer,candidate_existing_person
+4391,4166,1946-08-12,Stolen Murder,George W. Allen,,director,candidate_new_person
+76088,4167,1946-08-19,Delivery Guaranteed,Marvin Miller,275,announcer,candidate_existing_person
+76088,4167,1946-08-19,Delivery Guaranteed,George W. Allen,,producer,candidate_new_person
+76088,4167,1946-08-19,Delivery Guaranteed,Robert Libbott,,writer,candidate_new_person
+76088,4167,1946-08-19,Delivery Guaranteed,Frank Burt,,writer,candidate_new_person
+76555,4170,1946-09-09,Witness at the Fountain,Harold Swanton,,writer,candidate_new_person
+76555,4170,1946-09-09,Witness at the Fountain,Marvin Miller,275,announcer,candidate_existing_person
+76555,4170,1946-09-09,Witness at the Fountain,George W. Allen,,director,candidate_new_person
+76556,4171,1946-09-16,The Brass Ring,David Gillespie,,writer,candidate_new_person
+76556,4171,1946-09-16,The Brass Ring,George W. Allen,,director,candidate_new_person
+76556,4171,1946-09-16,The Brass Ring,Dick Wells,,announcer,candidate_new_person
+79401,4174,1946-10-07,A Present for Ricky,Gene Farmhurst,,writer,candidate_new_person
+79401,4174,1946-10-07,A Present for Ricky,Marvin Miller,275,announcer,candidate_existing_person
+76537,4175,1946-10-14,Weak Sister,Jack Kelsey,,writer,candidate_new_person
+76537,4175,1946-10-14,Weak Sister,George W. Allen,,producer,candidate_new_person
+76537,4175,1946-10-14,Weak Sister,Marvin Miller,275,announcer,candidate_existing_person
+62436,4176,1946-10-21,Masquerade,David Kahn,,writer,candidate_new_person
+62436,4176,1946-10-21,Masquerade,George W. Allen,,producer,candidate_new_person
+62436,4176,1946-10-21,Masquerade,Marvin Miller,275,announcer,candidate_existing_person
+76547,4177,1946-10-28,Backfire,George W. Allen,,producer,candidate_new_person
+76547,4177,1946-10-28,Backfire,Joel Malone,,writer,candidate_new_person
+76547,4177,1946-10-28,Backfire,Marvin Miller,275,announcer,candidate_existing_person
+76538,4179,1946-11-11,The Deadly Penny,Bernard Gerard,,writer,candidate_new_person
+76538,4179,1946-11-11,The Deadly Penny,George W. Allen,,producer,candidate_new_person
+76538,4179,1946-11-11,The Deadly Penny,Wilbur Hatch,,writer,candidate_new_person
+76538,4179,1946-11-11,The Deadly Penny,Marvin Miller,275,announcer,candidate_existing_person
+62437,4181,1946-11-25,Two Year Plan,George W. Allen,,producer,candidate_new_person
+62437,4181,1946-11-25,Two Year Plan,Marvin Miller,275,announcer,candidate_existing_person
+62437,4181,1946-11-25,Two Year Plan,George Fass,,writer,candidate_new_person
+79404,4182,1946-12-02,Blind Impulse,Sherman Marks,,producer,candidate_new_person
+79404,4182,1946-12-02,Blind Impulse,Bob Venables,,announcer,candidate_new_person
+79405,4183,1946-12-09,With My Own Eyes,Robert Hall,,writer,candidate_new_person
+79405,4183,1946-12-09,With My Own Eyes,Harold Swanton,,writer,candidate_new_person
+79405,4183,1946-12-09,With My Own Eyes,George W. Allen,,producer,candidate_new_person
+79405,4183,1946-12-09,With My Own Eyes,Marvin Miller,275,announcer,candidate_existing_person
+76543,4185,1946-12-23,Next Year Is Mine,Joel Malone,,writer,candidate_new_person
+76543,4185,1946-12-23,Next Year Is Mine,George W. Allen,,producer,candidate_new_person
+76543,4185,1946-12-23,Next Year Is Mine,Marvin Miller,275,announcer,candidate_existing_person
+76544,4186,1946-12-30,Murder on Rourke Island,Harold Swanton,,writer,candidate_new_person
+76544,4186,1946-12-30,Murder on Rourke Island,George W. Allen,,producer,candidate_new_person
+76544,4186,1946-12-30,Murder on Rourke Island,Marvin Miller,275,announcer,candidate_existing_person
+76545,4187,1947-01-06,Dear Roger,George W. Allen,,producer,candidate_new_person
+76545,4187,1947-01-06,Dear Roger,Marvin Miller,275,announcer,candidate_existing_person
+60290,4188,1947-01-13,The Choice,George W. Allen,,producer,candidate_new_person
+60290,4188,1947-01-13,The Choice,Adrian Gendot,,writer,candidate_new_person
+60290,4188,1947-01-13,The Choice,Marvin Miller,275,announcer,candidate_existing_person
+60291,4189,1947-01-20,Last Curtain,Marvin Miller,275,announcer,candidate_existing_person
+60291,4189,1947-01-20,Last Curtain,George W. Allen,,producer,candidate_new_person
+60291,4189,1947-01-20,Last Curtain,Gene Farmhurst,,writer,candidate_new_person
+60292,4190,1947-01-27,Night Melody,Joel Malone,,writer,candidate_new_person
+60292,4190,1947-01-27,Night Melody,Harold Swanton,,writer,candidate_new_person
+60292,4190,1947-01-27,Night Melody,George W. Allen,,producer,candidate_new_person
+60292,4190,1947-01-27,Night Melody,Marvin Miller,275,announcer,candidate_existing_person
+39871,4192,1947-02-10,Safety in Numbers,Marvin Miller,275,announcer,candidate_existing_person
+39871,4192,1947-02-10,Safety in Numbers,George W. Allen,,producer,candidate_new_person
+39871,4192,1947-02-10,Safety in Numbers,Brian Thorn,,writer,candidate_new_person
+60294,4193,1947-02-17,A Woman'S Privilege,Marvin Miller,275,announcer,candidate_existing_person
+60294,4193,1947-02-17,A Woman'S Privilege,George W. Allen,,producer,candidate_new_person
+60294,4193,1947-02-17,A Woman'S Privilege,Brian Thorn,,writer,candidate_new_person
+61240,4194,1947-02-24,Eight to Twelve,Marvin Miller,275,announcer,candidate_existing_person
+61240,4194,1947-02-24,Eight to Twelve,Harold Swanton,,director,candidate_new_person
+61240,4194,1947-02-24,Eight to Twelve,Joel Malone,,writer,candidate_new_person
+61240,4194,1947-02-24,Eight to Twelve,George W. Allen,,producer,candidate_new_person
+53274,4195,1947-03-03,Blue Legend,E. Jack Neuman,,writer,candidate_new_person
+53274,4195,1947-03-03,Blue Legend,George W. Allen,,producer,candidate_new_person
+53274,4195,1947-03-03,Blue Legend,Marvin Miller,275,announcer,candidate_existing_person
+45089,4196,1947-03-10,Murder of Byron Blake,Marvin Miller,275,announcer,candidate_existing_person
+45089,4196,1947-03-10,Murder of Byron Blake,Gene Farmhurst,,writer,candidate_new_person
+60295,4196,1947-03-10,Murder of Byron Blake,Marvin Miller,275,announcer,candidate_existing_person
+60295,4196,1947-03-10,Murder of Byron Blake,George W. Allen,,producer,candidate_new_person
+60295,4196,1947-03-10,Murder of Byron Blake,Gene Farmhurst,,writer,candidate_new_person
+61501,4197,1947-03-17,Mavis Cameron Disappears,Marvin Miller,275,announcer,candidate_existing_person
+61501,4197,1947-03-17,Mavis Cameron Disappears,George W. Allen,,producer,candidate_new_person
+61501,4197,1947-03-17,Mavis Cameron Disappears,Edward Bloodworth,,writer,candidate_new_person
+60298,4199,1947-03-31,The Blank Wall,George W. Allen,,producer,candidate_new_person
+60298,4199,1947-03-31,The Blank Wall,Marvin Miller,275,announcer,candidate_existing_person
+47859,4202,1947-04-14,Maid of Honor,Brian Thorn,,writer,candidate_new_person
+47859,4202,1947-04-14,Maid of Honor,Marvin Miller,275,announcer,candidate_existing_person
+47859,4202,1947-04-14,Maid of Honor,George W. Allen,,producer,candidate_new_person
+47860,4203,1947-04-21,Backlash,J. Douglas Ware,,writer,candidate_new_person
+47860,4203,1947-04-21,Backlash,Marvin Miller,275,announcer,candidate_existing_person
+47860,4203,1947-04-21,Backlash,George W. Allen,,producer,candidate_new_person
+47861,4204,1947-04-28,The Black Book,George W. Allen,,producer,candidate_new_person
+47861,4204,1947-04-28,The Black Book,William Envick,,writer,candidate_new_person
+47861,4204,1947-04-28,The Black Book,Marvin Miller,275,announcer,candidate_existing_person
+47862,4205,1947-05-05,Windfall,George W. Allen,,producer,candidate_new_person
+47862,4205,1947-05-05,Windfall,Harold Swanton,,writer,candidate_new_person
+47862,4205,1947-05-05,Windfall,Joel Malone,,writer,candidate_new_person
+47853,4208,1947-05-26,Fateful Friday,Marvin Miller,275,announcer,candidate_existing_person
+47853,4208,1947-05-26,Fateful Friday,George W. Allen,,producer,candidate_new_person
+47854,4209,1947-06-02,Caesar'S Wife,David Victor,,writer,candidate_new_person
+47854,4209,1947-06-02,Caesar'S Wife,Gordon T. Hughes,,producer,candidate_new_person
+47854,4209,1947-06-02,Caesar'S Wife,Gordon T. Hughes,,director,candidate_new_person47854,4209,1947-06-02,Caesar'S Wife,Herbert Little Jr,,writer,candidate_new_person
+47855,4210,1947-06-09,Juggernaut,Marvin Miller,275,announcer,candidate_existing_person
+47855,4210,1947-06-09,Juggernaut,George W. Allen,,producer,candidate_new_person
+47855,4210,1947-06-09,Juggernaut,Joel Malone,,writer,candidate_new_person
+47855,4210,1947-06-09,Juggernaut,Harold Swanton,,writer,candidate_new_person
+47856,4211,1947-06-16,Ambassador of Death,George W. Allen,,producer,candidate_new_person
+47856,4211,1947-06-16,Ambassador of Death,Meyer Dolinsky,,writer,candidate_new_person
+41234,4212,1947-06-23,The Gentle Way,George W. Allen,,producer,candidate_new_person
+41234,4212,1947-06-23,The Gentle Way,John Hastey,,writer,candidate_new_person
+47864,4215,1947-07-16,Beyond Reasonable Doubt,Marvin Miller,275,announcer,candidate_existing_person
+47864,4215,1947-07-16,Beyond Reasonable Doubt,Robert Libbott,,writer,candidate_new_person
+47864,4215,1947-07-16,Beyond Reasonable Doubt,Frank Burt,,writer,candidate_new_person
+47864,4215,1947-07-16,Beyond Reasonable Doubt,George W. Allen,,producer,candidate_new_person
+47865,4218,1947-08-06,Dark Future,Gene Farmhurst,,writer,candidate_new_person
+47865,4218,1947-08-06,Dark Future,George W. Allen,,producer,candidate_new_person
+47866,4219,1947-08-13,Whispered Verdict,Stuart Sterling,,writer,candidate_new_person
+47866,4219,1947-08-13,Whispered Verdict,George W. Allen,,producer,candidate_new_person
+47867,4220,1947-08-20,Girl Next Door,Marvin Miller,275,announcer,candidate_existing_person
+47867,4220,1947-08-20,Girl Next Door,George W. Allen,,producer,candidate_new_person
+47867,4220,1947-08-20,Girl Next Door,William Envick,,writer,candidate_new_person
+47868,4221,1947-08-27,Curtain Call,George W. Allen,,producer,candidate_new_person
+47868,4221,1947-08-27,Curtain Call,Robert Eisenbach,,writer,candidate_new_person
+47868,4221,1947-08-27,Curtain Call,Jackson Gillis,,writer,candidate_new_person
+47868,4221,1947-08-27,Curtain Call,Marvin Miller,275,announcer,candidate_existing_person
+47869,4222,1947-09-03,The Eleventh Hour,George W. Allen,,producer,candidate_new_person
+47869,4222,1947-09-03,The Eleventh Hour,Harold Swanton,,writer,candidate_new_person
+47869,4222,1947-09-03,The Eleventh Hour,Joel Malone,,writer,candidate_new_person
+47872,4225,1947-09-24,Sleep My Pretty One,George W. Allen,,producer,candidate_new_person
+47872,4225,1947-09-24,Sleep My Pretty One,Ruth Born,,writer,candidate_new_person
+47872,4225,1947-09-24,Sleep My Pretty One,Marvin Miller,275,announcer,candidate_existing_person
+47873,4227,1947-10-08,Career Man,Rena K. Green,,writer,candidate_new_person
+47873,4227,1947-10-08,Career Man,George W. Allen,,producer,candidate_new_person
+47873,4227,1947-10-08,Career Man,Marvin Miller,275,announcer,candidate_existing_person
+47874,4228,1947-10-15,Man of Distinction,George W. Allen,,producer,candidate_new_person
+47874,4228,1947-10-15,Man of Distinction,Jackson Gillis,,writer,candidate_new_person
+47874,4228,1947-10-15,Man of Distinction,Robert Eisenbach,,writer,candidate_new_person
+62438,4230,1947-10-29,The Back Door,George W. Allen,,producer,candidate_new_person
+62438,4230,1947-10-29,The Back Door,James Erthein,,writer,candidate_new_person
+61502,4231,1947-11-05,The Big Prison,Joel Malone,,writer,candidate_new_person
+61502,4231,1947-11-05,The Big Prison,Harold Swanton,,writer,candidate_new_person
+61502,4231,1947-11-05,The Big Prison,George W. Allen,,producer,candidate_new_person
+61502,4231,1947-11-05,The Big Prison,Marvin Miller,275,announcer,candidate_existing_person
+61503,4233,1947-11-19,Dark Moon,George W. Allen,,producer,candidate_new_person
+61503,4233,1947-11-19,Dark Moon,John Hart,,writer,candidate_new_person
+76081,4234,1947-11-26,Body Off Billingsgate,Lesley Edgely,,writer,candidate_new_person
+76081,4234,1947-11-26,Body Off Billingsgate,George W. Allen,,producer,candidate_new_person
+76081,4234,1947-11-26,Body Off Billingsgate,Marvin Miller,275,announcer,candidate_existing_person
+62739,4236,1947-12-10,Wedding Gift,Marvin Miller,275,announcer,candidate_existing_person
+62739,4236,1947-12-10,Wedding Gift,Merrick Stone,,writer,candidate_new_person
+62739,4236,1947-12-10,Wedding Gift,David Clark,,writer,candidate_new_person
+62740,4237,1947-12-17,Murder in Haste,Marvin Miller,275,announcer,candidate_existing_person
+62740,4237,1947-12-17,Murder in Haste,George W. Allen,,producer,candidate_new_person
+62740,4237,1947-12-17,Murder in Haste,Eleanor Beeson,,writer,candidate_new_person
+61342,4238,1947-12-24,Decision,Marvin Miller,275,announcer,candidate_existing_person
+61342,4238,1947-12-24,Decision,Harold Swanton,,writer,candidate_new_person
+61342,4238,1947-12-24,Decision,George W. Allen,,producer,candidate_new_person
+64210,4239,1947-12-31,The First Year,Marvin Miller,275,announcer,candidate_existing_person
+64210,4239,1947-12-31,The First Year,George W. Allen,,producer,candidate_new_person
+64210,4239,1947-12-31,The First Year,Harold Swanton,,writer,candidate_new_person
+64210,4239,1947-12-31,The First Year,Joel Malone,,writer,candidate_new_person
+60287,4240,1948-01-07,Comeback,George W. Allen,,producer,candidate_new_person
+60287,4240,1948-01-07,Comeback,Marvin Miller,275,announcer,candidate_existing_person
+60287,4240,1948-01-07,Comeback,Carey Shaw,,writer,candidate_new_person
+60287,4240,1948-01-07,Comeback,John Moore,,writer,candidate_new_person
+60288,4241,1948-01-14,Silent Partner,Marvin Miller,275,announcer,candidate_existing_person
+60288,4241,1948-01-14,Silent Partner,George W. Allen,,producer,candidate_new_person
+60288,4241,1948-01-14,Silent Partner,Joel Malone,,writer,candidate_new_person
+60288,4241,1948-01-14,Silent Partner,Harold Swanton,,writer,candidate_new_person
+61125,4242,1948-01-21,Twelve Portraits of Marcia,George W. Allen,,producer,candidate_new_person
+61125,4242,1948-01-21,Twelve Portraits of Marcia,John Montsos,,writer,candidate_new_person
+61125,4242,1948-01-21,Twelve Portraits of Marcia,Marvin Miller,275,announcer,candidate_existing_person
+64271,4243,1948-01-28,Night Final,Marvin Miller,275,announcer,candidate_existing_person
+64271,4243,1948-01-28,Night Final,George W. Allen,,producer,candidate_new_person
+64271,4243,1948-01-28,Night Final,Bob Platt,,writer,candidate_new_person
+64517,4244,1948-02-04,Undertow,George W. Allen,,producer,candidate_new_person
+64517,4244,1948-02-04,Undertow,George Fass,,writer,candidate_new_person
+64517,4244,1948-02-04,Undertow,Gertrude Fass,,writer,candidate_new_person
+64270,4245,1948-02-11,Money Is the Root of All Evil,Marvin Miller,275,announcer,candidate_existing_person
+4399,4246,1948-02-18,Quiet Suicide,Jackson Gillis,,writer,candidate_new_person
+4399,4246,1948-02-18,Quiet Suicide,Robert Eisenbach,,writer,candidate_new_person
+61504,4247,1948-02-25,Meeting on Tenth Street,Marvin Miller,275,announcer,candidate_existing_person
+61504,4247,1948-02-25,Meeting on Tenth Street,George W. Allen,,producer,candidate_new_person
+61504,4247,1948-02-25,Meeting on Tenth Street,Joel Malone,,writer,candidate_new_person
+61504,4247,1948-02-25,Meeting on Tenth Street,Harold Swanton,,writer,candidate_new_person
+61341,4248,1948-03-03,Boiling Point,Marvin Miller,275,announcer,candidate_existing_person
+61341,4248,1948-03-03,Boiling Point,George W. Allen,,producer,candidate_new_person
+61341,4248,1948-03-03,Boiling Point,Joe Fugano,,writer,candidate_new_person
+76078,4249,1948-03-10,Return Engagement,Lesley Edgely,,writer,candidate_new_person
+76078,4249,1948-03-10,Return Engagement,George W. Allen,,producer,candidate_new_person
+76078,4249,1948-03-10,Return Engagement,Marvin Miller,275,announcer,candidate_existing_person
+76150,4251,1948-03-24,The Dark Room,Marvin Miller,275,announcer,candidate_existing_person
+76150,4251,1948-03-24,The Dark Room,Joel Malone,,writer,candidate_new_person
+76150,4251,1948-03-24,The Dark Room,George W. Allen,,producer,candidate_new_person
+76079,4252,1948-03-31,Bird of Prey,Marvin Miller,275,announcer,candidate_existing_person
+76079,4252,1948-03-31,Bird of Prey,George Fass,,writer,candidate_new_person
+76079,4252,1948-03-31,Bird of Prey,Gertrude Fass,,writer,candidate_new_person
+76079,4252,1948-03-31,Bird of Prey,George W. Allen,,producer,candidate_new_person
+24332,4253,1948-04-07,What Makes a Murderer,George W. Allen,,producer,candidate_new_person
+24332,4253,1948-04-07,What Makes a Murderer,Harold Swanton,,writer,candidate_new_person
+24332,4253,1948-04-07,What Makes a Murderer,Marvin Miller,275,announcer,candidate_existing_person
+63412,4255,1948-04-21,Silent City,Marvin Miller,275,announcer,candidate_existing_person
+63412,4255,1948-04-21,Silent City,Gilbert Thomas,,writer,candidate_new_person
+63412,4255,1948-04-21,Silent City,George W. Allen,,producer,candidate_new_person
+41200,4256,1948-04-28,Tough Guy,Marvin Miller,275,announcer,candidate_existing_person
+41201,4258,1948-05-12,Chain Reaction,Marvin Miller,275,announcer,candidate_existing_person
+41201,4258,1948-05-12,Chain Reaction,Sidney Renthal,,writer,candidate_new_person
+41202,4259,1948-05-19,Murder on Margin,Marvin Miller,275,announcer,candidate_existing_person
+41203,4261,1948-06-02,Stranger in the House,Marvin Miller,275,announcer,candidate_existing_person
+76093,4264,1948-06-30,Small Town Girl,Marvin Miller,275,announcer,candidate_existing_person
+76093,4264,1948-06-30,Small Town Girl,Lesley Edgely,,writer,candidate_new_person
+76093,4264,1948-06-30,Small Town Girl,Wilbur Hatch,,writer,candidate_new_person
+76094,4266,1948-07-21,Farewell Party,Bob Gray,,writer,candidate_new_person
+41205,4270,1948-08-18,Bright Future,Marvin Miller,275,announcer,candidate_existing_person
+41205,4270,1948-08-18,Bright Future,Robert Eisenbach,,writer,candidate_new_person
+41205,4270,1948-08-18,Bright Future,Jackson Gillis,,writer,candidate_new_person
+79390,4271,1948-08-25,Trio of Rogues,George Fass,,writer,candidate_new_person
+79390,4271,1948-08-25,Trio of Rogues,Gertrude Fass,,writer,candidate_new_person
+79390,4271,1948-08-25,Trio of Rogues,George W. Allen,,producer,candidate_new_person
+79390,4271,1948-08-25,Trio of Rogues,George W. Allen,,director,candidate_new_person
+79517,4272,1948-09-01,Payment in Full,Sidney Reuthal,,writer,candidate_new_person
+79517,4272,1948-09-01,Payment in Full,George W. Allen,,producer,candidate_new_person
+79517,4272,1948-09-01,Payment in Full,George W. Allen,,director,candidate_new_person
+79517,4272,1948-09-01,Payment in Full,Marvin Miller,275,announcer,candidate_existing_person
+41207,4274,1948-09-15,Uncle Ben'S Widow,Marvin Miller,275,announcer,candidate_existing_person
+41207,4274,1948-09-15,Uncle Ben'S Widow,Jim Lehrer,,writer,candidate_new_person
+64080,4275,1948-09-22,Still Death,George W. Allen,,producer,candidate_new_person
+64080,4275,1948-09-22,Still Death,George W. Allen,,director,candidate_new_person
+64080,4275,1948-09-22,Still Death,Marvin Miller,275,announcer,candidate_existing_person
+64080,4275,1948-09-22,Still Death,Gilbert Thomas,,writer,candidate_new_person
+65084,4276,1948-09-29,Conspiracy,Marvin Miller,275,announcer,candidate_existing_person
+65085,4277,1948-10-03,Big Gamble,George Esner,,writer,candidate_new_person
+65085,4277,1948-10-03,Big Gamble,George W. Allen,,producer,candidate_new_person
+65085,4277,1948-10-03,Big Gamble,George W. Allen,,director,candidate_new_person
+65085,4277,1948-10-03,Big Gamble,Marvin Miller,275,announcer,candidate_existing_person
+76160,4278,1948-10-10,Whirlpool,Marvin Miller,275,announcer,candidate_existing_person
+76160,4278,1948-10-10,Whirlpool,Joel Malone,,writer,candidate_new_person
+76164,4279,1948-10-17,Package for Emily,Marvin Miller,275,announcer,candidate_existing_person
+76164,4279,1948-10-17,Package for Emily,Robert S. Brody,,writer,candidate_new_person
+76164,4279,1948-10-17,Package for Emily,George W. Allen,,producer,candidate_new_person
+76164,4279,1948-10-17,Package for Emily,George W. Allen,,director,candidate_new_person
+76161,4280,1948-10-24,Search for an Unknown,Marvin Miller,275,announcer,candidate_existing_person
+76161,4280,1948-10-24,Search for an Unknown,George W. Allen,,producer,candidate_new_person
+76161,4280,1948-10-24,Search for an Unknown,George W. Allen,,director,candidate_new_person
+76161,4280,1948-10-24,Search for an Unknown,Adrian Gendot,,writer,candidate_new_person
+60280,4281,1948-10-31,Letter from Yesterday,George W. Allen,,producer,candidate_new_person
+60280,4281,1948-10-31,Letter from Yesterday,George W. Allen,,director,candidate_new_person
+60280,4281,1948-10-31,Letter from Yesterday,Edward Bloodworth,,writer,candidate_new_person
+60280,4281,1948-10-31,Letter from Yesterday,Marvin Miller,275,announcer,candidate_existing_person
+70599,4282,1948-11-07,Cover Up,George W. Allen,,producer,candidate_new_person
+70599,4282,1948-11-07,Cover Up,George W. Allen,,director,candidate_new_person
+70599,4282,1948-11-07,Cover Up,Louis Hampton,,writer,candidate_new_person
+70600,4283,1948-11-14,Nightmare,Marvin Miller,275,announcer,candidate_existing_person
+70600,4283,1948-11-14,Nightmare,George W. Allen,,producer,candidate_new_person
+70600,4283,1948-11-14,Nightmare,George W. Allen,,director,candidate_new_person
+70600,4283,1948-11-14,Nightmare,Sterling Tracy,,director,candidate_new_person
+70600,4283,1948-11-14,Nightmare,Robert Eisenbach,,writer,candidate_new_person
+70600,4283,1948-11-14,Nightmare,Jackson Gillis,,writer,candidate_new_person
+60283,4284,1948-11-21,The Lovely Look,Marvin Miller,275,announcer,candidate_existing_person
+60283,4284,1948-11-21,The Lovely Look,George W. Allen,,producer,candidate_new_person
+60283,4284,1948-11-21,The Lovely Look,Sterling Tracy,,director,candidate_new_person
+60283,4284,1948-11-21,The Lovely Look,Mary Ruth Funk,,writer,candidate_new_person
+60284,4285,1948-11-28,Murder in Paradise,Marvin Miller,275,announcer,candidate_existing_person
+60284,4285,1948-11-28,Murder in Paradise,George W. Allen,,producer,candidate_new_person
+60284,4285,1948-11-28,Murder in Paradise,Sterling Tracy,,director,candidate_new_person
+60284,4285,1948-11-28,Murder in Paradise,George Fass,,writer,candidate_new_person
+60284,4285,1948-11-28,Murder in Paradise,Gertrude Fass,,writer,candidate_new_person
+60285,4286,1948-12-05,Hired Alibi,Bernard Gerard,,writer,candidate_new_person
+60285,4286,1948-12-05,Hired Alibi,George W. Allen,,producer,candidate_new_person
+60285,4286,1948-12-05,Hired Alibi,Sterling Tracy,,director,candidate_new_person
+76152,4287,1948-12-12,Stormy Weather,Marvin Miller,275,announcer,candidate_existing_person
+76152,4287,1948-12-12,Stormy Weather,E. Jack Neuman,,writer,candidate_new_person
+76152,4287,1948-12-12,Stormy Weather,George W. Allen,,producer,candidate_new_person
+76152,4287,1948-12-12,Stormy Weather,George W. Allen,,director,candidate_new_person
+76095,4288,1948-12-19,The Hangtree Affair,Marvin Miller,275,announcer,candidate_existing_person
+76095,4288,1948-12-19,The Hangtree Affair,Joel Malone,,writer,candidate_new_person
+76095,4288,1948-12-19,The Hangtree Affair,Adrian Gendot,,writer,candidate_new_person
+76095,4288,1948-12-19,The Hangtree Affair,George W. Allen,,producer,candidate_new_person
+76095,4288,1948-12-19,The Hangtree Affair,George W. Allen,,director,candidate_new_person
+76145,4289,1948-12-26,Delayed Christmas Present,Edward Bloodworth,,writer,candidate_new_person
+76145,4289,1948-12-26,Delayed Christmas Present,Marvin Miller,275,announcer,candidate_existing_person
+76145,4289,1948-12-26,Delayed Christmas Present,George W. Allen,,producer,candidate_new_person
+76145,4289,1948-12-26,Delayed Christmas Present,Gordon T. Hughes,,director,candidate_new_person
+76146,4290,1949-01-02,Man on the Roof,Steve Hampton,,writer,candidate_new_person
+76146,4290,1949-01-02,Man on the Roof,George W. Allen,,producer,candidate_new_person
+76146,4290,1949-01-02,Man on the Roof,Gordon T. Hughes,,director,candidate_new_person
+76146,4290,1949-01-02,Man on the Roof,Marvin Miller,275,announcer,candidate_existing_person
+76167,4291,1949-01-09,Tell Tale Brand,Marvin Miller,275,announcer,candidate_existing_person
+76167,4291,1949-01-09,Tell Tale Brand,George W. Allen,,producer,candidate_new_person
+76167,4291,1949-01-09,Tell Tale Brand,Gordon T. Hughes,,director,candidate_new_person
+76167,4291,1949-01-09,Tell Tale Brand,Robert Ryf,,writer,candidate_new_person
+46041,4292,1949-01-16,Shakedown,Bill Forman,,announcer,candidate_new_person
+46041,4292,1949-01-16,Shakedown,George W. Allen,,producer,candidate_new_person
+46041,4292,1949-01-16,Shakedown,Meyer Dolinsky,,writer,candidate_new_person
+79523,4293,1949-01-23,Impulse,George W. Allen,,producer,candidate_new_person
+79523,4293,1949-01-23,Impulse,Gordon T. Hughes,,director,candidate_new_person
+79523,4293,1949-01-23,Impulse,Marvin Miller,275,announcer,candidate_existing_person
+79523,4293,1949-01-23,Impulse,Robert Ryf,,writer,candidate_new_person
+62924,4295,1949-02-06,The Cheat,Marvin Miller,275,announcer,candidate_existing_person
+62924,4295,1949-02-06,The Cheat,George W. Allen,,producer,candidate_new_person
+62924,4295,1949-02-06,The Cheat,George W. Allen,,director,candidate_new_person
+62924,4295,1949-02-06,The Cheat,Bernard Gerard,,writer,candidate_new_person
+24333,4296,1949-02-13,Last Curtain,George W. Allen,,producer,candidate_new_person
+24333,4296,1949-02-13,Last Curtain,George W. Allen,,director,candidate_new_person
+24333,4296,1949-02-13,Last Curtain,Frank DeFelita,,writer,candidate_new_person
+24333,4296,1949-02-13,Last Curtain,Marvin Miller,275,announcer,candidate_existing_person
+79391,4298,1949-02-27,Grave Secret,Steve Hampton,,writer,candidate_new_person
+79391,4298,1949-02-27,Grave Secret,George W. Allen,,producer,candidate_new_person
+79391,4298,1949-02-27,Grave Secret,George W. Allen,,director,candidate_new_person
+76147,4300,1949-03-13,Search for Maxine,Harold Swanton,,writer,candidate_new_person
+76147,4300,1949-03-13,Search for Maxine,George W. Allen,,producer,candidate_new_person
+76147,4300,1949-03-13,Search for Maxine,Gordon T. Hughes,,director,candidate_new_person
+76148,4301,1949-03-20,Death of Mr. Penny,Marvin Miller,275,announcer,candidate_existing_person
+76148,4301,1949-03-20,Death of Mr. Penny,George W. Allen,,producer,candidate_new_person
+76148,4301,1949-03-20,Death of Mr. Penny,Gordon T. Hughes,,director,candidate_new_person
+76148,4301,1949-03-20,Death of Mr. Penny,Adrian Gendot,,writer,candidate_new_person
+76148,4301,1949-03-20,Death of Mr. Penny,Joel Murcott,,writer,candidate_new_person
+6022,4302,1949-03-27,Beyond the Wall,Jackson Gillis,,writer,candidate_new_person
+6022,4302,1949-03-27,Beyond the Wall,Robert Eisenbach,,writer,candidate_new_person
+76144,4303,1949-04-03,Rawhide Coffin,Marvin Miller,275,announcer,candidate_existing_person
+76144,4303,1949-04-03,Rawhide Coffin,George W. Allen,,producer,candidate_new_person
+76144,4303,1949-04-03,Rawhide Coffin,Gordon T. Hughes,,director,candidate_new_person
+76144,4303,1949-04-03,Rawhide Coffin,Robert Steven Brady,,writer,candidate_new_person
+76089,4304,1949-04-10,Murder at Twin Pines,Marvin Miller,275,announcer,candidate_existing_person
+76090,4305,1949-04-17,Sleep My Pretty One,Ruth Born,,writer,candidate_new_person
+76090,4305,1949-04-17,Sleep My Pretty One,Marvin Miller,275,announcer,candidate_existing_person
+76090,4305,1949-04-17,Sleep My Pretty One,Gordon T. Hughes,,director,candidate_new_person
+76090,4305,1949-04-17,Sleep My Pretty One,George W. Allen,,producer,candidate_new_person
+76142,4306,1949-04-24,Mask for Kinsella,Marvin Miller,275,announcer,candidate_existing_person
+76142,4306,1949-04-24,Mask for Kinsella,George W. Allen,,producer,candidate_new_person
+76142,4306,1949-04-24,Mask for Kinsella,George W. Allen,,director,candidate_new_person
+76142,4306,1949-04-24,Mask for Kinsella,Richard Creedon,,writer,candidate_new_person
+76143,4307,1949-05-01,Solid Citizen,Leona Shirley,,writer,candidate_new_person
+76143,4307,1949-05-01,Solid Citizen,Marvin Miller,275,announcer,candidate_existing_person
+76143,4307,1949-05-01,Solid Citizen,George W. Allen,,producer,candidate_new_person
+76143,4307,1949-05-01,Solid Citizen,George W. Allen,,director,candidate_new_person
+76091,4308,1949-05-08,Danger Is a Beautiful Blonde,George W. Allen,,producer,candidate_new_person
+76091,4308,1949-05-08,Danger Is a Beautiful Blonde,George W. Allen,,director,candidate_new_person
+76091,4308,1949-05-08,Danger Is a Beautiful Blonde,Marvin Miller,275,announcer,candidate_existing_person
+76091,4308,1949-05-08,Danger Is a Beautiful Blonde,Hazel Leitel,,writer,candidate_new_person
+76091,4308,1949-05-08,Danger Is a Beautiful Blonde,John Dunkel,,writer,candidate_new_person
+41254,4309,1949-05-15,Golden Opportunity,Marvin Miller,275,announcer,candidate_existing_person
+41254,4309,1949-05-15,Golden Opportunity,Harrison Negley,,writer,candidate_new_person
+76087,4310,1949-05-22,Fatal Fraud,Joel Malone,,writer,candidate_new_person
+76087,4310,1949-05-22,Fatal Fraud,Adrian Gendot,,writer,candidate_new_person
+76087,4310,1949-05-22,Fatal Fraud,George W. Allen,,producer,candidate_new_person
+76087,4310,1949-05-22,Fatal Fraud,George W. Allen,,director,candidate_new_person
+76087,4310,1949-05-22,Fatal Fraud,Marvin Miller,275,announcer,candidate_existing_person
+76163,4311,1949-05-29,Deal with Death,Marvin Miller,275,announcer,candidate_existing_person
+76163,4311,1949-05-29,Deal with Death,Steve Hampton,,writer,candidate_new_person
+76163,4311,1949-05-29,Deal with Death,George W. Allen,,producer,candidate_new_person
+76163,4311,1949-05-29,Deal with Death,George W. Allen,,director,candidate_new_person
+76151,4312,1949-06-05,Letter to Melanie,Marvin Miller,275,announcer,candidate_existing_person
+76151,4312,1949-06-05,Letter to Melanie,Joel Malone,,writer,candidate_new_person
+76151,4312,1949-06-05,Letter to Melanie,Harold Swanton,,writer,candidate_new_person
+76151,4312,1949-06-05,Letter to Melanie,George W. Allen,,producer,candidate_new_person
+76151,4312,1949-06-05,Letter to Melanie,George W. Allen,,director,candidate_new_person
+11151,4313,1949-06-12,Perfect Alibi,James Cullen,,writer,candidate_new_person
+61343,4316,1949-07-03,Panic on Mulberry Street,Marvin Miller,275,announcer,candidate_existing_person
+61343,4316,1949-07-03,Panic on Mulberry Street,George W. Allen,,producer,candidate_new_person
+61343,4316,1949-07-03,Panic on Mulberry Street,George W. Allen,,director,candidate_new_person
+61343,4316,1949-07-03,Panic on Mulberry Street,Steve Hampton,,writer,candidate_new_person
+61344,4317,1949-07-10,Front Man,Marvin Miller,275,announcer,candidate_existing_person
+61344,4317,1949-07-10,Front Man,George W. Allen,,producer,candidate_new_person
+61344,4317,1949-07-10,Front Man,George W. Allen,,director,candidate_new_person
+61344,4317,1949-07-10,Front Man,Gilbert Thomas,,writer,candidate_new_person
+47427,4318,1949-07-17,Death in Sixteen Millimeter,Marvin Miller,275,announcer,candidate_existing_person
+47427,4318,1949-07-17,Death in Sixteen Millimeter,George W. Allen,,producer,candidate_new_person
+47427,4318,1949-07-17,Death in Sixteen Millimeter,George W. Allen,,director,candidate_new_person
+47427,4318,1949-07-17,Death in Sixteen Millimeter,Nancy Cleveland,,writer,candidate_new_person
+47428,4319,1949-07-24,The Hermit,George W. Allen,,producer,candidate_new_person
+47428,4319,1949-07-24,The Hermit,George W. Allen,,director,candidate_new_person
+47428,4319,1949-07-24,The Hermit,Marvin Miller,275,announcer,candidate_existing_person
+47428,4319,1949-07-24,The Hermit,Ben S. Hunter,,writer,candidate_new_person
+47429,4320,1949-07-31,Brotherly Hate,Harrison Negley,,writer,candidate_new_person
+47429,4320,1949-07-31,Brotherly Hate,George W. Allen,,producer,candidate_new_person
+47429,4320,1949-07-31,Brotherly Hate,George W. Allen,,director,candidate_new_person
+47429,4320,1949-07-31,Brotherly Hate,Marvin Miller,275,announcer,candidate_existing_person
+41255,4321,1949-08-07,The Trigger Man,Marvin Miller,275,announcer,candidate_existing_person
+41255,4321,1949-08-07,The Trigger Man,George W. Allen,,producer,candidate_new_person
+41255,4321,1949-08-07,The Trigger Man,George W. Allen,,director,candidate_new_person
+41255,4321,1949-08-07,The Trigger Man,Robert Druskin,,writer,candidate_new_person
+41255,4321,1949-08-07,The Trigger Man,Beatrice Druskin,,writer,candidate_new_person
+47433,4322,1949-08-14,Best Friend,George W. Allen,,producer,candidate_new_person
+47433,4322,1949-08-14,Best Friend,Norman R. Cramer,,writer,candidate_new_person
+47433,4322,1949-08-14,Best Friend,Sterling Tracy,,director,candidate_new_person
+47433,4322,1949-08-14,Best Friend,Marvin Miller,275,announcer,candidate_existing_person
+47434,4323,1949-08-21,The Confession,George W. Allen,,producer,candidate_new_person
+47434,4323,1949-08-21,The Confession,Joel Malone,,writer,candidate_new_person
+47434,4323,1949-08-21,The Confession,Sterling Tracy,,producer,candidate_new_person
+47353,4324,1949-08-28,Eager Pigeon,George W. Allen,,producer,candidate_new_person
+47353,4324,1949-08-28,Eager Pigeon,Joel Malone,,writer,candidate_new_person
+47353,4324,1949-08-28,Eager Pigeon,Sterling Tracy,,producer,candidate_new_person
+47354,4325,1949-09-04,Smart Girl,George W. Allen,,producer,candidate_new_person
+47354,4325,1949-09-04,Smart Girl,Marvin Miller,275,announcer,candidate_existing_person
+47354,4325,1949-09-04,Smart Girl,Sterling Tracy,,director,candidate_new_person
+47354,4325,1949-09-04,Smart Girl,David H. Ross,,writer,candidate_new_person
+4390,4326,1949-09-11,Brief Pause for Murder,George W. Allen,,producer,candidate_new_person
+4390,4326,1949-09-11,Brief Pause for Murder,Lou Huston,,writer,candidate_new_person
+4390,4326,1949-09-11,Brief Pause for Murder,Sterling Tracy,,producer,candidate_new_person
+4390,4326,1949-09-11,Brief Pause for Murder,Bill Forman,,writer,candidate_new_person
+46039,4327,1949-09-18,Poor Henry,Harold Swanton,,writer,candidate_new_person
+46039,4327,1949-09-18,Poor Henry,Marvin Miller,275,announcer,candidate_existing_person
+46039,4327,1949-09-18,Poor Henry,George W. Allen,,producer,candidate_new_person
+46039,4327,1949-09-18,Poor Henry,Sterling Tracy,,director,candidate_new_person
+46042,4328,1949-09-25,Incident at Arroyo Grande,David H. Ross,,writer,candidate_new_person
+46042,4328,1949-09-25,Incident at Arroyo Grande,George W. Allen,,producer,candidate_new_person
+46043,4329,1949-10-02,A Woman'S Privilege,George W. Allen,,producer,candidate_new_person
+46043,4329,1949-10-02,A Woman'S Privilege,George W. Allen,,director,candidate_new_person
+46043,4329,1949-10-02,A Woman'S Privilege,Marvin Miller,275,announcer,candidate_existing_person
+46043,4329,1949-10-02,A Woman'S Privilege,Joel Malone,,writer,candidate_new_person
+46043,4329,1949-10-02,A Woman'S Privilege,Harold Swanton,,writer,candidate_new_person
+49669,4331,1949-10-16,Best Man,George W. Allen,,producer,candidate_new_person
+49669,4331,1949-10-16,Best Man,George W. Allen,,director,candidate_new_person
+49669,4331,1949-10-16,Best Man,Marvin Miller,275,announcer,candidate_existing_person
+49669,4331,1949-10-16,Best Man,William Froug,,writer,candidate_new_person
+49661,4332,1949-10-23,Debt of Honor,Marvin Miller,275,announcer,candidate_existing_person
+49661,4332,1949-10-23,Debt of Honor,George W. Allen,,producer,candidate_new_person
+49661,4332,1949-10-23,Debt of Honor,George W. Allen,,director,candidate_new_person
+49661,4332,1949-10-23,Debt of Honor,Harrison Negley,,writer,candidate_new_person
+49662,4333,1949-10-30,Ticket to Murder,Adrian Gendot,,writer,candidate_new_person
+49662,4333,1949-10-30,Ticket to Murder,George W. Allen,,producer,candidate_new_person
+49662,4333,1949-10-30,Ticket to Murder,Joel Malone,,writer,candidate_new_person
+50397,4334,1949-11-06,The New Mrs. Devlin,Marvin Miller,275,announcer,candidate_existing_person
+50397,4334,1949-11-06,The New Mrs. Devlin,George W. Allen,,producer,candidate_new_person
+50397,4334,1949-11-06,The New Mrs. Devlin,George W. Allen,,director,candidate_new_person
+50397,4334,1949-11-06,The New Mrs. Devlin,Louis Estey,,writer,candidate_new_person
+50398,4335,1949-11-13,Incident at Pebble Cove,Steve Hampton,,writer,candidate_new_person
+50398,4335,1949-11-13,Incident at Pebble Cove,George W. Allen,,producer,candidate_new_person
+50398,4335,1949-11-13,Incident at Pebble Cove,George W. Allen,,director,candidate_new_person
+50398,4335,1949-11-13,Incident at Pebble Cove,Marvin Miller,275,announcer,candidate_existing_person
+47430,4336,1949-11-20,Letters from Aaron Burr,Marvin Miller,275,announcer,candidate_existing_person
+47430,4336,1949-11-20,Letters from Aaron Burr,George W. Allen,,producer,candidate_new_person
+47430,4336,1949-11-20,Letters from Aaron Burr,George W. Allen,,director,candidate_new_person
+47430,4336,1949-11-20,Letters from Aaron Burr,Joel Malone,,writer,candidate_new_person
+49666,4338,1949-12-04,Impulse,Adrian Gendot,,writer,candidate_new_person
+49666,4338,1949-12-04,Impulse,George W. Allen,,producer,candidate_new_person
+49667,4339,1949-12-11,Swan Song,Nancy Cleveland,,writer,candidate_new_person
+49667,4339,1949-12-11,Swan Song,George W. Allen,,producer,candidate_new_person
+49667,4339,1949-12-11,Swan Song,George W. Allen,,director,candidate_new_person
+49667,4339,1949-12-11,Swan Song,Marvin Miller,275,announcer,candidate_existing_person
+49670,4340,1949-12-18,Patroness of Murder,Marvin Miller,275,announcer,candidate_existing_person
+49670,4340,1949-12-18,Patroness of Murder,George W. Allen,,producer,candidate_new_person
+49670,4340,1949-12-18,Patroness of Murder,George W. Allen,,director,candidate_new_person
+49670,4340,1949-12-18,Patroness of Murder,David Ross,,writer,candidate_new_person
+49671,4341,1949-12-25,Letter from Cynthia,Edward Bloodworth,,writer,candidate_new_person
+49671,4341,1949-12-25,Letter from Cynthia,George W. Allen,,producer,candidate_new_person
+41235,4342,1950-01-01,Evening Stroll,George W. Allen,,producer,candidate_new_person
+41235,4342,1950-01-01,Evening Stroll,Steve Hampton,,writer,candidate_new_person
+42182,4343,1950-01-08,Return to Riondo,Marvin Miller,275,announcer,candidate_existing_person
+42182,4343,1950-01-08,Return to Riondo,George W. Allen,,producer,candidate_new_person
+42182,4343,1950-01-08,Return to Riondo,George W. Allen,,director,candidate_new_person
+42182,4343,1950-01-08,Return to Riondo,Joel Malone,,writer,candidate_new_person
+16752,4344,1950-01-15,Escape to Skull Island,Wilbur Hatch,,composer,candidate_new_person
+16752,4344,1950-01-15,Escape to Skull Island,Wilbur Hatch,,conductor,candidate_new_person
+16752,4344,1950-01-15,Escape to Skull Island,R. Sprague Hall,,writer,candidate_new_person
+76092,4346,1950-01-29,Burden of Guilt,Marvin Miller,275,announcer,candidate_existing_person
+76092,4346,1950-01-29,Burden of Guilt,George W. Allen,,producer,candidate_new_person
+76092,4346,1950-01-29,Burden of Guilt,George W. Allen,,director,candidate_new_person
+48975,4349,1950-02-19,Five Cent Call,Adrian Gendot,,writer,candidate_new_person
+48975,4349,1950-02-19,Five Cent Call,Bill Forman,,announcer,candidate_new_person
+48975,4349,1950-02-19,Five Cent Call,George W. Allen,,producer,candidate_new_person
+48976,4350,1950-02-26,Appointment for Murder,Bill Forman,,announcer,candidate_new_person
+48976,4350,1950-02-26,Appointment for Murder,George W. Allen,,producer,candidate_new_person
+48976,4350,1950-02-26,Appointment for Murder,Gilbert Thomas,,writer,candidate_new_person
+48977,4351,1950-03-05,Chinese Elephant Puzzle,George W. Allen,,producer,candidate_new_person
+48977,4351,1950-03-05,Chinese Elephant Puzzle,George W. Allen,,director,candidate_new_person
+48977,4351,1950-03-05,Chinese Elephant Puzzle,Marvin Miller,275,announcer,candidate_existing_person
+48977,4351,1950-03-05,Chinese Elephant Puzzle,Gordon Gray,,writer,candidate_new_person
+48977,4351,1950-03-05,Chinese Elephant Puzzle,John Hunt,,writer,candidate_new_person
+48978,4352,1950-03-12,Strange Meeting,George W. Allen,,producer,candidate_new_person
+48978,4352,1950-03-12,Strange Meeting,George W. Allen,,director,candidate_new_person
+48978,4352,1950-03-12,Strange Meeting,Joel Malone,,writer,candidate_new_person
+48978,4352,1950-03-12,Strange Meeting,Marvin Miller,275,announcer,candidate_existing_person
+42168,4353,1950-03-19,Oriana Affair,Adrian Gendot,,writer,candidate_new_person
+42168,4353,1950-03-19,Oriana Affair,Bill Forman,,announcer,candidate_new_person
+42168,4353,1950-03-19,Oriana Affair,George W. Allen,,producer,candidate_new_person
+42181,4354,1950-03-26,Lady in the Snow,Marvin Miller,275,announcer,candidate_existing_person
+42181,4354,1950-03-26,Lady in the Snow,George W. Allen,,producer,candidate_new_person
+42181,4354,1950-03-26,Lady in the Snow,George W. Allen,,director,candidate_new_person
+42181,4354,1950-03-26,Lady in the Snow,Nancy Cleveland,,writer,candidate_new_person
+40186,4355,1950-04-02,Lady with a Key,Marvin Miller,275,announcer,candidate_existing_person
+40186,4355,1950-04-02,Lady with a Key,Edward Bloodworth,,writer,candidate_new_person
+40187,4356,1950-04-09,Dark Voyage,Marvin Miller,275,announcer,candidate_existing_person
+40187,4356,1950-04-09,Dark Voyage,Joel Malone,,writer,candidate_new_person
+40276,4357,1950-04-16,Murder in Mind,Marvin Miller,275,announcer,candidate_existing_person
+51557,4360,1950-05-07,Fatal Error,Marvin Miller,275,announcer,candidate_existing_person
+51557,4360,1950-05-07,Fatal Error,George W. Allen,,producer,candidate_new_person
+51557,4360,1950-05-07,Fatal Error,Steve Hampton,,writer,candidate_new_person
+51558,4361,1950-05-14,Blue Alibi,George W. Allen,,producer,candidate_new_person
+51558,4361,1950-05-14,Blue Alibi,George W. Allen,,director,candidate_new_person
+51558,4361,1950-05-14,Blue Alibi,Marvin Miller,275,announcer,candidate_existing_person
+51558,4361,1950-05-14,Blue Alibi,Nancy Cleveland,,writer,candidate_new_person
+76153,4362,1950-05-21,The Return,George W. Allen,,producer,candidate_new_person
+76153,4362,1950-05-21,The Return,George W. Allen,,director,candidate_new_person
+76153,4362,1950-05-21,The Return,Joel Malone,,writer,candidate_new_person
+76153,4362,1950-05-21,The Return,Marvin Miller,275,announcer,candidate_existing_person
+76154,4364,1950-06-04,Caesar'S Wife,Marvin Miller,275,announcer,candidate_existing_person
+76154,4364,1950-06-04,Caesar'S Wife,David Victor,,writer,candidate_new_person
+76154,4364,1950-06-04,Caesar'S Wife,George W. Allen,,producer,candidate_new_person
+76154,4364,1950-06-04,Caesar'S Wife,George W. Allen,,director,candidate_new_person76157,4365,1950-06-11,Rebound,Marvin Miller,275,announcer,candidate_existing_person
+76157,4365,1950-06-11,Rebound,George Martin,,writer,candidate_new_person
+76157,4365,1950-06-11,Rebound,George W. Allen,,producer,candidate_new_person
+76157,4365,1950-06-11,Rebound,George W. Allen,,director,candidate_new_person
+76158,4366,1950-06-18,Jessica,Jack Leonard,,writer,candidate_new_person
+76158,4366,1950-06-18,Jessica,Wilbur Hatch,,composer,candidate_new_person
+76158,4366,1950-06-18,Jessica,Wilbur Hatch,,conductor,candidate_new_person
+76158,4366,1950-06-18,Jessica,George W. Allen,,producer,candidate_new_person
+76158,4366,1950-06-18,Jessica,George W. Allen,,director,candidate_new_person
+76158,4366,1950-06-18,Jessica,Marvin Miller,275,announcer,candidate_existing_person
+76165,4367,1950-06-25,Manhunt,George W. Allen,,producer,candidate_new_person
+76165,4367,1950-06-25,Manhunt,George W. Allen,,director,candidate_new_person
+76165,4367,1950-06-25,Manhunt,Marvin Miller,275,announcer,candidate_existing_person
+76166,4368,1950-07-02,Quiet Sunday,Marvin Miller,275,announcer,candidate_existing_person
+76166,4368,1950-07-02,Quiet Sunday,Bernard Gerard,,writer,candidate_new_person
+76166,4368,1950-07-02,Quiet Sunday,Zane Mann,,writer,candidate_new_person
+52552,4369,1950-07-09,Devoted Couple,George W. Allen,,producer,candidate_new_person
+52552,4369,1950-07-09,Devoted Couple,George W. Allen,,director,candidate_new_person
+52552,4369,1950-07-09,Devoted Couple,Bill Forman,,narrator,candidate_new_person
+52552,4369,1950-07-09,Devoted Couple,Joel Malone,,writer,candidate_new_person
+52552,4369,1950-07-09,Devoted Couple,Marvin Miller,275,announcer,candidate_existing_person
+52553,4370,1950-07-16,Attorney for the Defense,George W. Allen,,producer,candidate_new_person
+52553,4370,1950-07-16,Attorney for the Defense,George W. Allen,,director,candidate_new_person
+52553,4370,1950-07-16,Attorney for the Defense,Bill Forman,,narrator,candidate_new_person
+52553,4370,1950-07-16,Attorney for the Defense,Marvin Miller,275,announcer,candidate_existing_person
+52553,4370,1950-07-16,Attorney for the Defense,Steven Abbey,,writer,candidate_new_person
+52557,4372,1950-07-30,With My Own Eyes,George W. Allen,,producer,candidate_new_person
+52557,4372,1950-07-30,With My Own Eyes,George W. Allen,,director,candidate_new_person
+52557,4372,1950-07-30,With My Own Eyes,Marvin Miller,275,announcer,candidate_existing_person
+52557,4372,1950-07-30,With My Own Eyes,Bill Forman,,narrator,candidate_new_person
+52557,4372,1950-07-30,With My Own Eyes,Harold Swanton,,writer,candidate_new_person
+52550,4373,1950-08-06,Double Exposure,Bill Forman,,narrator,candidate_new_person
+52550,4373,1950-08-06,Double Exposure,George W. Allen,,producer,candidate_new_person
+52550,4373,1950-08-06,Double Exposure,George W. Allen,,director,candidate_new_person
+52550,4373,1950-08-06,Double Exposure,Joel Malone,,writer,candidate_new_person
+52550,4373,1950-08-06,Double Exposure,Marvin Miller,275,announcer,candidate_existing_person
+52551,4375,1950-08-20,Finale,Bill Forman,,narrator,candidate_new_person
+52551,4375,1950-08-20,Finale,George W. Allen,,producer,candidate_new_person
+52551,4375,1950-08-20,Finale,Nancy Cleveland,,writer,candidate_new_person
+52551,4375,1950-08-20,Finale,Norman Nesbitt,,announcer,candidate_new_person
+51555,4378,1950-09-10,Golden Penny,Marvin Miller,275,announcer,candidate_existing_person
+51555,4378,1950-09-10,Golden Penny,Jack Conrad,,writer,candidate_new_person
+51555,4378,1950-09-10,Golden Penny,George W. Allen,,producer,candidate_new_person
+51555,4378,1950-09-10,Golden Penny,Robert Hafter,,director,candidate_new_person
+51556,4379,1950-09-17,Deadly Rumor,Marvin Miller,275,announcer,candidate_existing_person
+51556,4379,1950-09-17,Deadly Rumor,Joel Malone,,writer,candidate_new_person
+51556,4379,1950-09-17,Deadly Rumor,Robert Hafter,,director,candidate_new_person
+51556,4379,1950-09-17,Deadly Rumor,George W. Allen,,producer,candidate_new_person
+52555,4381,1950-10-01,Dear Diary,Bill Forman,,narrator,candidate_new_person
+52555,4381,1950-10-01,Dear Diary,Edwin Spangenberg,,writer,candidate_new_person
+52555,4381,1950-10-01,Dear Diary,George W. Allen,,producer,candidate_new_person
+52555,4381,1950-10-01,Dear Diary,Marvin Miller,275,announcer,candidate_existing_person
+52901,4382,1950-10-08,Fatal Action,Marvin Miller,275,announcer,candidate_existing_person
+52901,4382,1950-10-08,Fatal Action,Wilbur Hatch,,composer,candidate_new_person
+52901,4382,1950-10-08,Fatal Action,Wilbur Hatch,,conductor,candidate_new_person
+52901,4382,1950-10-08,Fatal Action,George W. Allen,,producer,candidate_new_person
+52901,4382,1950-10-08,Fatal Action,George W. Allen,,director,candidate_new_person
+52901,4382,1950-10-08,Fatal Action,Joel Malone,,writer,candidate_new_person
+52902,4383,1950-10-15,Smart Boy,Marvin Miller,275,announcer,candidate_existing_person
+52902,4383,1950-10-15,Smart Boy,Wilbur Hatch,,composer,candidate_new_person
+52902,4383,1950-10-15,Smart Boy,Wilbur Hatch,,conductor,candidate_new_person
+52902,4383,1950-10-15,Smart Boy,George W. Allen,,producer,candidate_new_person
+52902,4383,1950-10-15,Smart Boy,George W. Allen,,director,candidate_new_person
+52902,4383,1950-10-15,Smart Boy,Norman Kramer,,writer,candidate_new_person
+52897,4384,1950-10-22,The Wall,Adrian Gendot,,writer,candidate_new_person
+52897,4384,1950-10-22,The Wall,Bill Forman,,announcer,candidate_new_person
+52897,4384,1950-10-22,The Wall,George W. Allen,,producer,candidate_new_person
+52898,4385,1950-10-29,The Intruder,Wilbur Hatch,,composer,candidate_new_person
+52898,4385,1950-10-29,The Intruder,Wilbur Hatch,,conductor,candidate_new_person
+52898,4385,1950-10-29,The Intruder,Marvin Miller,275,announcer,candidate_existing_person
+52898,4385,1950-10-29,The Intruder,George W. Allen,,producer,candidate_new_person
+52898,4385,1950-10-29,The Intruder,George W. Allen,,director,candidate_new_person
+52898,4385,1950-10-29,The Intruder,Betty Eulilius,,writer,candidate_new_person
+52899,4386,1950-11-05,Just Like a Man,Bill Forman,,announcer,candidate_new_person
+52899,4386,1950-11-05,Just Like a Man,George W. Allen,,producer,candidate_new_person
+52899,4386,1950-11-05,Just Like a Man,Joel Malone,,writer,candidate_new_person
+52900,4387,1950-11-12,Friendly Case of Blackmail,Bill Forman,,announcer,candidate_new_person
+52900,4387,1950-11-12,Friendly Case of Blackmail,George W. Allen,,producer,candidate_new_person
+52900,4387,1950-11-12,Friendly Case of Blackmail,Joe Gilbert,,writer,candidate_new_person
+52900,4387,1950-11-12,Friendly Case of Blackmail,John Everett,,writer,candidate_new_person
+53040,4388,1950-11-19,Warm Reception,Adrian Gendot,,writer,candidate_new_person
+53040,4388,1950-11-19,Warm Reception,Bill Forman,,announcer,candidate_new_person
+53040,4388,1950-11-19,Warm Reception,George W. Allen,,producer,candidate_new_person
+59542,4390,1950-12-03,Lady with the Knife,Marvin Miller,275,announcer,candidate_existing_person
+59542,4390,1950-12-03,Lady with the Knife,Harold Swanton,,writer,candidate_new_person
+59542,4390,1950-12-03,Lady with the Knife,Joel Malone,,writer,candidate_new_person
+59542,4390,1950-12-03,Lady with the Knife,George W. Allen,,producer,candidate_new_person
+59542,4390,1950-12-03,Lady with the Knife,George W. Allen,,director,candidate_new_person
+53038,4391,1950-12-10,Clock on the Tower,Bill Forman,,announcer,candidate_new_person
+53038,4391,1950-12-10,Clock on the Tower,Edward Bloodworth,,writer,candidate_new_person
+53038,4391,1950-12-10,Clock on the Tower,George W. Allen,,producer,candidate_new_person
+53039,4392,1950-12-17,Flee from Evil,Adrian Gendot,,writer,candidate_new_person
+53039,4392,1950-12-17,Flee from Evil,Bill Forman,,announcer,candidate_new_person
+53039,4392,1950-12-17,Flee from Evil,George W. Allen,,producer,candidate_new_person
+50709,4395,1951-01-07,Hit and Run,Bill Forman,,announcer,candidate_new_person
+50709,4395,1951-01-07,Hit and Run,George W. Allen,,producer,candidate_new_person
+50709,4395,1951-01-07,Hit and Run,Joseph Cochran,,writer,candidate_new_person
+50692,4396,1951-01-14,The Little Things,James J. Cullin,,writer,candidate_new_person
+50693,4397,1951-01-21,Treasure Hunt,Bill Forman,,announcer,candidate_new_person
+50693,4397,1951-01-21,Treasure Hunt,George W. Allen,,producer,candidate_new_person
+50693,4397,1951-01-21,Treasure Hunt,Russell Hughes,,writer,candidate_new_person
+50690,4398,1951-01-28,Trade Mark,Bill Forman,,announcer,candidate_new_person
+50690,4398,1951-01-28,Trade Mark,George W. Allen,,producer,candidate_new_person
+50690,4398,1951-01-28,Trade Mark,Joe Gilbert,,writer,candidate_new_person
+50690,4398,1951-01-28,Trade Mark,Joel Malone,,writer,candidate_new_person
+50691,4399,1951-02-04,Murder Over Burma,Ross Murray,,writer,candidate_new_person
+50691,4399,1951-02-04,Murder Over Burma,George W. Allen,,producer,candidate_new_person
+50691,4399,1951-02-04,Murder Over Burma,George W. Allen,,director,candidate_new_person
+50399,4400,1951-02-11,Spell in Green,Ardith Hitchcock,,writer,candidate_new_person
+50399,4400,1951-02-11,Spell in Green,Bill Forman,,announcer,candidate_new_person
+50399,4400,1951-02-11,Spell in Green,George W. Allen,,producer,candidate_new_person
+50400,4401,1951-02-18,Man in the Storm,Adrian Gendot,,writer,candidate_new_person
+50400,4401,1951-02-18,Man in the Storm,Bill Forman,,announcer,candidate_new_person
+50400,4401,1951-02-18,Man in the Storm,George W. Allen,,producer,candidate_new_person
+79393,4402,1951-02-25,Murder Arrangement,George W. Allen,,producer,candidate_new_person
+79393,4402,1951-02-25,Murder Arrangement,George W. Allen,,director,candidate_new_person
+79393,4402,1951-02-25,Murder Arrangement,Joel Malone,,writer,candidate_new_person
+50707,4403,1951-03-04,Helping Hand,Adrian Gendot,,writer,candidate_new_person
+50707,4403,1951-03-04,Helping Hand,Bill Forman,,announcer,candidate_new_person
+50707,4403,1951-03-04,Helping Hand,George W. Allen,,producer,candidate_new_person
+11152,4404,1951-03-11,High Death,Bill Forman,,announcer,candidate_new_person
+11152,4404,1951-03-11,High Death,Edwin Spangenberg,,writer,candidate_new_person
+11152,4404,1951-03-11,High Death,George W. Allen,,producer,candidate_new_person
+50699,4405,1951-03-18,Jackson Street Affair,Adrian Gendot,,writer,candidate_new_person
+50699,4405,1951-03-18,Jackson Street Affair,Bill Forman,,announcer,candidate_new_person
+50699,4405,1951-03-18,Jackson Street Affair,George W. Allen,,producer,candidate_new_person
+79395,4407,1951-04-01,Man in a Corner,Marvin Miller,275,announcer,candidate_existing_person
+79395,4407,1951-04-01,Man in a Corner,George W. Allen,,producer,candidate_new_person
+79395,4407,1951-04-01,Man in a Corner,George W. Allen,,director,candidate_new_person
+50700,4409,1951-04-15,Triple Cross,Marvin Miller,275,announcer,candidate_existing_person
+50700,4409,1951-04-15,Triple Cross,George W. Allen,,producer,candidate_new_person
+50700,4409,1951-04-15,Triple Cross,George W. Allen,,director,candidate_new_person
+50700,4409,1951-04-15,Triple Cross,Nancy Cleveland,,writer,candidate_new_person
+79525,4410,1951-04-22,Kind Thought,Marvin Miller,275,announcer,candidate_existing_person
+79525,4410,1951-04-22,Kind Thought,George W. Allen,,producer,candidate_new_person
+79525,4410,1951-04-22,Kind Thought,George W. Allen,,director,candidate_new_person
+50701,4412,1951-05-06,Two and One Makes Murder,Bill Forman,,announcer,candidate_new_person
+50701,4412,1951-05-06,Two and One Makes Murder,Edward Bloodworth,,writer,candidate_new_person
+50701,4412,1951-05-06,Two and One Makes Murder,George W. Allen,,producer,candidate_new_person
+50702,4413,1951-05-13,A Matter of Courtesy,Bill Forman,,announcer,candidate_new_person
+50702,4413,1951-05-13,A Matter of Courtesy,George W. Allen,,producer,candidate_new_person
+51207,4414,1951-05-20,Custom-Made Murder,Marvin Miller,275,announcer,candidate_existing_person
+51207,4414,1951-05-20,Custom-Made Murder,George W. Allen,,producer,candidate_new_person
+51207,4414,1951-05-20,Custom-Made Murder,George W. Allen,,director,candidate_new_person
+51207,4414,1951-05-20,Custom-Made Murder,Joel Malone,,writer,candidate_new_person
+51208,4415,1951-05-27,Seattle Take Three,Marvin Miller,275,announcer,candidate_existing_person
+51208,4415,1951-05-27,Seattle Take Three,George W. Allen,,producer,candidate_new_person
+51208,4415,1951-05-27,Seattle Take Three,George W. Allen,,director,candidate_new_person
+51208,4415,1951-05-27,Seattle Take Three,Joel Malone,,writer,candidate_new_person
+53259,4416,1951-06-03,Tall Thin Man,Bill Forman,,announcer,candidate_new_person
+53259,4416,1951-06-03,Tall Thin Man,Edwin Spangenberg,,writer,candidate_new_person
+53259,4416,1951-06-03,Tall Thin Man,George W. Allen,,producer,candidate_new_person
+45617,4417,1951-06-10,A Law of Physics,Marvin Miller,275,announcer,candidate_existing_person
+45617,4417,1951-06-10,A Law of Physics,George W. Allen,,producer,candidate_new_person
+45617,4417,1951-06-10,A Law of Physics,George W. Allen,,director,candidate_new_person
+45617,4417,1951-06-10,A Law of Physics,George Asnass,,writer,candidate_new_person
+53264,4418,1951-06-17,Man in the Trench Coat,Adrian Gendot,,writer,candidate_new_person
+53264,4418,1951-06-17,Man in the Trench Coat,Bill Forman,,announcer,candidate_new_person
+53264,4418,1951-06-17,Man in the Trench Coat,George W. Allen,,producer,candidate_new_person
+92612,4419,1951-06-24,Murder of Byron Blake,George W. Allen,,producer,candidate_new_person
+92612,4419,1951-06-24,Murder of Byron Blake,George W. Allen,,director,candidate_new_person
+92612,4419,1951-06-24,Murder of Byron Blake,Gene Fromherz,,writer,candidate_new_person
+92612,4419,1951-06-24,Murder of Byron Blake,Marvin Miller,275,announcer,candidate_existing_person
+45105,4421,1951-07-08,The Witness,Bill Forman,,announcer,candidate_new_person
+45105,4421,1951-07-08,The Witness,Hy Averback,,announcer,candidate_new_person
+45105,4421,1951-07-08,The Witness,Meyer Dolinsky,,writer,candidate_new_person
+45106,4423,1951-07-22,Autumn Song,Marvin Miller,275,announcer,candidate_existing_person
+45106,4423,1951-07-22,Autumn Song,Joel Malone,,writer,candidate_new_person
+45106,4423,1951-07-22,Autumn Song,George W. Allen,,producer,candidate_new_person
+45106,4423,1951-07-22,Autumn Song,George W. Allen,,director,candidate_new_person
+93298,4424,1951-07-29,Danger Is a Beautiful Blonde,Hazel Leitel,,writer,candidate_new_person
+93298,4424,1951-07-29,Danger Is a Beautiful Blonde,John Dunkel,,writer,candidate_new_person
+79398,4425,1951-08-05,Design for Murder,Joel Malone,,writer,candidate_new_person
+79398,4425,1951-08-05,Design for Murder,Marvin Miller,275,announcer,candidate_existing_person
+79398,4425,1951-08-05,Design for Murder,George W. Allen,,producer,candidate_new_person
+79398,4425,1951-08-05,Design for Murder,George W. Allen,,director,candidate_new_person
+46851,4426,1951-08-12,Fateful Reminder,Marvin Miller,275,announcer,candidate_existing_person
+46851,4426,1951-08-12,Fateful Reminder,George W. Allen,,producer,candidate_new_person
+46851,4426,1951-08-12,Fateful Reminder,George W. Allen,,director,candidate_new_person
+46851,4426,1951-08-12,Fateful Reminder,Margaret Solenstein,,writer,candidate_new_person
+46852,4428,1951-08-26,She Never Would Be Missed,Bill Forman,,announcer,candidate_new_person
+46852,4428,1951-08-26,She Never Would Be Missed,Cleo Davis,,writer,candidate_new_person
+46852,4428,1951-08-26,She Never Would Be Missed,George W. Allen,,producer,candidate_new_person
+46852,4428,1951-08-26,She Never Would Be Missed,Les Tremayne,221,narrator,candidate_existing_person
+46852,4428,1951-08-26,She Never Would Be Missed,Will Einvick,,writer,candidate_new_person
+48067,4429,1951-09-02,Public Hero,Bill Forman,,announcer,candidate_new_person
+48067,4429,1951-09-02,Public Hero,George W. Allen,,producer,candidate_new_person
+48067,4429,1951-09-02,Public Hero,Hazel Leitel,,writer,candidate_new_person
+48067,4429,1951-09-02,Public Hero,Nancy Cleveland,,writer,candidate_new_person
+48068,4430,1951-09-09,Guilty Conscience,Bill Forman,,announcer,candidate_new_person
+48068,4430,1951-09-09,Guilty Conscience,Edward Bloodworth,,writer,candidate_new_person
+48068,4430,1951-09-09,Guilty Conscience,George W. Allen,,producer,candidate_new_person
+48068,4430,1951-09-09,Guilty Conscience,Lamont Johnson,113,announcer,candidate_existing_person
+46848,4431,1951-09-16,A Matter of Patience,Bill Forman,,announcer,candidate_new_person
+46848,4431,1951-09-16,A Matter of Patience,Carol Nicks,,writer,candidate_new_person
+46848,4431,1951-09-16,A Matter of Patience,George Adrian,,writer,candidate_new_person
+46848,4431,1951-09-16,A Matter of Patience,George W. Allen,,producer,candidate_new_person
+46848,4431,1951-09-16,A Matter of Patience,Hy Averback,,announcer,candidate_new_person
+48069,4433,1951-09-30,Two Smart People,Bill Forman,,announcer,candidate_new_person
+48069,4433,1951-09-30,Two Smart People,George W. Allen,,producer,candidate_new_person
+48069,4433,1951-09-30,Two Smart People,Joel Malone,,writer,candidate_new_person
+51211,4435,1951-10-14,Partners in Crime,Adrian Gendot,,writer,candidate_new_person
+51211,4435,1951-10-14,Partners in Crime,Bill Forman,,announcer,candidate_new_person
+51211,4435,1951-10-14,Partners in Crime,George W. Allen,,producer,candidate_new_person
+51209,4437,1951-10-28,Doctor'S Wife,George W. Allen,,producer,candidate_new_person
+51209,4437,1951-10-28,Doctor'S Wife,George W. Allen,,director,candidate_new_person
+51209,4437,1951-10-28,Doctor'S Wife,Meyer Dolinsky,,writer,candidate_new_person
+51210,4438,1951-11-04,Man on the Run,Adrian Gendot,,writer,candidate_new_person
+51210,4438,1951-11-04,Man on the Run,Bill Forman,,announcer,candidate_new_person
+51210,4438,1951-11-04,Man on the Run,George W. Allen,,producer,candidate_new_person
+51210,4438,1951-11-04,Man on the Run,Lamont Johnson,113,announcer,candidate_existing_person
+51213,4439,1951-11-11,Three Minus One Equals Murder,Marvin Miller,275,announcer,candidate_existing_person
+51213,4439,1951-11-11,Three Minus One Equals Murder,George W. Allen,,producer,candidate_new_person
+51213,4439,1951-11-11,Three Minus One Equals Murder,George W. Allen,,director,candidate_new_person
+51213,4439,1951-11-11,Three Minus One Equals Murder,Joline Hinman,,writer,candidate_new_person
+51214,4441,1951-11-25,The Clay Tree,Adrian Gendot,,writer,candidate_new_person
+51214,4441,1951-11-25,The Clay Tree,Bill Forman,,announcer,candidate_new_person
+51214,4441,1951-11-25,The Clay Tree,George W. Allen,,producer,candidate_new_person
+51231,4442,1951-12-02,End of the Road,Bill Forman,,announcer,candidate_new_person
+51231,4442,1951-12-02,End of the Road,George W. Allen,,producer,candidate_new_person
+51231,4442,1951-12-02,End of the Road,Steve Hampton,,writer,candidate_new_person
+51232,4443,1951-12-09,The Other Hand,Marvin Miller,275,announcer,candidate_existing_person
+51232,4443,1951-12-09,The Other Hand,George W. Allen,,producer,candidate_new_person
+51232,4443,1951-12-09,The Other Hand,George W. Allen,,director,candidate_new_person
+51232,4443,1951-12-09,The Other Hand,Joel Malone,,writer,candidate_new_person
+51232,4443,1951-12-09,The Other Hand,Harold Swanton,,writer,candidate_new_person
+51234,4445,1951-12-23,Christmas Gift,Bill Forman,,announcer,candidate_new_person
+51234,4445,1951-12-23,Christmas Gift,Edward Bloodworth,,writer,candidate_new_person
+51234,4445,1951-12-23,Christmas Gift,George W. Allen,,producer,candidate_new_person
+51205,4446,1951-12-30,Fatal Step,Adrian Gendot,,writer,candidate_new_person
+51206,4447,1952-01-06,Episode at Thunder Mountain,Marvin Miller,275,announcer,candidate_existing_person
+51206,4447,1952-01-06,Episode at Thunder Mountain,Joel Malone,,writer,candidate_new_person
+51206,4447,1952-01-06,Episode at Thunder Mountain,George W. Allen,,producer,candidate_new_person
+51206,4447,1952-01-06,Episode at Thunder Mountain,George W. Allen,,director,candidate_new_person
+79399,4449,1952-01-20,Bad Penny,Margaret Solenstein,,writer,candidate_new_person
+79399,4449,1952-01-20,Bad Penny,George W. Allen,,producer,candidate_new_person
+79399,4449,1952-01-20,Bad Penny,George W. Allen,,director,candidate_new_person
+79399,4449,1952-01-20,Bad Penny,Marvin Miller,275,announcer,candidate_existing_person
+46040,4450,1952-01-27,Borrowed Byline,George W. Allen,,producer,candidate_new_person
+46040,4450,1952-01-27,Borrowed Byline,George W. Allen,,director,candidate_new_person
+46040,4450,1952-01-27,Borrowed Byline,Marvin Miller,275,announcer,candidate_existing_person
+46040,4450,1952-01-27,Borrowed Byline,Harold Swanton,,writer,candidate_new_person
+46040,4450,1952-01-27,Borrowed Byline,Joel Malone,,writer,candidate_new_person
+53044,4452,1952-02-10,Little Red Book,Bill Forman,,announcer,candidate_new_person
+53044,4452,1952-02-10,Little Red Book,George W. Allen,,producer,candidate_new_person
+53044,4452,1952-02-10,Little Red Book,Joel Malone,,writer,candidate_new_person
+53044,4452,1952-02-10,Little Red Book,Robert Hafter,,director,candidate_new_person
+61914,4458,1952-03-23,Ski Master,Marvin Miller,275,announcer,candidate_existing_person
+61914,4458,1952-03-23,Ski Master,George W. Allen,,producer,candidate_new_person
+61914,4458,1952-03-23,Ski Master,George W. Allen,,director,candidate_new_person
+61914,4458,1952-03-23,Ski Master,George Adrian,,writer,candidate_new_person
+61914,4458,1952-03-23,Ski Master,Carol Nicks,,writer,candidate_new_person
+62172,4459,1952-03-30,Homecoming,Marvin Miller,275,announcer,candidate_existing_person
+62172,4459,1952-03-30,Homecoming,Wilbur Hatch,,composer,candidate_new_person
+62172,4459,1952-03-30,Homecoming,Wilbur Hatch,,conductor,candidate_new_person
+62172,4459,1952-03-30,Homecoming,George W. Allen,,producer,candidate_new_person
+62172,4459,1952-03-30,Homecoming,George W. Allen,,director,candidate_new_person
+62172,4459,1952-03-30,Homecoming,Gomer Cool,,writer,candidate_new_person
+62173,4460,1952-04-06,Element X,Marvin Miller,275,announcer,candidate_existing_person
+62173,4460,1952-04-06,Element X,Marvin Miller,275,narrator,candidate_existing_person
+62173,4460,1952-04-06,Element X,Adrian Gendot,,writer,candidate_new_person
+62173,4460,1952-04-06,Element X,George W. Allen,,producer,candidate_new_person
+62173,4460,1952-04-06,Element X,George W. Allen,,director,candidate_new_person
+41236,4463,1952-04-27,Saturday Night,Edward Bloodworth,,writer,candidate_new_person
+79400,4466,1952-05-18,Determined Traveler,Marvin Miller,275,announcer,candidate_existing_person
+79400,4466,1952-05-18,Determined Traveler,Winifred Hanson,,writer,candidate_new_person
+79400,4466,1952-05-18,Determined Traveler,George W. Allen,,producer,candidate_new_person
+79400,4466,1952-05-18,Determined Traveler,George W. Allen,,director,candidate_new_person
+41237,4467,1952-05-25,Charming Hostess,Carol Nicks,,writer,candidate_new_person
+41237,4467,1952-05-25,Charming Hostess,Bill Forman,,announcer,candidate_new_person
+41237,4467,1952-05-25,Charming Hostess,George Adrian,,writer,candidate_new_person
+79409,4469,1952-06-08,Man in the Way,Marvin Miller,275,announcer,candidate_existing_person
+79409,4469,1952-06-08,Man in the Way,George W. Allen,,producer,candidate_new_person
+79409,4469,1952-06-08,Man in the Way,George W. Allen,,director,candidate_new_person
+79410,4470,1952-06-15,Last Message,Joel Malone,,writer,candidate_new_person
+79410,4470,1952-06-15,Last Message,Marvin Miller,275,announcer,candidate_existing_person
+79410,4470,1952-06-15,Last Message,George W. Allen,,producer,candidate_new_person
+79410,4470,1952-06-15,Last Message,George W. Allen,,director,candidate_new_person
+79383,4472,1952-06-29,Night Flight,George W. Allen,,producer,candidate_new_person
+79383,4472,1952-06-29,Night Flight,George W. Allen,,director,candidate_new_person
+79383,4472,1952-06-29,Night Flight,Joel Malone,,writer,candidate_new_person
+79381,4476,1952-07-27,You Can'T Trust a Stranger,Gus Bayz,,writer,candidate_new_person
+79381,4476,1952-07-27,You Can'T Trust a Stranger,George W. Allen,,producer,candidate_new_person
+79381,4476,1952-07-27,You Can'T Trust a Stranger,George W. Allen,,director,candidate_new_person
+79382,4477,1952-08-03,Dark Island,Robert Hafter,,director,candidate_new_person
+79382,4477,1952-08-03,Dark Island,Adrian Gendot,,writer,candidate_new_person
+79379,4480,1952-08-24,Final Papers,George W. Allen,,producer,candidate_new_person
+79379,4480,1952-08-24,Final Papers,George W. Allen,,director,candidate_new_person
+79379,4480,1952-08-24,Final Papers,George Adrian,,writer,candidate_new_person
+79379,4480,1952-08-24,Final Papers,Carol Nicks,,writer,candidate_new_person
+79380,4482,1952-09-07,Secret of Chalk Point,George W. Allen,,producer,candidate_new_person
+79380,4482,1952-09-07,Secret of Chalk Point,George W. Allen,,director,candidate_new_person
+79380,4482,1952-09-07,Secret of Chalk Point,Adrian Gendot,,writer,candidate_new_person
