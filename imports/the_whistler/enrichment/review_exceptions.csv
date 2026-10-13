@@ -1,0 +1,87 @@
+catalog_id,reason,date,title,db_same_date
+45141,review_regional,1942-08-22,Death Has A Thirst,3961:Death Has a Thirst
+45140,review_regional,1942-09-13,Mirage,3964:Mirage
+24317,review,1942-09-20,Fog,3965:Out of the Fog
+3638,review_regional,1943-05-08,Death Has A Thirst,3997:Death Has a Thirst
+41220,review,1943-05-16,The Man Who Waited,
+11150,review_regional,1943-10-03,Mirage,4018:Mirage
+79524,review,1944-01-30,All Damage Covered,4035:Obsession
+51107,review,1944-07-23,The Last Of The Devereaux,4060:Last of the Deveraux
+51108,review,1944-09-03,Practically Foolproof,4066:Foolproof
+51111,review,1944-09-25,Married For Murder,4069:Married to Murder
+47843,review,1944-10-16,The Tale The Dead Man Told,4072:Tale of the Dead Man Told
+47844,review,1944-10-23,Death Carried A Lunch Kit,4073:Death Carries a Lunch Kit
+79406,review,1944-11-27,Death Walks A Tightrope,4077:Death Walks a Tightwire
+47851,review,1945-01-15,Murder Has A Signature,4084:Murder Had a Signature
+79403,review,1945-02-16,Gateway To Danger,
+76548,review,1945-05-07,Accident According To Plan,4100:Accident-According to Plans
+46238,review,1945-10-29,Final Returns,4125:Final Return
+61786,review_regional,1945-12-17,Lucky Night,4132:Lucky Night
+62921,review,1945-12-31,Miracle On Forty-Ninth Street,4134:Miracle on 49Th Street
+76084,review,1946-02-11,Six-Letter Word For Death,4140:Six Letter Word for Murder
+79413,review,1946-03-18,The Master Touch,4145:The Master'S Touch
+79416,review_regional,1946-05-20,The Broken Chain,4154:Broken Chain
+76553,review,1946-07-24,My Love Comes Home,
+4395,review,1946-07-29,The Sellout,4164:My Love Comes Home
+4393,review,1946-08-07,Lucky Night,
+99113,review,1946-08-09,Brief Pause For Murder,
+4394,review,1946-08-21,The Broken Chain,
+76162,review,1946-08-26,Brief Pause For Murder,4168:Broken Chain
+76156,review,1946-09-23,Stranger In The House,4172:The Victim Smiled
+60293,review_regional,1947-02-03,Seven Steps To Murder,4191:Seven Steps to Murder
+6021,review,1947-02-12,A Woman's Privilege,
+39872,review,1947-02-12,Seven Steps To Murder,
+60297,review,1947-03-24,The Lady and The Knife,4198:Lady with the Knife
+47858,review,1947-04-07,The Sheriff's Assistant,4201:Sheriff Assistant
+79519,review,1947-05-12,Eighteen Bowden Lane,4206:18 Bowden Lane
+47863,review,1947-05-19,Hasty Conclusions,4207:Hasty Conclusion
+47857,review,1947-07-09,The Two Lives Of Colby Fletcher,4214:Lives of Colby Fletcher
+47870,review_regional,1947-09-10,The Bridge On Black Mountain,4223:Bridge on Black Mountain
+47871,review_regional,1947-09-17,Death and The Emperor,4224:Death and the Emperor
+47875,review,1947-10-22,A Case For Mr. Carrington,4229:A Case for Mister Carrington
+1523,review_regional,1947-11-05,The Big Prison,4231:The Big Prison
+79386,review_regional,1947-11-12,The Stolen Chance,4232:The Stolen Chance
+76082,review_regional,1947-12-03,The Professor and The Fox,4235:Professor and the Fox
+63571,review,1948-03-17,The Human Catalyst,4250:The Catalyst
+79518,review,1948-04-14,'Til Death Do Us Part,4254:Till Death Do Us Part
+45981,review,1948-05-05,A Concerto For Death,4257:Lady in Waiting
+76159,review,1948-05-05,A Concerto For Death,4257:Lady in Waiting
+76080,review_regional,1948-06-16,Concerto Of Death,4263:Concerto of Death
+79388,review_regional,1948-08-04,A Question Of Murder,4268:Question of Murder
+61126,review,1949-06-19,That Physical Fact,4314:Physical Fact
+61127,review,1949-06-26,Final Decree,4315:Fatal Decree
+49668,review_regional,1949-10-09,A Rose For Pamela,4330:Rose for Pamela
+47176,review,1949-11-27,The Clever Mr. Farley,4337:Clever Mister Farley
+40277,review,1950-04-23,Return With The Spray,4358:Returned with the Spray
+52556,review,1950-07-23,Cliffs Of Wayrum,4371:Cliffs of Weyrum
+52554,review,1950-09-24,That Hemsley Affair,4380:Hemsley Affair
+53043,review,1950-11-26,'Til Death Do Us Part,4389:Till Death Do Us Part
+50708,review_regional,1950-12-31,The Big Jump,4394:Big Jump
+79394,review,1951-03-25,His Own Reward,4406:His Own Record
+79396,review,1951-04-08,A Trip To Aunt Sarah,4408:Trip to Aunt Sarah'S
+45090,review,1951-07-01,The House On Hainsby Boulevard,4420:House on Hainsley Blvd.
+51212,review,1951-10-21,Alias Mr. Aldren,4436:Alias Mister Alden
+51233,review,1951-12-16,Curiosity Killed A Cat,4444:Curiosity Killed the Cat
+53045,review_regional,1952-02-17,A Rose For Pamela,4453:Rose for Pamela
+61913,review_regional,1952-03-16,Marked Man,4457:Marked Man
+84516,review,1952-10-12,,4487:One Dark Night
+118130,review,1952-12-21,,4497:Christmas Bonus
+65074,review,1953-10-18,,4538:Girl in Black
+65071,review,1953-11-22,,4543:Perilous Meeting
+62061,review,1953-11-29,,4544:Lady on a Yacht
+65073,review,1953-12-20,,4547:The Huntress
+118131,review,1954-07-11,,4576:Out of the Past
+36348,review,1954-10-03,,4588:Stolen Letter
+118132,review,1955-03-03,,4610:The Alibi
+118182,review,1955-03-03,,4610:The Alibi
+118098,review,1955-04-14,,4616:Trip to Aunt Sarah'S
+118077,review,1955-04-28,,4618:Letters from Aaron Burr
+118097,review,1955-05-05,,4619:The Lovely Look
+117081,review,1955-05-12,,4620:Night Melody
+118070,review,1955-05-12,,4620:Night Melody
+118071,review,1955-05-12,,4620:Night Melody
+117082,review,1955-06-02,,4623:The First Year
+118069,review,1955-06-02,,4623:The First Year
+117083,review,1955-06-16,,4625:Two Lives of Colby Fletcher
+79377,review,1955-08-04,,4632:The Havana Lee
+118065,review,1955-08-25,,4635:Little Red Book
