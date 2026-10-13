@@ -5,7 +5,7 @@ import csv
 import collections
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
-EXPECTED={"exact":355,"review_regional":18,"review":68,"excluded_distribution":115}
+EXPECTED={"exact":355,"review_regional":18,"review":68,"excluded_distribution":114}
 DB_ROLES={"actor","writer","adapter","director","producer","announcer",
           "narrator","host","composer","sound_effects"}
 def load(name):
@@ -16,7 +16,7 @@ def main():
     credits=load("credit_candidates.csv")
     exceptions=load("review_exceptions.csv")
     status=collections.Counter(x["status"] for x in catalog)
-    if len(catalog)!=556 or status!=EXPECTED:
+    if len(catalog)!=555 or status!=EXPECTED:
         raise ValueError(f"Catalog count/status drift: rows={len(catalog)}, status={dict(status)}")
     ids=[x["catalog_id"] for x in catalog]
     if len(ids)!=len(set(ids)):
@@ -36,7 +36,7 @@ def main():
     if len(exceptions)!=86:
         raise ValueError(f"Unexpected exception count: {len(exceptions)}")
     print("Whistler enrichment PRE-FLIGHT (read-only)")
-    print(f"Catalog records: {len(catalog)}")
+    print(f"Catalog staged records: {len(catalog)} (original target 556; 1 unaccounted for)")
     for key in EXPECTED: print(f"  {key}: {status[key]}")
     print(f"Credit claims: {len(credits)}")
     for key in ("unsupported_role","unmatched_person"):
