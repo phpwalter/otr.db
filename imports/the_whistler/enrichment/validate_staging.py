@@ -13,8 +13,10 @@ def load(name):
         reader=csv.DictReader(f)
         rows=list(reader)
         for number,row in enumerate(rows,start=2):
-            if None in row or any(value is None for value in row.values()):
+            if None in row or any(value is None for key,value in row.items() if not (name=="credit_candidates.csv" and key=="approved")):
                 raise ValueError(f"{name}: malformed or incomplete CSV row at record {number}: {row!r}")
+            if name=="credit_candidates.csv" and row.get("approved") is None:
+                row["approved"]=""
         return rows
 def main():
     catalog=load("catalog_reconciliation.csv")
