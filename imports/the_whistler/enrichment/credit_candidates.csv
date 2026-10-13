@@ -397,7 +397,8 @@ catalog_id,episode_id,episode_date,episode_title,person,person_id,role,credit_st
 47853,4208,1947-05-26,Fateful Friday,George W. Allen,,producer,candidate_new_person
 47854,4209,1947-06-02,Caesar'S Wife,David Victor,,writer,candidate_new_person
 47854,4209,1947-06-02,Caesar'S Wife,Gordon T. Hughes,,producer,candidate_new_person
-47854,4209,1947-06-02,Caesar'S Wife,Gordon T. Hughes,,director,candidate_new_person47854,4209,1947-06-02,Caesar'S Wife,Herbert Little Jr,,writer,candidate_new_person
+47854,4209,1947-06-02,Caesar'S Wife,Gordon T. Hughes,,director,candidate_new_person
+47854,4209,1947-06-02,Caesar'S Wife,Herbert Little Jr,,writer,candidate_new_person
 47855,4210,1947-06-09,Juggernaut,Marvin Miller,275,announcer,candidate_existing_person
 47855,4210,1947-06-09,Juggernaut,George W. Allen,,producer,candidate_new_person
 47855,4210,1947-06-09,Juggernaut,Joel Malone,,writer,candidate_new_person
@@ -796,7 +797,8 @@ catalog_id,episode_id,episode_date,episode_title,person,person_id,role,credit_st
 76154,4364,1950-06-04,Caesar'S Wife,Marvin Miller,275,announcer,candidate_existing_person
 76154,4364,1950-06-04,Caesar'S Wife,David Victor,,writer,candidate_new_person
 76154,4364,1950-06-04,Caesar'S Wife,George W. Allen,,producer,candidate_new_person
-76154,4364,1950-06-04,Caesar'S Wife,George W. Allen,,director,candidate_new_person76157,4365,1950-06-11,Rebound,Marvin Miller,275,announcer,candidate_existing_person
+76154,4364,1950-06-04,Caesar'S Wife,George W. Allen,,director,candidate_new_person
+76157,4365,1950-06-11,Rebound,Marvin Miller,275,announcer,candidate_existing_person
 76157,4365,1950-06-11,Rebound,George Martin,,writer,candidate_new_person
 76157,4365,1950-06-11,Rebound,George W. Allen,,producer,candidate_new_person
 76157,4365,1950-06-11,Rebound,George W. Allen,,director,candidate_new_person
