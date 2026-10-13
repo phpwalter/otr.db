@@ -16,6 +16,8 @@ import subprocess
 import sys
 from pathlib import Path
 from importlib.util import spec_from_file_location, module_from_spec
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+from title_articles import canonical_title
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -185,7 +187,7 @@ UNION ALL SELECT 'broadcasts',count(*) FROM public.broadcast b JOIN public.serie
 UNION ALL SELECT 'provisional_title_matches',count(*) FROM wh_stage WHERE repeat_of IS NOT NULL;
 __END__;
 """
-    payload=[{"number":r["Episode Number"],"air_date":r["Air Date"],"title":r["Title"],
+    payload=[{"number":r["Episode Number"],"air_date":r["Air Date"],"title":canonical_title(r["Title"]),
       "description":r.get("Description",""),"broadcast_status":r["Broadcast Status"],
       "repeat_of":r["Repeat Of"],"primary_source":r["Primary Source"],
       "preservation_status":r.get("Preservation Status",""),
