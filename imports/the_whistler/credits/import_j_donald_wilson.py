@@ -31,7 +31,7 @@ BEGIN
  THEN RAISE EXCEPTION 'Specified --person-id does not identify J. Donald Wilson'; END IF;
  IF EXISTS(SELECT 1 FROM incoming i LEFT JOIN public.episode e ON
  e.legacy_system='THE_WHISTLER' AND e.legacy_episode_id=i.episode_number
- WHERE e.episode_id IS NULL OR e.air_date IS DISTINCT FROM i.air_date OR e.title IS DISTINCT FROM i.title)
+ WHERE e.episode_id IS NULL OR e.air_date IS DISTINCT FROM i.air_date OR public.otr_title_match_key(e.title) IS DISTINCT FROM public.otr_title_match_key(i.title))
  THEN RAISE EXCEPTION 'One or more episode identities mismatch database'; END IF;
  IF EXISTS(SELECT 1 FROM incoming i JOIN public.episode e
  ON e.legacy_system='THE_WHISTLER' AND e.legacy_episode_id=i.episode_number
