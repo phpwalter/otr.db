@@ -22,7 +22,7 @@ CREATE TEMP TABLE inp AS SELECT * FROM jsonb_to_recordset(__PAYLOAD__::jsonb)
 DO $check$
 BEGIN
  IF EXISTS(SELECT 1 FROM inp i LEFT JOIN public.episode e ON e.episode_id=i.episode_id
- WHERE e.episode_id IS NULL OR e.legacy_system IS DISTINCT FROM 'THE_WHISTLER'
+ WHERE e.episode_id IS NULL OR e.series_id IS DISTINCT FROM (SELECT series_id FROM public.series WHERE slug='the-whistler' LIMIT 1)
  OR e.air_date IS DISTINCT FROM i.air_date
  OR public.otr_title_match_key(e.title) IS DISTINCT FROM public.otr_title_match_key(i.title))
  THEN RAISE EXCEPTION 'Episode identity/date/title mismatch'; END IF;
@@ -65,7 +65,7 @@ def main():
  a=p.parse_args()
  with a.input.open(encoding="utf-8-sig",newline="") as f:
   rows=list(csv.DictReader(f))
- approved=[r for r in rows if r.get("approved","").strip().lower() in ("yes","true","1")]
+ approved=[r for r in rows if (r.get("approved") or "").strip().lower() in ("yes","true","1")]
  if not approved:
   print("No approved=yes rows; no changes to import.",file=sys.stderr)
   return 2
