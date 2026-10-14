@@ -22,3 +22,20 @@ python imports/the_whistler/enrichment/import_reviewed_credits.py --env .env --a
 ```
 
 Never set approval flags without examining source attribution, same-date production differences, duplicate individuals, and existing conflicting credits. This script does not create people or handle ambiguous regional broadcasts. It intentionally refuses to apply without approvals.
+
+## Consolidated reviewed import
+
+Run from the repository root:
+
+```powershell
+python imports/the_whistler/enrichment/create_person_decisions.py
+python imports/the_whistler/enrichment/import_whistler_enrichment.py --dry-run
+python imports/the_whistler/enrichment/import_whistler_enrichment.py --apply
+python imports/the_whistler/enrichment/audit_enrichment.py
+```
+
+The decision generator runs once and refuses to overwrite an edited decision file. All people default to `hold`. Edit `reports/person_decisions.csv` only after verifying source identity; `action=existing` needs a verified `person_id` and evidence, whereas `action=create` requires evidence. Existing-person credits with a staged numeric `person_id` also need attribution review. Independently mark `approved=yes` on individual rows of `credit_candidates.csv` only after validating their original CBS episode and contributor role.
+
+**Do not use --apply until a dry run succeeds and every approved row has been reviewed.** The importer rejects all non-`exact` catalog matches, 29 unsupported conductor claims, missing approvals, ambiguous people, and episode/date/title mismatches. It inserts neither AFRS nor syndicated broadcasts and never changes recording metadata. No approval is inferred from matching scores. The audit checks episode count, orphan credits, and duplicate credit keys; it does not establish historical attribution accuracy.
+
+The importer runs a transaction with `ROLLBACK` unless `--apply` is explicitly specified. A run with no approved credits reports zero and does not connect to PostgreSQL. The source files and reports are not automatically committed back to GitHub by local execution.
