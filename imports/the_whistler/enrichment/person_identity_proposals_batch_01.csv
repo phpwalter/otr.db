@@ -1,0 +1,8 @@
+name,claims,proposed_decision,series_roles_supported,blocking_review,evidence
+"George W. Allen","342","create_candidate","producer; director","Writer credits require individual corroboration","CONTRIBUTOR_REVIEW_BATCH_01.md; Dunning; Radio Archives"
+"Wilbur Hatch","58","create_candidate","composer","Conductor unsupported; writer claims not established","CONTRIBUTOR_REVIEW_BATCH_01.md; Dunning"
+"Joel Malone","44","create_candidate","writer","Verify each episode attribution","CONTRIBUTOR_REVIEW_BATCH_01.md; Dunning; Radio Archives"
+"Bill Forman","42","create_candidate","announcer; narrator","Writer claims not established","CONTRIBUTOR_REVIEW_BATCH_01.md; Dunning; AFI"
+"Harold Swanton","35","create_candidate","writer; director","Verify every episode and role","CONTRIBUTOR_REVIEW_BATCH_01.md; Dunning; Radio Archives"
+"Adrian Gendot","24","create_candidate","writer","Verify original CBS broadcast attribution","CONTRIBUTOR_REVIEW_BATCH_01.md; episode indexes"
+"Sterling Tracy","10","create_candidate","director; producer","Verify individual production/date","CONTRIBUTOR_REVIEW_BATCH_01.md; program histories"
