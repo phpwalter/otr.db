@@ -39,3 +39,10 @@ The decision generator runs once and refuses to overwrite an edited decision fil
 **Do not use --apply until a dry run succeeds and every approved row has been reviewed.** The importer rejects all non-`exact` catalog matches, 29 unsupported conductor claims, missing approvals, ambiguous people, and episode/date/title mismatches. It inserts neither AFRS nor syndicated broadcasts and never changes recording metadata. No approval is inferred from matching scores. The audit checks episode count, orphan credits, and duplicate credit keys; it does not establish historical attribution accuracy.
 
 The importer runs a transaction with `ROLLBACK` unless `--apply` is explicitly specified. A run with no approved credits reports zero and does not connect to PostgreSQL. The source files and reports are not automatically committed back to GitHub by local execution.
+
+
+## Contributor batch 1 identity proposals
+
+`person_identity_proposals_batch_01.csv` contains seven proposed contributor identities covering 555 source credit claims collectively. These are *proposals*, not approved database changes. They were selected from the recurring contributor research. Do not copy `create_candidate` blindly into `reports/person_decisions.csv`; first verify the person does not already exist under an alternate or stage name. The alias-matching algorithm identified one possible variant among all 148 unresolved names, but absence of a suggestion is not proof of uniqueness.
+
+The current importer will not create a new person solely from the proposal file. Approval must be recorded separately in the local decision file, with supporting evidence, and episode credits require an independent `approved=yes` flag. Writer attributions for Allen, Hatch, and Forman and conductor claims must remain unapproved without independent episode-level evidence. No changes to the live database were made by this repository update.
